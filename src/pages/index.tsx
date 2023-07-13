@@ -1,6 +1,17 @@
-import logo from "../../public/logo.svg";
-import Image from "next/image";
+import Header from "./components/Header";
+import Banner from "./components/Banner";
+import MyClub from "./components/MyClub";
+import RecruitClub from "./components/RecruitClub";
 
 export default function Home() {
-  return <div>자 이제 시작이야</div>;
+  return (
+    <>
+      <div className="flex flex-col place-items-center">
+        <Header />
+        <Banner />
+        <MyClub />
+        <RecruitClub />
+      </div>
+    </>
+  );
 }
