@@ -18,11 +18,12 @@ export default function Password() {
         placeholder="비밀번호 확인"
         onChange={setConfirmPassword}
       />
-      {!Match && (
-        <div className="ml-[4rem] text-red-500 mt-[-2.8rem]">
-          비밀번호가 일지하지 않습니다.
-        </div>
-      )}
+      <div
+        className="ml-[4rem] text-red-500 mt-[-2.8rem] text-[0.8rem]"
+        style={{ visibility: Match ? "hidden" : "visible" }}
+      >
+        비밀번호가 일치하지 않습니다.
+      </div>
     </>
   );
 }
