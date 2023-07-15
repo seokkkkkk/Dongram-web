@@ -1,7 +1,6 @@
 import logo from "@/../public/logo.svg";
-import bell from "@/../public/bell.svg";
-import setting from "@/../public/setting.svg";
-import user from "@/../public/user.svg";
+import LoginButton from "./LoginButton";
+import UserButton from "./UserButton";
 import search_icon from "@/../public/search-icon.svg";
 import Image from "next/image";
 import Link from "next/link";
@@ -36,27 +35,9 @@ export default function Header() {
           />
         </div>
         {/*로그인X*/}
-        {/* 
-        <div className="flex ml-[1.8rem]">
-          <button className="rounded-[2.5rem] border-[1px] border-[#C1C7CD] w-[11.3rem] h-[5.2rem] text-[2rem] font-[500]">
-            로그인
-          </button>
-          <button className="rounded-[2.5rem] text-white bg-[#0090F9] w-[11.3rem] h-[5.2rem] text-[2rem] font-[500] ml-[1.1rem]">
-            회원가입
-          </button>
-        </div>*/}
+        <LoginButton />
         {/*로그인O*/}
-        <div className="flex ml-[6rem]">
-          <button>
-            <Image src={bell} alt="bell" className="w-[3.6rem] h-[3.6rem]" />
-          </button>
-          <button className="ml-[2.7rem]">
-            <Image src={setting} alt="bell" className="w-[3.6rem] h-[3.6rem]" />
-          </button>
-          <button className="ml-[2.7rem]">
-            <Image src={user} alt="bell" className="w-[3.6rem] h-[3.6rem]" />
-          </button>
-        </div>
+        {/*<UserButton />**/}
       </div>
       <div className="mt-[1.9rem] border-[#DDE1E6] border-[1px] w-[135rem]" />
     </header>
