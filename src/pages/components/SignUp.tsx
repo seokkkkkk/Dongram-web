@@ -1,4 +1,3 @@
-import Link from "next/link";
 import InputLarge from "./InputLarge";
 import InputSmall from "./InputSmall";
 import MajorSelector from "./MajorSelector";

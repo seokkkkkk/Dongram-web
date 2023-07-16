@@ -1,6 +1,5 @@
 import logo from "@/../public/logo.svg";
 import LoginButton from "./LoginButton";
-import UserButton from "./UserButton";
 import search_icon from "@/../public/search-icon.svg";
 import Image from "next/image";
 import Link from "next/link";

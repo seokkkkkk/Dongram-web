@@ -1,5 +1,5 @@
 import { useState } from "react";
-import InputPassword from "./InputLargeWithShowOption";
+import InputPassword from "./InputLargeForPassword";
 
 export default function Password() {
   const [password, setPassword] = useState("");
