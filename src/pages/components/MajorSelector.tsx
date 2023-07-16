@@ -37,7 +37,9 @@ export default function MajorSelector({ filePath, first }: InputData) {
       </div>
       <div className="ml-[4rem] mb-10 flex">
         <div>
-          <div className="mb-[1rem] text-[1.4rem]">단과대</div>
+          <div className="mb-[1rem] text-[1.4rem]">
+            단과대{first ? "*" : ""}
+          </div>
           <div className="w-[24.4rem] h-[4.8rem] bg-[#F2F4F8] border-b-[#C1C7CD] border-b-[0.1rem] flex place-content-center place-items-center">
             <select
               defaultValue=""
@@ -56,7 +58,7 @@ export default function MajorSelector({ filePath, first }: InputData) {
           </div>
         </div>
         <div className="ml-[3.2rem]">
-          <div className="mb-[1rem] text-[1.4rem]">학과</div>
+          <div className="mb-[1rem] text-[1.4rem]">학과{first ? "*" : ""}</div>
           <div className="w-[24.4rem] h-[4.8rem] bg-[#F2F4F8] border-b-[#C1C7CD] border-b-[0.1rem] flex place-content-center place-items-center mt-4">
             <select
               value={selectedMajor || ""}
