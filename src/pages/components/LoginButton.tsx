@@ -1,9 +1,16 @@
 import { useState } from "react";
 import SignUp from "./SignUp";
+import SignIn from "./SignUp";
 
 export default function LoginButton() {
   const [signInModal, setSignInModal] = useState(false);
   const [signUpModal, setSignUpModal] = useState(false);
+  const toggleSignUp = () => setSignUpModal(!signUpModal);
+  const toggleSignIn = () => setSignInModal(!signInModal);
+  const toggleAll = () => {
+    toggleSignUp();
+    toggleSignIn();
+  };
 
   return (
     <>
@@ -23,7 +30,8 @@ export default function LoginButton() {
       </div>
       <SignUp
         signUpModal={signUpModal}
-        toggle={() => setSignUpModal(!signUpModal)}
+        toggleSignUp={toggleSignUp}
+        toggleSignIn={toggleAll}
       />
     </>
   );
