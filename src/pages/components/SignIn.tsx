@@ -12,7 +12,7 @@ export default function SignInModal({
   toggleSignIn,
 }: Modal) {
   return signInModal ? (
-    <div className="fixed z-10 inset-0 ">
+    <div className="fixed z-10 inset-0 cursor-default">
       <div className="text-center">
         <div
           className="absolute inset-0 bg-gray-500 opacity-75 "
