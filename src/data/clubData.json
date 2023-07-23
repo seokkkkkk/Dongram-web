@@ -1,0 +1,26 @@
+[
+  {
+    "name": "세마치",
+    "college": "중앙동아리",
+    "department": "X",
+    "category": "공연분과",
+    "recruitmentPeriod": "6/21~6/22",
+    "clubIntroduction": "안녕하세요~ 세마치에 오신 것을 환영합니다!"
+  },
+  {
+    "name": "B 동아리",
+    "college": "사회과학대학",
+    "department": "경제학과",
+    "category": "문화동아리",
+    "recruitmentPeriod": "7/10~7/15",
+    "clubIntroduction": "안녕하세요~ B 동아리에 오신 것을 환영합니다!"
+  },
+  {
+    "name": "C 동아리",
+    "college": "인문과학대학",
+    "department": "영어학과",
+    "category": "체육동아리",
+    "recruitmentPeriod": "8/1~8/5",
+    "clubIntroduction": "안녕하세요~ C 동아리에 오신 것을 환영합니다!"
+  }
+]

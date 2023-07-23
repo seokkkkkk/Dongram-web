@@ -14,6 +14,7 @@ function Categories({ filePath }: filePath) {
 
   useEffect(() => {
     import(`@/data/${filePath}.json`).then((data) => {
+      //json파일 사용 예시
       setCategories(data.default);
     });
   }, [filePath]);
