@@ -21,7 +21,7 @@ export default function Header() {
           </Link>
           <span className="ml-[4rem]">내 동아리</span>
         </div>
-        <div className="flex bg-[#F2F4F8] w-[40rem] h-[6.1rem] pl-[1.6rem] pr-[1.5rem] py-[1.9rem] ml-[8rem] border-b-[1px] border-b-[#C1C7CD] text-3xl">
+        <div className="flex bg-[#F2F4F8] w-[40rem] h-[6.1rem] pl-[1.6rem] pr-[1.5rem] py-[1.9rem] ml-[8rem] border-b-[1px] border-b-[#C1C7CD]">
           <Image
             src={search_icon}
             alt="search-icon"

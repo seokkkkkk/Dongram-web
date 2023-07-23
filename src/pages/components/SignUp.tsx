@@ -1,7 +1,9 @@
+import { useState } from "react";
 import InputLarge from "./InputLarge";
 import InputSmall from "./InputSmall";
 import MajorSelector from "./MajorSelector";
 import Password from "./Password";
+import axios from "axios";
 
 interface Modal {
   signUpModal: boolean;
@@ -14,6 +16,36 @@ export default function SignUpModal({
   toggleSignUp,
   toggleSignIn,
 }: Modal) {
+  const [id, setId] = useState("");
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [checkPassword, setCheckPassword] = useState("");
+  const [col1, setCol1] = useState<string | null>(null);
+  const [col2, setCol2] = useState<string | null>(null);
+  const [major1, setMajor1] = useState<string | null>(null);
+  const [major2, setMajor2] = useState<string | null>(null);
+
+  const onSubmit = () => {
+    const formData = {
+      studentId: id,
+      name: name,
+      password: password,
+      checkPassword: checkPassword,
+      college1: col1,
+      college2: col2,
+      major1: major1,
+      major2: major2,
+    };
+
+    axios
+      .post("http://10.50.46.60:8080/join", formData)
+      .then((res) => {
+        console.log("저장 완료");
+      })
+      .catch((errror) => {
+        console.log("저장 실패");
+      });
+  };
   return signUpModal ? (
     <div className="fixed z-10 inset-0 cursor-default">
       <div className="text-center">
@@ -32,17 +64,51 @@ export default function SignUpModal({
           >
             이미 계정을 소유하고 있나요?
           </div>
-          <InputLarge text="아이디*" placeholder="학번" />
-          <Password />
-          <InputSmall text="이름*" placeholder="이름" />
-          <MajorSelector filePath="major" first={true} />
-          <MajorSelector filePath="major" first={false} />
-          <button
-            onClick={toggleSignUp}
-            className="w-[52rem] h-[4.8rem] bg-[#0090F9] ml-[4rem] text-white text-[2rem] font-[600]"
-          >
-            회원가입
-          </button>
+          <form>
+            <InputLarge
+              text="아이디*"
+              placeholder="학번"
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                setId(e.target.value);
+              }}
+            />
+            <Password
+              password={password}
+              setPassword={setPassword}
+              confirmPassword={checkPassword}
+              setConfirmPassword={setCheckPassword}
+            />
+            <InputSmall
+              text="이름*"
+              placeholder="이름"
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                setName(e.target.value);
+              }}
+            />
+            <MajorSelector
+              filePath="major"
+              first={true}
+              college={col1}
+              setCollege={setCol1}
+              major={major1}
+              setMajor={setMajor1}
+            />
+            <MajorSelector
+              filePath="major"
+              first={false}
+              college={col2}
+              setCollege={setCol2}
+              major={major2}
+              setMajor={setMajor2}
+            />
+            <button
+              type="submit"
+              onClick={onSubmit}
+              className="w-[52rem] h-[4.8rem] bg-[#0090F9] ml-[4rem] text-white text-[2rem] font-[600]"
+            >
+              회원가입
+            </button>
+          </form>
         </div>
       </div>
     </div>

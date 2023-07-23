@@ -1,0 +1,18 @@
+[
+  {
+    "studentId": "20101284",
+    "name": "전창하",
+    "password": "1234",
+    "checkPassword": "1234",
+    "college1": "정보통신대",
+    "major1": "컴퓨터공학과"
+  },
+  {
+    "studentId": "20101284",
+    "name": "전창하",
+    "password": "1234",
+    "checkPassword": "1234",
+    "college1": "정보통신대",
+    "major1": "컴퓨터공학과"
+  }
+]

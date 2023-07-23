@@ -1,9 +1,10 @@
 interface Input {
   text: string;
   placeholder: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export default function InputLarge({ text, placeholder }: Input) {
+export default function InputLarge({ text, placeholder, onChange }: Input) {
   return (
     <div className="ml-[4rem] mb-10">
       <div className="mt-[0.8rem] mb-[1rem] text-[1.4rem]">{text}</div>
@@ -12,6 +13,7 @@ export default function InputLarge({ text, placeholder }: Input) {
           type="text"
           placeholder={placeholder}
           className="w-[48.8rem] h-[2.2rem] text-[1.6rem] bg-transparent outline-none"
+          onChange={onChange}
         />
       </div>
     </div>

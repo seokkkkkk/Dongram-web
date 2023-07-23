@@ -4,6 +4,5 @@ import useFontSize from "./font/fontSize";
 
 export default function App({ Component, pageProps }: AppProps) {
   useFontSize();
-
   return <Component {...pageProps} />;
 }
