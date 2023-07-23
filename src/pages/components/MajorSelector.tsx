@@ -3,17 +3,26 @@ import { useEffect, useState } from "react";
 interface InputData {
   filePath: string;
   first: boolean;
+  college: string | null;
+  major: string | null;
+  setCollege: (value: string | null) => void;
+  setMajor: (value: string | null) => void;
 }
 
 interface MajorData {
   [key: string]: string[];
 }
 
-export default function MajorSelector({ filePath, first }: InputData) {
+export default function MajorSelector({
+  filePath,
+  first,
+  college,
+  major,
+  setCollege,
+  setMajor,
+}: InputData) {
   const [colleges, setColleges] = useState<string[]>([]);
   const [majors, setMajors] = useState<string[]>([]);
-  const [selectedCollege, setSelectedCollege] = useState<string | null>(null);
-  const [selectedMajor, setSelectedMajor] = useState<string | null>(null);
   const [data, setData] = useState<MajorData>({});
 
   useEffect(() => {
@@ -24,11 +33,11 @@ export default function MajorSelector({ filePath, first }: InputData) {
   }, [filePath]);
 
   useEffect(() => {
-    if (selectedCollege && data[selectedCollege]) {
-      setMajors(data[selectedCollege]);
-      setSelectedMajor(null);
+    if (college && data[college]) {
+      setMajors(data[college]);
+      setMajor(null);
     }
-  }, [selectedCollege, data]);
+  }, [college, data]);
 
   return (
     <div>
@@ -44,7 +53,7 @@ export default function MajorSelector({ filePath, first }: InputData) {
             <select
               defaultValue=""
               className="w-[21.2rem] h-[2.2rem] text-[1.6rem] bg-transparent outline-none hover:cursor-pointer"
-              onChange={(e) => setSelectedCollege(e.target.value)}
+              onChange={(e) => setCollege(e.target.value)}
             >
               <option disabled value="">
                 대학
@@ -61,10 +70,10 @@ export default function MajorSelector({ filePath, first }: InputData) {
           <div className="mb-[1rem] text-[1.4rem]">학과{first ? "*" : ""}</div>
           <div className="w-[24.4rem] h-[4.8rem] bg-[#F2F4F8] border-b-[#C1C7CD] border-b-[0.1rem] flex place-content-center place-items-center mt-4">
             <select
-              value={selectedMajor || ""}
-              onChange={(e) => setSelectedMajor(e.target.value)}
+              value={major || ""}
+              onChange={(e) => setMajor(e.target.value)}
               className="w-[21.2rem] h-[2.2rem] text-[1.6rem] bg-transparent outline-none hover:cursor-pointer"
-              disabled={!selectedCollege}
+              disabled={!college}
             >
               <option disabled value="">
                 학과

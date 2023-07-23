@@ -1,9 +1,19 @@
 import { useState } from "react";
 import InputPassword from "./InputLargeForPassword";
 
-export default function Password() {
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+interface Input {
+  password: string;
+  confirmPassword: string;
+  setPassword: (value: string) => void;
+  setConfirmPassword: (value: string) => void;
+}
+
+export default function Password({
+  password,
+  confirmPassword,
+  setPassword,
+  setConfirmPassword,
+}: Input) {
   const Match = password === confirmPassword;
 
   return (

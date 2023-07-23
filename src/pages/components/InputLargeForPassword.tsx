@@ -29,6 +29,7 @@ export default function InputLarge({ text, placeholder, onChange }: Input) {
           placeholder={placeholder}
           className="w-[48.8rem] h-[2.2rem] text-[1.6rem] ml-[1.8rem] mr-[1.3rem] bg-transparent outline-none"
           onChange={handleChange}
+          autoComplete="off"
         />
         <Image
           src={inputType === "password" ? showEye2 : showEye}
