@@ -1,5 +1,4 @@
-import { useState } from "react";
-import InputPassword from "./InputLargeForPassword";
+import { InputPassword } from "./InputLargeForPassword";
 
 interface Input {
   password: string;
@@ -8,7 +7,7 @@ interface Input {
   setConfirmPassword: (value: string) => void;
 }
 
-export default function Password({
+export function Password({
   password,
   confirmPassword,
   setPassword,

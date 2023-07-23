@@ -4,7 +4,7 @@ interface CategoryProps {
   props: string;
 }
 
-export default function BigCategory({ props }: CategoryProps) {
+export function BigCategory({ props }: CategoryProps) {
   const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = () => {

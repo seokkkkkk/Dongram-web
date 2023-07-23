@@ -1,8 +1,8 @@
 import { useState } from "react";
-import SignUp from "./SignUp";
-import SignIn from "./SignIn";
+import { SignUp } from "./SignUp";
+import { SignIn } from "./SignIn";
 
-export default function LoginButton() {
+export function LoginButton() {
   const [signInModal, setSignInModal] = useState(false);
   const [signUpModal, setSignUpModal] = useState(false);
   const toggleSignUp = () => setSignUpModal(!signUpModal);

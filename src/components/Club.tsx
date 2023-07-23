@@ -1,6 +1,6 @@
 import Image from "next/image";
-import clubimage from "@/../public/placeholder.png";
-import Category from "./Category";
+import clubimage from "@public/placeholder.png";
+import { Category } from "./Category";
 
 interface ClubProps {
   recruit: string;
@@ -9,12 +9,7 @@ interface ClubProps {
   name: string;
 }
 
-export default function Club({
-  recruit,
-  college,
-  department,
-  name,
-}: ClubProps) {
+export function Club({ recruit, college, department, name }: ClubProps) {
   return (
     <div className="w-[20.7rem] h-[30em] border-[#DDE1E6] border-[1px] mr-[3rem]">
       <Image

@@ -1,12 +1,13 @@
-import Club from "./Club";
+import { Club } from "./Club";
 import Link from "next/link";
 
-export default function RecruitClub() {
+export function MyClub() {
   return (
-    <div className="w-[95.8rem] mt-[3rem] mb-[4.4rem]">
+    <div className="w-[95.8rem]">
       <div className="ml-[0.9rem] mb-[1.7rem] text-[2.4rem] font-[400]">
-        모집 중인 동아리
+        내 동아리
       </div>
+
       <Link href="../clubExplain">
         <div className="flex">
           <Club
@@ -15,8 +16,6 @@ export default function RecruitClub() {
             department="공연"
             name="세마치"
           />
-          <Club />
-          <Club />
           <Club />
         </div>
       </Link>

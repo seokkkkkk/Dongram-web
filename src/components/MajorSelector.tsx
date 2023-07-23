@@ -13,7 +13,7 @@ interface MajorData {
   [key: string]: string[];
 }
 
-export default function MajorSelector({
+export function MajorSelector({
   filePath,
   first,
   college,
@@ -37,7 +37,7 @@ export default function MajorSelector({
       setMajors(data[college]);
       setMajor(null);
     }
-  }, [college, data]);
+  }, [college, data, setMajor]);
 
   return (
     <div>

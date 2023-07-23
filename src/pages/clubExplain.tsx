@@ -1,5 +1,5 @@
-import Header from "./components/Header";
-import ClubData from "./components/clubData";
+import { Header } from "@components/Header";
+import { ClubData } from "@components/ClubData";
 export default function Home() {
   return (
     <>

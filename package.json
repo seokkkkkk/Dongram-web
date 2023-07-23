@@ -22,8 +22,12 @@
     "react-cookie": "^4.1.1",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.45.2",
+    "styled-components": "^6.0.5",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.6"
   },
-  "proxy": "http://10.50.46.60:8080"
+  "proxy": "http://10.50.46.60:8080",
+  "devDependencies": {
+    "tailwind-styled-components": "^2.2.0"
+  }
 }

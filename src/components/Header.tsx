@@ -1,10 +1,10 @@
-import logo from "@/../public/logo.svg";
-import LoginButton from "./LoginButton";
-import search_icon from "@/../public/search-icon.svg";
+import logo from "@public/logo.svg";
+import { LoginButton } from "./LoginButton";
+import search_icon from "@public/search-icon.svg";
 import Image from "next/image"; //이미지 갖고오기 위한 문
 import Link from "next/link"; //링크 마찬가지
 
-export default function Header() {
+export function Header() {
   return (
     <header>
       <div className="flex text-[2.4rem] leading-[110%] place-items-center mt-[30px]">

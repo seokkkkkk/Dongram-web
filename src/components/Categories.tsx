@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import BigCategory from "./BigCategory";
+import { BigCategory } from "./BigCategory";
 
 interface CategoryProps {
   props: string;

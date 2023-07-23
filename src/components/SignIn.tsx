@@ -1,16 +1,16 @@
-import InputLarge from "./InputLarge";
-import Password from "./InputLargeWithShowOption";
+import { InputLarge } from "./InputLarge";
+import { Password } from "./InputLargeWithShowOption";
+import { useState } from "react";
+
 interface Modal {
   signInModal: boolean;
   toggleSignUp: () => void;
   toggleSignIn: () => void;
 }
 
-export default function SignInModal({
-  signInModal,
-  toggleSignUp,
-  toggleSignIn,
-}: Modal) {
+export function SignIn({ signInModal, toggleSignUp, toggleSignIn }: Modal) {
+  const [id, setId] = useState("");
+
   return signInModal ? (
     <div className="fixed z-10 inset-0 cursor-default">
       <div className="text-center">
@@ -23,7 +23,13 @@ export default function SignInModal({
           <div className="text-[#697077] text-[6.4rem] font-[700] mt-[4.6rem] mb-[3.5rem] text-center">
             로그인
           </div>
-          <InputLarge text="아이디" placeholder="학번" />
+          <InputLarge
+            text="아이디"
+            placeholder="학번"
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+              setId(e.target.value);
+            }}
+          />
           <Password text="비밀번호" placeholder="비밀번호" />
           <div className="flex ml-[4rem] justify-between mt-[-1.5rem] mb-[2rem] text-[#001D6C] text-[1.4rem] leading-[140%] text-right">
             <div className="mr-[3.7rem] cursor-pointer" onClick={toggleSignIn}>

@@ -1,17 +1,17 @@
 import React from "react";
-import clubData from "../../data/clubData.json";
+import clubData from "@data/clubData.json";
 import Image from "next/image";
 import clubimage from "@/../public/placeholder.png";
 
-const ClubComponent: React.FC = () => {
+const ClubData: React.FC = () => {
   // A, B, C 동아리에 대한 정보를 담는 배열
   const clubA = clubData.filter((club) => club.name === "세마치");
   const clubB = clubData.filter((club) => club.name === "B 동아리");
   const clubC = clubData.filter((club) => club.name === "C 동아리");
 
   return (
-    <React.Fragment>
-      <div className=" mt-[2rem] mr-[95rem] w-[14.4rem] h-[2.6rem] flex-shrink-0 text-black text-[3.2rem] font-roboto font-normal leading-140 font-[400] ">
+    <>
+      <div className=" mt-[2rem] mr-[95rem] w-[14.4rem] h-[2.6rem] flex-shrink-0 text-black text-[3.2rem] font-roboto leading-140 font-[400] ">
         상세설명
       </div>
       <div className="mt-[4rem] border-[#000] border-[0.1rem] w-[867px] h-[0rem] transform rotate-[0.066deg] flex-shrink-0" />
@@ -83,15 +83,15 @@ const ClubComponent: React.FC = () => {
         </div>
       </div>
       <div className="mt-[4rem] border-[#000] border-[0.01rem] w-[867px] h-[0rem] transform rotate-[0.066deg] flex-shrink-0" />
-      <div className=" mt-[1rem] mr-[95rem] w-[14.4rem] h-[3rem] flex-shrink-0 text-black text-[2rem]  font-normal leading-140 font-[400] ">
+      <div className=" mt-[1rem] mr-[95rem] w-[14.4rem] h-[3rem] flex-shrink-0 text-black text-[2rem] leading-140 font-[400] ">
         동아리소개
       </div>
       <div className="mr-[52rem] mt-[1rem] border-[#DDE1E6] border-[0.1rem] w-[459px] h-[0rem] transform rotate-[0.374deg] flex-shrink-0" />
-      <div className="mt-[1rem] mr-[50rem] w-[459px] h-[3rem] flex-shrink-0 text-black text-[1.6rem]  font-normal leading-140 font-[400]">
+      <div className="mt-[1rem] mr-[50rem] w-[459px] h-[3rem] flex-shrink-0 text-black text-[1.6rem] leading-140 font-[400]">
         {clubA[0].clubIntroduction}
       </div>
-    </React.Fragment>
+    </>
   );
 };
 
-export default ClubComponent;
+export { ClubData };

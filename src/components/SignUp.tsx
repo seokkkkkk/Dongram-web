@@ -1,8 +1,8 @@
 import { useState } from "react";
-import InputLarge from "./InputLarge";
-import InputSmall from "./InputSmall";
-import MajorSelector from "./MajorSelector";
-import Password from "./Password";
+import { InputLarge } from "./InputLarge";
+import { InputSmall } from "./InputSmall";
+import { MajorSelector } from "./MajorSelector";
+import { Password } from "./Password";
 import axios from "axios";
 
 interface Modal {
@@ -11,11 +11,7 @@ interface Modal {
   toggleSignIn: () => void;
 }
 
-export default function SignUpModal({
-  signUpModal,
-  toggleSignUp,
-  toggleSignIn,
-}: Modal) {
+export function SignUp({ signUpModal, toggleSignUp, toggleSignIn }: Modal) {
   const [id, setId] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -37,7 +33,7 @@ export default function SignUpModal({
       major2: major2,
     };
 
-    axios
+    axios //api post 예시
       .post("http://10.50.46.60:8080/join", formData)
       .then((res) => {
         console.log("저장 완료");

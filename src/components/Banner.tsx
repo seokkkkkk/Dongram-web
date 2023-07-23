@@ -1,7 +1,7 @@
-import banner from "@/../public/placeholder.png";
+import banner from "@public/placeholder.png";
 import Image from "next/image";
 
-export default function Banner() {
+export function Banner() {
   return (
     <Image
       src={banner}
