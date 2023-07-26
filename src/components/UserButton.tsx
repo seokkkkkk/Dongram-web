@@ -2,6 +2,12 @@ import bell from "@public/bell.svg";
 import setting from "@public/setting.svg";
 import user from "@public/user.svg";
 import Image from "next/image";
+import styled from "@emotion/styled";
+
+export const UserButtonContainer = styled.div`
+  margin-left: 6rem;
+  display: flex;
+`;
 
 export function UserButton() {
   <div className="flex ml-[6rem]">
@@ -16,3 +22,5 @@ export function UserButton() {
     </button>
   </div>;
 }
+
+//테스트
