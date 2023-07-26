@@ -3,6 +3,7 @@ import { LoginButton } from "./LoginButton";
 import search_icon from "@public/search-icon.svg";
 import Image from "next/image"; //이미지 갖고오기 위한 문
 import Link from "next/link"; //링크 마찬가지
+import { UserButton } from "./UserButton";
 
 export function Header() {
   return (
@@ -34,9 +35,9 @@ export function Header() {
           />
         </div>
         {/*로그인X*/}
-        <LoginButton />
+        {/* <LoginButton /> */}
         {/*로그인O*/}
-        {/*<UserButton />**/}
+        <UserButton />*
       </div>
       <div className="mt-[1.9rem] border-[#DDE1E6] border-[1px] w-[135rem]" />
     </header>
