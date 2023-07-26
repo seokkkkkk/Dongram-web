@@ -35,9 +35,9 @@ export function Header() {
           />
         </div>
         {/*로그인X*/}
-        {/* <LoginButton /> */}
+        <LoginButton />
         {/*로그인O*/}
-        <UserButton />*
+        {/* <UserButton />* */}
       </div>
       <div className="mt-[1.9rem] border-[#DDE1E6] border-[1px] w-[135rem]" />
     </header>
