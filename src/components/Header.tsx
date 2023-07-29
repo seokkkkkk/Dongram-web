@@ -1,45 +1,100 @@
+//styled 완료
 import logo from "@public/logo.svg";
 import { LoginButton } from "./LoginButton";
 import search_icon from "@public/search-icon.svg";
 import Image from "next/image"; //이미지 갖고오기 위한 문
 import Link from "next/link"; //링크 마찬가지
 import { UserButton } from "./UserButton";
+import styled from "@emotion/styled";
 
+const HeaderContainer = styled.div`
+  display: flex;
+  font-size: 2.4rem;
+  line-height: 110%;
+  place-items: center;
+  margin-top: 30px;
+`;
+const LogoImage = styled(Image)`
+  width: 2.4rem;
+  height: 2.4rem;
+`;
+const LogoContainer = styled.div`
+  display: flex;
+  place-items: center;
+`;
+const LogoText = styled.span`
+  color: #697077;
+  font-weight: 700;
+  margin-left: 1.6rem;
+`;
+const BoardContainer = styled.div`
+  display: flex;
+  font-weight: 400;
+  margin-left: 8.1rem;
+  white-space: nowrap;
+`;
+const FreeBoardText = styled.span`
+  margin-left: 8rem;
+`;
+const ClubText = styled.span`
+  margin-left: 4rem;
+`;
+const SearchContainer = styled.div`
+  display: flex;
+  background-color: #f2f4f8;
+  width: 40rem;
+  height: 6.1rem;
+  padding-left: 1.6rem;
+  padding-right: 1.5rem;
+  padding-top: 1.9rem;
+  padding-bottom: 1.9rem;
+  margin-left: 8rem;
+  border-bottom: 1px solid #c1c7cd;
+`;
+const SearchImage = styled(Image)`
+  width: 1.9rem;
+  height: 1.9rem;
+`;
+const SearchInput = styled.input`
+  flex-grow: 1;
+  background-color: transparent;
+  margin-left: 1.1rem;
+  outline: none;
+  font-size: 1.6rem;
+`;
+const GreyBorder = styled.div`
+  margin-top: 1.9rem;
+  border: 1px solid #dde1e6;
+  width: 135rem;
+`;
 export function Header() {
   return (
     <header>
-      <div className="flex text-[2.4rem] leading-[110%] place-items-center mt-[30px]">
+      <HeaderContainer>
         <Link href="../">
-          <div className="flex place-items-center">
-            <Image src={logo} alt="logo" className="w-[2.4rem] h-[2.4rem]" />
-            <span className="text-[#697077] font-[700] ml-[1.6rem]">ST</span>
-          </div>
+          <LogoContainer>
+            <LogoImage src={logo} alt="logo" />
+            <LogoText>ST</LogoText>
+          </LogoContainer>
         </Link>
-        <div className="flex font-[400] ml-[8.1rem] whitespace-nowrap">
-          <span className="ml-[8rem]">자유게시판</span>
+        <BoardContainer>
+          <FreeBoardText>자유게시판</FreeBoardText>
           <Link href="../clubPage">
-            <span className="ml-[4rem]">동아리정보</span>
+            <ClubText>동아리정보</ClubText>
           </Link>
-          <span className="ml-[4rem]">내 동아리</span>
-        </div>
-        <div className="flex bg-[#F2F4F8] w-[40rem] h-[6.1rem] pl-[1.6rem] pr-[1.5rem] py-[1.9rem] ml-[8rem] border-b-[1px] border-b-[#C1C7CD]">
-          <Image
-            src={search_icon}
-            alt="search-icon"
-            className="w-[1.9rem] h-[1.9rem]"
-          />
-          <input
-            type="text"
-            placeholder="Search for..."
-            className="flex-grow bg-transparent ml-[1.1rem] outline-none text-[1.6rem]"
-          />
-        </div>
+          <ClubText>내 동아리</ClubText>
+        </BoardContainer>
+        <SearchContainer>
+          <SearchImage src={search_icon} alt="search-icon" />
+          <SearchInput type="text" placeholder="Search for..." />
+        </SearchContainer>
         {/*로그인X*/}
         <LoginButton />
         {/*로그인O*/}
         {/* <UserButton />* */}
-      </div>
-      <div className="mt-[1.9rem] border-[#DDE1E6] border-[1px] w-[135rem]" />
+      </HeaderContainer>
+
+      <GreyBorder></GreyBorder>
     </header>
   );
 }
