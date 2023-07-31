@@ -1,7 +1,43 @@
+//styled 완료
 import React, { useState } from "react";
 import Image from "next/image";
 import showEye from "@public/showEye.svg";
 import showEye2 from "@public/showEye2.svg";
+import styled from "@emotion/styled";
+
+const PageContainer = styled.div`
+  margin-left: 4rem;
+  margin-bottom: 30px;
+`;
+const TextShowing = styled.div`
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+`;
+const Border = styled.div`
+  width: 52rem;
+  height: 4.8rem;
+  background-color: #f2f4f8;
+  border-bottom: 0.1rem solid #c1c7cd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const TextInput = styled.input`
+  width: 48.8rem;
+  height: 2.2rem;
+  font-size: 1.6rem;
+  margin-left: 1.8rem;
+  margin-right: 1.3rem;
+  background-color: transparent;
+  outline: none;
+`;
+const PasswordEyeImage = styled(Image)`
+  cursor: pointer;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 15px;
+`;
 
 interface Input {
   text: string;
@@ -16,21 +52,16 @@ export function Password({ text, placeholder }: Input) {
   };
 
   return (
-    <div className="ml-[4rem] mb-10">
-      <div className="mt-[0.8rem] mb-[1rem] text-[1.4rem]">{text}</div>
-      <div className="w-[52rem] h-[4.8rem] bg-[#F2F4F8] border-b-[#C1C7CD] border-b-[0.1rem] flex place-content-center place-items-center">
-        <input
-          type={inputType}
-          placeholder={placeholder}
-          className="w-[48.8rem] h-[2.2rem] text-[1.6rem] ml-[1.8rem] mr-[1.3rem] bg-transparent outline-none"
-        />
-        <Image
+    <PageContainer>
+      <TextShowing>{text}</TextShowing>
+      <Border>
+        <TextInput type={inputType} placeholder={placeholder} />
+        <PasswordEyeImage
           src={inputType === "password" ? showEye2 : showEye}
           onClick={handleImageClick}
-          className="cursor-pointer w-[2.4rem] h-[2.4rem] mr-5"
           alt="toggle visibility"
         />
-      </div>
-    </div>
+      </Border>
+    </PageContainer>
   );
 }
