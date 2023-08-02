@@ -1,4 +1,13 @@
+//styled완료
 import { InputPassword } from "./InputLargeForPassword";
+import styled from "@emotion/styled";
+
+const PasswordCorrect = styled.div`
+  margin-left: 4rem;
+  color: #ef4444;
+  margin-top: -1rem;
+  font-size: 0.8rem;
+`;
 
 interface Input {
   password: string;
@@ -27,12 +36,9 @@ export function Password({
         placeholder="비밀번호 확인"
         onChange={setConfirmPassword}
       />
-      <div
-        className="ml-[4rem] text-red-500 mt-[-2.8rem] text-[0.8rem]"
-        style={{ visibility: Match ? "hidden" : "visible" }}
-      >
+      <PasswordCorrect style={{ visibility: Match ? "hidden" : "visible" }}>
         비밀번호가 일치하지 않습니다.
-      </div>
+      </PasswordCorrect>
     </>
   );
 }
