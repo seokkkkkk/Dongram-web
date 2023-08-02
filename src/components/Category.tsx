@@ -1,3 +1,6 @@
+//styled 보류
+import styled from "@emotion/styled";
+
 interface CategoryProps {
   props: string;
 }

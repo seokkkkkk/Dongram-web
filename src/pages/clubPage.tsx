@@ -1,22 +1,41 @@
+//styled 완료
 import { Header } from "@components/Header";
 import Categories from "@components/Categories";
-import tw from "tailwind-styled-components"; //tw 사용 예시
+import styled from "@emotion/styled";
 
-const PageContainer = tw.div`flex flex-col place-items-center`; //이것두
+const PageContainer = styled.div`
+  display: flex; /* Flexbox 컨테이너로 설정 */
+  flex-direction: column; /* 컬럼 방향으로 배치 */
+  align-items: center; /* 수직 가운데 정렬 */
+  justify-content: center; /* 수평 가운데 정렬 */
+`;
+
+const College = styled.div`
+  margin-top: 2rem;
+`;
+const Department = styled.div`
+  margin-top: 1.2rem;
+`;
+const Boarder = styled.div`
+  margin-top: 2rem;
+  border-color: #959a9f;
+  border-width: 1px;
+  width: 91.3rem;
+`;
 
 export default function clubPage() {
   return (
     <PageContainer>
       <Header />
       <div>
-        <div className="mt-[2rem]">
+        <College>
           <Categories filePath="college" />
-        </div>
-        <div className="mt-[1.2rem]">
+        </College>
+        <Department>
           <Categories filePath="department" />
-        </div>
+        </Department>
       </div>
-      <div className="mt-[2rem] border-[#959A9F] border-[1px] w-[91.3rem]" />
+      <Boarder />
     </PageContainer>
   );
 }
