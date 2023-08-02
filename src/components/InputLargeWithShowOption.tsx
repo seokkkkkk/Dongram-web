@@ -6,9 +6,10 @@ import showEye2 from "@public/showEye2.svg";
 interface Input {
   text: string;
   placeholder: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export function Password({ text, placeholder }: Input) {
+export function Password({ text, placeholder, onChange }: Input) {
   const [inputType, setInputType] = useState("password");
 
   const handleImageClick = () => {
@@ -23,6 +24,8 @@ export function Password({ text, placeholder }: Input) {
           type={inputType}
           placeholder={placeholder}
           className="w-[48.8rem] h-[2.2rem] text-[1.6rem] ml-[1.8rem] mr-[1.3rem] bg-transparent outline-none"
+          onChange={onChange}
+          autoComplete="off"
         />
         <Image
           src={inputType === "password" ? showEye2 : showEye}

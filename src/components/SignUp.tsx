@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { InputLarge } from "./InputLarge";
 import { InputSmall } from "./InputSmall";
 import { MajorSelector } from "./MajorSelector";
@@ -21,7 +21,7 @@ export function SignUp({ signUpModal, toggleSignUp, toggleSignIn }: Modal) {
   const [major1, setMajor1] = useState<string | null>(null);
   const [major2, setMajor2] = useState<string | null>(null);
 
-  const onSubmit = () => {
+  const onSubmit = useCallback(() => {
     const formData = {
       studentId: id,
       name: name,
@@ -34,14 +34,26 @@ export function SignUp({ signUpModal, toggleSignUp, toggleSignIn }: Modal) {
     };
 
     axios //api post 예시
-      .post("http://10.50.46.60:8080/join", formData)
+      .post("http://52.79.111.78:8080/join", formData)
       .then((res) => {
         console.log("저장 완료");
+        toggleSignUp();
       })
-      .catch((errror) => {
+      .catch((error) => {
         console.log("저장 실패");
+        console.log(error);
       });
-  };
+  }, [
+    id,
+    name,
+    password,
+    checkPassword,
+    col1,
+    col2,
+    major1,
+    major2,
+    toggleSignUp,
+  ]);
   return signUpModal ? (
     <div className="fixed z-10 inset-0 cursor-default">
       <div className="text-center">
@@ -98,7 +110,7 @@ export function SignUp({ signUpModal, toggleSignUp, toggleSignIn }: Modal) {
               setMajor={setMajor2}
             />
             <button
-              type="submit"
+              type="button"
               onClick={onSubmit}
               className="w-[52rem] h-[4.8rem] bg-[#0090F9] ml-[4rem] text-white text-[2rem] font-[600]"
             >
