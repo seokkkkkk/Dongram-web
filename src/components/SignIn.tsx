@@ -1,9 +1,80 @@
+//styled완료
 import { InputLarge } from "./InputLarge";
 import { Password } from "./InputLargeWithShowOption";
 import { useState, useCallback } from "react";
+import axios from "axios";
 import { setCookie } from "@/Utils/customAxios";
 import styled from "@emotion/styled";
-import axios from "axios";
+
+const PageContainer = styled.div`
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: default;
+`;
+const LoginTextAlign = styled.div`
+  text-align: center;
+`;
+const SignInOnclick = styled.div`
+  position: absolute;
+  inset: 0;
+  background-color: #9ca3af;
+  opacity: 0.75;
+`;
+const LoginSpanCss = styled.span`
+  display: inline-block;
+  vertical-align: middle;
+  height: 80vh;
+`;
+const LoginModal = styled.div`
+  display: inline-block;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  text-align: left;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
+  transform: translate(-0%, -0%);
+  vertical-align: middle;
+  width: 60rem;
+  height: 45rem;
+`;
+const LoginText = styled.div`
+  color: #697077;
+  font-size: 6.4rem;
+  font-weight: 700;
+  margin-top: 4.6rem;
+  margin-bottom: 3.5rem;
+  text-align: center;
+`;
+const LoginPasswordContainer = styled.div`
+  display: flex;
+  margin-left: 4rem;
+  justify-content: space-between;
+  margin-top: -1.5rem;
+  margin-bottom: 2rem;
+  color: #001d6c;
+  font-size: 1.4rem;
+  line-height: 140%;
+  text-align: right;
+`;
+const ForgetPassword = styled.div`
+  margin-right: 3.7rem;
+  cursor: pointer;
+`;
+
+const SignUpText = styled(ForgetPassword)``;
+
+const LoginButton = styled.button`
+  width: 52rem;
+  height: 4.8rem;
+  background-color: #0090f9;
+  margin-left: 4rem;
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+`;
 
 const ModalContainer = styled.div`
   position: fixed;
@@ -59,57 +130,36 @@ export function SignIn({ signInModal, toggleSignUp, toggleSignIn }: Modal) {
   }, [id, pw, toggleSignIn]);
 
   return signInModal ? (
-    <ModalContainer>
-      <CenterRow>
-        <Background onClick={toggleSignIn} />
-        <CenterCol />
-        <div
-          className="inline-block bg-white rounded-xl text-left shadow-xl transform align-middle w-[60rem] h-[45rem]
-        display: inline-block; background-color: white; border-radius: 0.75rem; text-align: left; box-shadow"
-        >
-          <form>
-            <div className="text-[#697077] text-[6.4rem] font-[700] mt-[4.6rem] mb-[3.5rem] text-center">
-              로그인
-            </div>
-            <InputLarge
-              text="아이디"
-              placeholder="학번"
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                setId(e.target.value);
-              }}
-            />
-            <Password
-              text="비밀번호"
-              placeholder="비밀번호"
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                setPw(e.target.value);
-              }}
-            />
-            <div className="flex ml-[4rem] justify-between mt-[-1.5rem] mb-[2rem] text-[#001D6C] text-[1.4rem] leading-[140%] text-right">
-              <div
-                className="mr-[3.7rem] cursor-pointer"
-                onClick={toggleSignIn}
-              >
-                비밀번호를 잊으셨나요?
-              </div>
-              <div
-                className=" mr-[3.7rem] cursor-pointer"
-                onClick={toggleSignUp}
-              >
-                회원가입
-              </div>
-            </div>
+    <PageContainer>
+      <LoginTextAlign>
+        <SignInOnclick onClick={toggleSignIn} />
+        <LoginSpanCss />
 
-            <button
-              type="button"
-              className="w-[52rem] h-[4.8rem] bg-[#0090F9] ml-[4rem] text-white text-[2rem] font-[600]"
-              onClick={onSubmit}
-            >
-              로그인
-            </button>
-          </form>
-        </div>
-      </CenterRow>
-    </ModalContainer>
+        <LoginModal>
+          <LoginText>로그인</LoginText>
+          <InputLarge
+            text="아이디"
+            placeholder="학번"
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+              setId(e.target.value);
+            }}
+          />
+          <Password
+            text="비밀번호"
+            placeholder="비밀번호"
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+              setPw(e.target.value);
+            }}
+          />
+          <LoginPasswordContainer>
+            <ForgetPassword onClick={toggleSignIn}>
+              비밀번호를 잊으셨나요?
+            </ForgetPassword>
+            <SignUpText onClick={toggleSignUp}>회원가입</SignUpText>
+          </LoginPasswordContainer>
+          <LoginButton onClick={onSubmit}>로그인</LoginButton>
+        </LoginModal>
+      </LoginTextAlign>
+    </PageContainer>
   ) : null;
 }

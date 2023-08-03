@@ -1,9 +1,75 @@
-import { useState, useCallback } from "react";
+//styled완료
+import { useState } from "react";
 import { InputLarge } from "./InputLarge";
 import { InputSmall } from "./InputSmall";
 import { MajorSelector } from "./MajorSelector";
 import { Password } from "./Password";
 import axios from "axios";
+import styled from "@emotion/styled";
+
+const PageContainer = styled.div`
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: default;
+`;
+const PageTextAlign = styled.div`
+  text-align: center;
+`;
+const BackGroundColor = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #9ca3af;
+  opacity: 0.75;
+`;
+const SignUpSpanCss = styled.span`
+  display: inline-block;
+  vertical-align: middle;
+  height: 100vh;
+`;
+const SignUpModal = styled.div`
+  display: inline-block;
+  background-color: #ffffff;
+  border-radius: 2.5rem;
+  text-align: left;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+  transform: translate(0%, 0%);
+  vertical-align: middle;
+  width: 60rem;
+  height: 90rem;
+`;
+const SignUpText = styled.div`
+  color: #697077;
+  font-size: 6.4rem;
+  font-weight: 700;
+  margin-top: 4.6rem;
+  margin-bottom: 3.5rem;
+  text-align: center;
+`;
+const AlreadyHaveAccount = styled.div`
+  text-align: right;
+  margin-right: 3.7rem;
+  color: #001d6c;
+  font-size: 1.4rem;
+  line-height: 140%;
+  cursor: pointer;
+`;
+
+const SubmitButton = styled.button`
+  width: 52rem;
+  height: 4.8rem;
+  background-color: #0090f9;
+  margin-left: 4rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+`;
 
 interface Modal {
   signUpModal: boolean;
@@ -55,23 +121,13 @@ export function SignUp({ signUpModal, toggleSignUp, toggleSignIn }: Modal) {
     toggleSignUp,
   ]);
   return signUpModal ? (
-    <div className="fixed z-10 inset-0 cursor-default">
-      <div className="text-center">
-        <div
-          className="absolute inset-0 bg-gray-500 opacity-75 "
-          onClick={toggleSignUp}
-        />
-        <span className="inline-block align-middle h-screen" />
-        <div className="inline-block bg-white rounded-xl text-left shadow-xl transform align-middle w-[60rem] h-[85rem]">
-          <div className="text-[#697077] text-[6.4rem] font-[700] mt-[4.6rem] mb-[3.5rem] text-center">
-            회원가입
-          </div>
-          <div
-            className="text-right mr-[3.7rem] text-[#001D6C] text-[1.4rem] leading-[140%] cursor-pointer"
-            onClick={toggleSignIn}
-          >
-            이미 계정을 소유하고 있나요?
-          </div>
+    <PageContainer>
+      <PageTextAlign>
+        <BackGroundColor onClick={toggleSignUp} />
+        <SignUpSpanCss />
+        <SignUpModal>
+          <SignUpText>회원가입</SignUpText>
+          <AlreadyHaveAccount>이미 계정을 소유하고 있나요?</AlreadyHaveAccount>
           <form>
             <InputLarge
               text="아이디*"
@@ -109,16 +165,12 @@ export function SignUp({ signUpModal, toggleSignUp, toggleSignIn }: Modal) {
               major={major2}
               setMajor={setMajor2}
             />
-            <button
-              type="button"
-              onClick={onSubmit}
-              className="w-[52rem] h-[4.8rem] bg-[#0090F9] ml-[4rem] text-white text-[2rem] font-[600]"
-            >
+            <SubmitButton type="submit" onClick={onSubmit}>
               회원가입
-            </button>
+            </SubmitButton>
           </form>
-        </div>
-      </div>
-    </div>
+        </SignUpModal>
+      </PageTextAlign>
+    </PageContainer>
   ) : null;
 }
