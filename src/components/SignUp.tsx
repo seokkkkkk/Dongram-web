@@ -1,5 +1,5 @@
 //styled완료
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { InputLarge } from "./InputLarge";
 import { InputSmall } from "./InputSmall";
 import { MajorSelector } from "./MajorSelector";
