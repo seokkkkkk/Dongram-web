@@ -1,8 +1,8 @@
 //styled 완료
-import { Header } from "@components/Header";
-import { Banner } from "@components/Banner";
-import { MyClub } from "@components/MyClub";
-import { RecruitClub } from "@components/RecruitClub";
+import { Header } from "@components/Header/Header";
+import { Banner } from "@components/Banner/Banner";
+import { MyClub } from "@components/MyClub/MyClub";
+import { RecruitClub } from "@components/RecruitClub/RecruitClub";
 import styled from "@emotion/styled";
 
 const PageConatiner = styled.div`
