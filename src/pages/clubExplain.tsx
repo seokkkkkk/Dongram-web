@@ -1,6 +1,5 @@
-//styled 완료
-import { Header } from "@components/Header";
-import { ClubData } from "@components/ClubData";
+import { Header } from "@components/Header/Header";
+import { ClubData } from "@components/ClubData/ClubData";
 import styled from "@emotion/styled";
 
 const PageContainer = styled.div`

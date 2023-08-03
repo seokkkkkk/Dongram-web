@@ -30,6 +30,7 @@
   },
   "proxy": "http://10.50.46.60:8080",
   "devDependencies": {
+    "babel-plugin-styled-components": "^2.1.4",
     "tailwind-styled-components": "^2.2.0"
   }
 }
