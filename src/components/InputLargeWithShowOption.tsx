@@ -56,7 +56,11 @@ export function Password({ text, placeholder, onChange }: Input) {
     <PageContainer>
       <TextShowing>{text}</TextShowing>
       <Border>
-        <TextInput type={inputType} placeholder={placeholder} />
+        <TextInput
+          type={inputType}
+          placeholder={placeholder}
+          autoComplete="off"
+        />
         <PasswordEyeImage
           src={inputType === "password" ? showEye2 : showEye}
           onClick={handleImageClick}

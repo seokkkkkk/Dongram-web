@@ -2,7 +2,30 @@ import { InputLarge } from "./InputLarge";
 import { Password } from "./InputLargeWithShowOption";
 import { useState, useCallback } from "react";
 import { setCookie } from "@/Utils/customAxios";
+import styled from "@emotion/styled";
 import axios from "axios";
+
+const ModalContainer = styled.div`
+  position: fixed;
+  z-index: 10;
+  inset: 0;
+  cursor: default;
+`;
+const CenterRow = styled.div`
+  text-align: center;
+`;
+const CenterCol = styled.span`
+  display: inline-block;
+  vertical-align: middle;
+  height: 80vh;
+`;
+const Background = styled.div`
+  position: absolute;
+  inset: 0;
+  background-color: #6b7280;
+  opacity: 0.75;
+`;
+const Box = styled.div``;
 interface Modal {
   signInModal: boolean;
   toggleSignUp: () => void;
@@ -36,14 +59,14 @@ export function SignIn({ signInModal, toggleSignUp, toggleSignIn }: Modal) {
   }, [id, pw, toggleSignIn]);
 
   return signInModal ? (
-    <div className="fixed z-10 inset-0 cursor-default">
-      <div className="text-center">
+    <ModalContainer>
+      <CenterRow>
+        <Background onClick={toggleSignIn} />
+        <CenterCol />
         <div
-          className="absolute inset-0 bg-gray-500 opacity-75 "
-          onClick={toggleSignIn}
-        />
-        <span className="inline-block align-middle h-[80vh]" />
-        <div className="inline-block bg-white rounded-xl text-left shadow-xl transform align-middle w-[60rem] h-[45rem]">
+          className="inline-block bg-white rounded-xl text-left shadow-xl transform align-middle w-[60rem] h-[45rem]
+        display: inline-block; background-color: white; border-radius: 0.75rem; text-align: left; box-shadow"
+        >
           <form>
             <div className="text-[#697077] text-[6.4rem] font-[700] mt-[4.6rem] mb-[3.5rem] text-center">
               로그인
@@ -86,7 +109,7 @@ export function SignIn({ signInModal, toggleSignUp, toggleSignIn }: Modal) {
             </button>
           </form>
         </div>
-      </div>
-    </div>
+      </CenterRow>
+    </ModalContainer>
   ) : null;
 }

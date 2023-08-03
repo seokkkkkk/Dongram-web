@@ -62,7 +62,7 @@ export function SignUp({ signUpModal, toggleSignUp, toggleSignIn }: Modal) {
           onClick={toggleSignUp}
         />
         <span className="inline-block align-middle h-screen" />
-        <div className="inline-block bg-white rounded-xl text-left shadow-xl transform align-middle w-[60rem] h-[90rem]">
+        <div className="inline-block bg-white rounded-xl text-left shadow-xl transform align-middle w-[60rem] h-[85rem]">
           <div className="text-[#697077] text-[6.4rem] font-[700] mt-[4.6rem] mb-[3.5rem] text-center">
             회원가입
           </div>
