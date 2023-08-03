@@ -1,4 +1,33 @@
+//styled완료
 import { useCallback } from "react";
+import styled from "@emotion/styled";
+
+const PgaeContainer = styled.div`
+  margin-left: 4rem;
+  margin-bottom: 10px;
+`;
+
+const MainText = styled.div`
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+`;
+const Border = styled.div`
+  width: 52rem;
+  height: 4.8rem;
+  background-color: #f2f4f8;
+  border-bottom: 0.1rem solid #c1c7cd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const InputStyled = styled.input`
+  width: 48.8rem;
+  height: 2.2rem;
+  font-size: 1.6rem;
+  background-color: transparent;
+  outline: none;
+`;
 
 interface Input {
   text: string;
@@ -9,16 +38,15 @@ interface Input {
 export function InputLarge({ text, placeholder, onChange }: Input) {
   const changeCallback = useCallback(onChange, [onChange]);
   return (
-    <div className="ml-[4rem] mb-10">
-      <div className="mt-[0.8rem] mb-[1rem] text-[1.4rem]">{text}</div>
-      <div className="w-[52rem] h-[4.8rem] bg-[#F2F4F8] border-b-[#C1C7CD] border-b-[0.1rem] flex place-content-center place-items-center">
-        <input
+    <PgaeContainer>
+      <MainText>{text}</MainText>
+      <Border>
+        <InputStyled
           type="text"
           placeholder={placeholder}
-          className="w-[48.8rem] h-[2.2rem] text-[1.6rem] bg-transparent outline-none"
           onChange={changeCallback}
         />
-      </div>
-    </div>
+      </Border>
+    </PgaeContainer>
   );
 }

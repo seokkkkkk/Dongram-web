@@ -1,8 +1,15 @@
+//styled 완료
 import { useEffect, useState } from "react";
 import { BigCategory } from "./BigCategory";
+import styled from "@emotion/styled";
+
+const CategoryContainer = styled.div`
+  white-space: nowrap;
+`;
 
 interface CategoryProps {
   props: string;
+  isClicked: boolean;
 }
 
 interface filePath {
@@ -20,11 +27,11 @@ function Categories({ filePath }: filePath) {
   }, [filePath]);
 
   return (
-    <div className="whitespace-nowrap">
+    <CategoryContainer>
       {categories.map((category, index) => (
         <BigCategory key={index} props={category.props} />
       ))}
-    </div>
+    </CategoryContainer>
   );
 }
 

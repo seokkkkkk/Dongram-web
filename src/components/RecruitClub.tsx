@@ -1,12 +1,24 @@
+//styled완료
 import { Club } from "./Club";
 import Link from "next/link";
+import styled from "@emotion/styled";
+
+const PageContainer = styled.div`
+  width: 95.8rem;
+  margin-top: 3rem;
+  margin-bottom: 4.4rem;
+`;
+const RecruitClubText = styled.div`
+  margin-left: 0.9rem;
+  margin-bottom: 1.7rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+`;
 
 export function RecruitClub() {
   return (
-    <div className="w-[95.8rem] mt-[3rem] mb-[4.4rem]">
-      <div className="ml-[0.9rem] mb-[1.7rem] text-[2.4rem] font-[400]">
-        모집 중인 동아리
-      </div>
+    <PageContainer>
+      <RecruitClubText>모집 중인 동아리</RecruitClubText>
       <Link href="../clubExplain">
         <div className="flex">
           <Club
@@ -20,6 +32,6 @@ export function RecruitClub() {
           <Club />
         </div>
       </Link>
-    </div>
+    </PageContainer>
   );
 }

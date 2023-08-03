@@ -1,6 +1,31 @@
+//styled완료
 import { useState } from "react";
 import { SignUp } from "./SignUp";
 import { SignIn } from "./SignIn";
+import styled from "@emotion/styled";
+
+const PageContainer = styled.div`
+  display: flex;
+  margin-left: 1.8rem;
+`;
+const LoginButtonCss = styled.button`
+  border-radius: 2.5rem;
+  border: 1px solid #c1c7cd;
+  width: 11.3rem;
+  height: 5.2rem;
+  font-size: 2rem;
+  font-weight: 500;
+`;
+const PasswordButtonCss = styled.button`
+  border-radius: 2.5rem;
+  background-color: #0090f9;
+  color: white;
+  width: 11.3rem;
+  height: 5.2rem;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-left: 1.1rem;
+`;
 
 export function LoginButton() {
   const [signInModal, setSignInModal] = useState(false);
@@ -14,20 +39,14 @@ export function LoginButton() {
 
   return (
     <>
-      <div className="flex ml-[1.8rem]">
-        <button
-          onClick={() => setSignInModal(!signInModal)}
-          className="rounded-[2.5rem] border-[1px] border-[#C1C7CD] w-[11.3rem] h-[5.2rem] text-[2rem] font-[500]"
-        >
+      <PageContainer>
+        <LoginButtonCss onClick={() => setSignInModal(!signInModal)}>
           로그인
-        </button>
-        <button
-          onClick={() => setSignUpModal(!signUpModal)}
-          className="rounded-[2.5rem] text-white bg-[#0090F9] w-[11.3rem] h-[5.2rem] text-[2rem] font-[500] ml-[1.1rem]"
-        >
+        </LoginButtonCss>
+        <PasswordButtonCss onClick={() => setSignUpModal(!signUpModal)}>
           회원가입
-        </button>
-      </div>
+        </PasswordButtonCss>
+      </PageContainer>
       <SignUp
         signUpModal={signUpModal}
         toggleSignUp={toggleSignUp}

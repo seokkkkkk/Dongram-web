@@ -1,4 +1,6 @@
+//sttyled 보류
 import { useEffect, useState } from "react";
+import styled from "@emotion/styled";
 
 interface InputData {
   filePath: string;
@@ -39,16 +41,27 @@ export function MajorSelector({
     }
   }, [college, data, setMajor]);
 
+  const MajorSubMajorText = styled.div`
+    margin-left: 4rem;
+    margin-top: 0.8rem;
+    color: #7e7f81;
+    font-size: 1.4rem;
+  `;
+  const PageContainer = styled.div``;
+
+  const DanGGwaDae = styled.div`
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  `;
+  const Border = styled.div``;
+
   return (
     <div>
-      <div className="ml-[4rem] mt-[0.8rem] text-[#7E7F81] text-[1.4rem]">
-        {first ? "" : "부/복수전공"}
-      </div>
+      <MajorSubMajorText>{first ? "" : "부/복수전공"}</MajorSubMajorText>
       <div className="ml-[4rem] mb-10 flex">
+        {/*오류발생 나중에 질문  >> select를 포함하는 div를 수정할 경우 오류가 발생함*/}
         <div>
-          <div className="mb-[1rem] text-[1.4rem]">
-            단과대{first ? "*" : ""}
-          </div>
+          <DanGGwaDae>단과대{first ? "*" : ""}</DanGGwaDae>
           <div className="w-[24.4rem] h-[4.8rem] bg-[#F2F4F8] border-b-[#C1C7CD] border-b-[0.1rem] flex place-content-center place-items-center">
             <select
               defaultValue=""
