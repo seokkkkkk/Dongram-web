@@ -1,0 +1,16 @@
+{
+  "clubs": [
+    {
+      "name": "Tools",
+      "status": "MEMBER"
+    },
+    {
+      "name": "세마치",
+      "status": "승인대기"
+    },
+    {
+      "name": "그레이무드",
+      "status": "HOST"
+    }
+  ]
+}

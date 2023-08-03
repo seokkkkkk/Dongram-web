@@ -1,10 +1,7 @@
-//styled 완료
 import { Header } from "@components/Header";
-import { Banner } from "@components/Banner";
-import { MyClub } from "@components/MyClub";
-import { RecruitClub } from "@components/RecruitClub";
+import { SideInfo } from "@/components/SideInfoFolder/SideInfo";
 import styled from "@emotion/styled";
-import Link from "next/link";
+import { MainInfo } from "@/components/MainInfoFolder/MainInfo";
 
 const PageConatiner = styled.div`
   display: flex; /* Flexbox 컨테이너로 설정 */
@@ -12,16 +9,21 @@ const PageConatiner = styled.div`
   align-items: center; /* 수직 가운데 정렬 */
   justify-content: center; /* 수평 가운데 정렬 */
 `;
+const InfoContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 
 export default function Home() {
   return (
     <>
-      <Link href="../memberInfo">회원정보 임시</Link>
       <PageConatiner>
         <Header />
-        <Banner />
-        <MyClub />
-        <RecruitClub />
+
+        <InfoContainer>
+          <SideInfo />
+          <MainInfo />
+        </InfoContainer>
       </PageConatiner>
     </>
   );
