@@ -19,7 +19,6 @@ export default function Home() {
     <>
       <PageConatiner>
         <Header />
-
         <InfoContainer>
           <SideInfo />
           <MainInfo />

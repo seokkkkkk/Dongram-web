@@ -33,8 +33,11 @@ export const ColumnBorder = styled.div`
   border-right: 1px solid #959a9f; /* 세로 방향 border 설정 */
   height: 70.9rem; /* 원하는 세로 높이 설정 */
   margin-top: 4rem;
+  margin-left: 5rem;
 `;
 export const SideMenuContainer = styled.div`
   flex-direction: column;
   margin-top: 8rem;
+  margin-left: -30rem;
+  margin-right: -3rem;
 `;
