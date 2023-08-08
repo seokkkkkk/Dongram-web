@@ -5,7 +5,7 @@ export const Container = styled.div`
   backdrop-blur: 0.2rem;
   display: inline-flex;
   justify-content: center;
-  place-item: center;
+  place-items: center;
   height: 1.8rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
