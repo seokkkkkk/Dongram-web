@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useMemo } from "react";
 import { AdminSearchBox } from "../AdminSearchBox/AdminSearchBox";
 import { AdminSelector } from "../AdminSelector/AdminSelector";
 import {
@@ -31,47 +31,49 @@ export const UserManageTable = () => {
   const [searchText, setSearchText] = useState("");
   const [searchOption, setSearchOption] = useState("ID");
 
-  const handleSearchClick = () => {
+  const handleSearchClick = useCallback(() => {
     setSearchText(inputText);
-  };
-  const handleOptionChange = (Option: string) => {
+  }, [inputText]);
+  const handleOptionChange = useCallback((Option: string) => {
     setSearchOption(Option);
     setSearchText("");
-  };
+  }, []);
 
-  const filteredData = data.filter((item) => {
-    if (!searchText) return true;
+  const filteredData = useMemo(() => {
+    return data.filter((item) => {
+      if (!searchText) return true;
 
-    let valueToSearch = "";
-    switch (searchOption) {
-      case "ID":
-        valueToSearch = item.id;
-        break;
-      case "이름":
-        valueToSearch = item.name;
-        break;
-      case "학번":
-        valueToSearch = item.studentId;
-        break;
-      case "학과":
-        valueToSearch = item.major;
-        break;
-      case "권한":
-        valueToSearch = item.authority;
-        break;
-      default:
-        break;
-    }
+      let valueToSearch = "";
+      switch (searchOption) {
+        case "ID":
+          valueToSearch = item.id;
+          break;
+        case "이름":
+          valueToSearch = item.name;
+          break;
+        case "학번":
+          valueToSearch = item.studentId;
+          break;
+        case "학과":
+          valueToSearch = item.major;
+          break;
+        case "권한":
+          valueToSearch = item.authority;
+          break;
+        default:
+          break;
+      }
 
-    return valueToSearch.toLowerCase().includes(searchText.toLowerCase());
-  });
+      return valueToSearch.toLowerCase().includes(searchText.toLowerCase());
+    });
+  }, [data, searchText, searchOption]);
 
   //table 페이지
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 8;
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentData = (() => {
+  const currentData = useMemo(() => {
     const slicedData = filteredData.slice(indexOfFirstItem, indexOfLastItem);
     const shortage = itemsPerPage - slicedData.length;
 
@@ -85,18 +87,20 @@ export const UserManageTable = () => {
     }
 
     return slicedData;
-  })();
+  }, [filteredData, indexOfFirstItem, indexOfLastItem, itemsPerPage]);
   const totalPages = Math.ceil(data.length / itemsPerPage);
-  const handlePageClick = (pageNumber: number) => {
+  const handlePageClick = useCallback((pageNumber: number) => {
     setCurrentPage(pageNumber);
-  };
-  const handleNextClick = () => {
+  }, []);
+
+  const handleNextClick = useCallback(() => {
     if (currentPage < totalPages) setCurrentPage(currentPage + 1);
-  };
-  const handlePrevClick = () => {
+  }, [currentPage, totalPages]);
+
+  const handlePrevClick = useCallback(() => {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
-  };
-  const renderPagination = () => {
+  }, [currentPage]);
+  const renderPagination = useCallback(() => {
     let pageNumbers = [];
     let startPage, endPage;
 
@@ -150,7 +154,13 @@ export const UserManageTable = () => {
         )}
       </PageTab>
     );
-  };
+  }, [
+    currentPage,
+    totalPages,
+    handleNextClick,
+    handlePageClick,
+    handlePrevClick,
+  ]);
   //여기까지
 
   useEffect(() => {

@@ -1,6 +1,6 @@
 import search_icon from "@public/adminSearch.svg";
 import { SearchBox, SearchImage, SearchInput } from "./AdminSearchBox.styled";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 
 interface AdminSearchBoxProps {
   onSearchChange: (value: string) => void;
@@ -13,10 +13,13 @@ export const AdminSearchBox = ({
 }: AdminSearchBoxProps) => {
   const [inputValue, setInputValue] = useState("");
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value);
-    onSearchChange(e.target.value);
-  };
+  const handleInputChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setInputValue(e.target.value);
+      onSearchChange(e.target.value);
+    },
+    [onSearchChange]
+  );
   return (
     <SearchBox>
       <SearchImage
