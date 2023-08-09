@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import under from "@public/under.svg";
 import {
   SelectBox,
@@ -9,17 +9,33 @@ import {
   Option,
 } from "./AuthoritySelector.styled";
 
-export const AuthoritySelector = () => {
+interface ParentProps {
+  Authority: string;
+  onAuthorityChange: (changedAuthority: string) => void;
+}
+
+export const AuthoritySelector = ({
+  Authority,
+  onAuthorityChange,
+}: ParentProps) => {
   const [showOptions, setShowOptions] = useState(false);
   const BoxClick = useCallback(() => {
     setShowOptions((prev) => !prev);
   }, []);
-  const [selectedOption, setSelectedOption] = useState("USER");
+  const [selectedOption, setSelectedOption] = useState(Authority);
 
-  const handleSetSelectedOption = useCallback((e: React.MouseEvent) => {
-    const { innerText } = e.target as HTMLElement;
-    setSelectedOption(innerText);
-  }, []);
+  useEffect(() => {
+    setSelectedOption(Authority);
+  }, [Authority]);
+
+  const handleSetSelectedOption = useCallback(
+    (e: React.MouseEvent) => {
+      const { innerText } = e.target as HTMLElement;
+      setSelectedOption(innerText);
+      onAuthorityChange(innerText);
+    },
+    [onAuthorityChange]
+  );
 
   return (
     <SelectBox show={showOptions} onClick={BoxClick}>

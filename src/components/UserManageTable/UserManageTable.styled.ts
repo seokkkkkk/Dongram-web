@@ -9,7 +9,7 @@ export const TableContent = styled.div`
   border-bottom: 0.5px solid #959a9f;
   width: 86rem;
 `;
-export const TableRow = styled.div`
+export const TableRow = styled.div<{ clicked?: boolean }>`
   display: flex;
   align-items: center;
   gap: 48px;
@@ -18,6 +18,9 @@ export const TableRow = styled.div`
   border: 0.5px solid #959a9f;
   border-bottom: none;
   flex-wrap: nowrap;
+  cursor: pointer;
+  color: ${(props) => (props.clicked ? "white" : "black")};
+  background: ${(props) => (props.clicked ? "#0090f9" : "white")};
 `;
 export const TableText = styled.div<{ isId?: boolean }>`
   font-size: 1.8rem;

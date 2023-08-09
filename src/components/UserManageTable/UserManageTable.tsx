@@ -25,14 +25,27 @@ interface DataRow {
   authority: string;
 }
 
-export const UserManageTable = () => {
+interface ParentProps {
+  ParentClickedId: (id: string) => void;
+}
+
+export const UserManageTable = ({ ParentClickedId }: ParentProps) => {
   const [data, setData] = useState<DataRow[]>([]);
   const [inputText, setInputText] = useState("");
   const [searchText, setSearchText] = useState("");
   const [searchOption, setSearchOption] = useState("ID");
+  const [clickedId, setClickedId] = useState<string | null>(null);
 
+  const handleClicked = useCallback(
+    (id: string) => {
+      setClickedId(id);
+      ParentClickedId(id);
+    },
+    [ParentClickedId]
+  );
   const handleSearchClick = useCallback(() => {
     setSearchText(inputText);
+    setCurrentPage(1);
   }, [inputText]);
   const handleOptionChange = useCallback((Option: string) => {
     setSearchOption(Option);
@@ -88,7 +101,7 @@ export const UserManageTable = () => {
 
     return slicedData;
   }, [filteredData, indexOfFirstItem, indexOfLastItem, itemsPerPage]);
-  const totalPages = Math.ceil(data.length / itemsPerPage);
+  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
   const handlePageClick = useCallback((pageNumber: number) => {
     setCurrentPage(pageNumber);
   }, []);
@@ -188,7 +201,11 @@ export const UserManageTable = () => {
         </TableTitle>
         <TableContent>
           {currentData.map((item, rowIndex) => (
-            <TableRow key={rowIndex}>
+            <TableRow
+              key={rowIndex}
+              onClick={() => handleClicked(item.id)}
+              clicked={item.id === clickedId}
+            >
               {Object.values(item).map((value, colIndex) => (
                 <TableText key={colIndex} isId={colIndex === 0}>
                   {value}
