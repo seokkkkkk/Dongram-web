@@ -1,8 +1,7 @@
 import { AuthoritySelector } from "../AuthoritySelector/AuthoritySelector";
-import { DepartSelector } from "../DepartSelector/DepartSelector";
+import { AdminMajorSelector } from "../AdminMajorSelector/AdminMajorSelector";
 import placeholder from "@public/placeholder.png";
-import x from "@public/x.svg";
-import { useEffect, useState } from "react";
+import React, { EventHandler, useCallback, useEffect, useState } from "react";
 import {
   UserContainer,
   UserImage,
@@ -16,9 +15,8 @@ import {
   CompleteButtons,
   Cancle,
   Save,
+  Majors,
 } from "./UserInfo.styled";
-import styled from "@emotion/styled";
-import Image from "next/image";
 
 interface DataRow {
   id: string;
@@ -41,86 +39,117 @@ interface ParentProps {
 export const UserInfo = ({ ClickedId }: ParentProps) => {
   const [data, setData] = useState<DataRow[]>([]);
   const [user, setUser] = useState<DataRow>();
+  const [changedUser, setChangedUser] = useState<DataRow>();
 
   useEffect(() => {
     import(`../../data/updated_dummy_users.json`)
       .then((data) => {
         setData(data.default);
         const selectedUser = data.default.find((data) => data.id === ClickedId);
-        selectedUser === undefined
-          ? setUser(data.default.find((data) => data.id === "1"))
-          : setUser(selectedUser);
+        selectedUser
+          ? (setUser(selectedUser), setChangedUser(selectedUser))
+          : (setUser(data.default.find((data) => data.id === "1")),
+            setChangedUser(data.default.find((data) => data.id === "1")));
       })
-      .catch((error) => console.error("에러 발생:", error));
+      .catch((error) => {
+        console.error("에러 발생:", error);
+      });
   }, [ClickedId]);
 
-  const handleAuthorityChange = (changedAuthority: string) => {
-    if (user) {
-      setUser({ ...user, authority: changedAuthority });
+  const handleNameChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const changedName = e.target.value;
+      if (changedUser) {
+        setChangedUser({ ...changedUser, name: changedName });
+      }
+    },
+    [changedUser]
+  );
+  const handleStudentIdChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const changedStuendId = e.target.value;
+      if (changedUser) {
+        setChangedUser({ ...changedUser, studentId: changedStuendId });
+      }
+    },
+    [changedUser]
+  );
+  const handleMajorChange = useCallback(
+    (changedMajor: string) => {
+      if (changedUser) {
+        setChangedUser({ ...changedUser, major: changedMajor });
+      }
+    },
+    [changedUser]
+  );
+  const handleMajor2Change = useCallback(
+    (changedMajor2: string) => {
+      if (changedUser) {
+        setChangedUser({ ...changedUser, major2: changedMajor2 });
+      }
+    },
+    [changedUser]
+  );
+  const handleClubsChange = (changedClub: Club) => {
+    if (changedUser) {
+      const updatedClubs = [...changedUser.clubs, changedClub];
+      setUser({ ...changedUser, clubs: updatedClubs });
     }
   };
-
-  const MajorBox = styled.div`
-    padding: 0 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    text-overflow: ellipsis;
-    border-radius: 0.5rem;
-    background: #c1c7cd;
-    font-size: 1.4rem;
-    line-height: 140%;
-  `;
-  const Majors = styled(Value)`
-    background: none;
-    border: none;
-    display: flex;
-    gap: 1rem;
-  `;
-  const XImage = styled(Image)`
-    width: 1.6rem;
-    height: 1.6rem;
-    cursor: pointer;
-  `;
+  const handleAuthorityChange = useCallback(
+    (changedAuthority: string) => {
+      if (changedUser) {
+        setChangedUser({ ...changedUser, authority: changedAuthority });
+      }
+    },
+    [changedUser]
+  );
+  const handelCancleClick = useCallback(() => {
+    setChangedUser(user);
+  }, [user]);
 
   return (
     <UserContainer>
       <UserImage src={placeholder} alt="userImage" />
       <Body>
         <Text>이름</Text>
-        <Value>{user ? user.name : "로딩 중..."}</Value>
+        <Value
+          value={changedUser ? changedUser.name : "로딩 중..."}
+          type="text"
+          onChange={handleNameChange}
+        />
         <Text>학번</Text>
-        <Value>{user ? user.studentId : "로딩 중..."}</Value>
+        <Value
+          value={changedUser ? changedUser.studentId : "로딩 중..."}
+          type="text"
+          onChange={handleStudentIdChange}
+        />
         <Text>학과</Text>
         <Majors>
-          <DepartSelector>
-            <MajorBox>
-              {user ? user.major : "로딩 중..."} <XImage src={x} alt="delete" />
-            </MajorBox>
-            <MajorBox>
-              {user ? user.major2 : "로딩 중..."}{" "}
-              <XImage src={x} alt="delete" />
-            </MajorBox>
-          </DepartSelector>
+          <AdminMajorSelector
+            major={changedUser ? changedUser.major : "로딩 중..."}
+            major2={changedUser ? changedUser.major2 : ""}
+            onMajorChange={handleMajorChange}
+            onMajor2Change={handleMajor2Change}
+          />
         </Majors>
         <Text>소속 동아리</Text>
         <Clubs>
-          {user
-            ? user.clubs.map((club, index) => (
+          {changedUser
+            ? changedUser.clubs.map((club, index) => (
                 <ClubBox key={index}>{club.name}</ClubBox>
               ))
             : "로딩 중..."}
         </Clubs>
         <Text>권한</Text>
         <AuthoritySelector
-          Authority={user ? user.authority : "로딩 중..."}
+          authority={changedUser ? changedUser.authority : "로딩 중..."}
           onAuthorityChange={handleAuthorityChange}
         />
         <Buttons>
           <Delete>회원삭제</Delete>
           <CompleteButtons>
-            <Cancle>취소</Cancle>
+            <Cancle onClick={handelCancleClick}>취소</Cancle>
             <Save>저장</Save>
           </CompleteButtons>
         </Buttons>

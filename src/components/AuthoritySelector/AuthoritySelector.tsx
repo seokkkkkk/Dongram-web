@@ -10,40 +10,40 @@ import {
 } from "./AuthoritySelector.styled";
 
 interface ParentProps {
-  Authority: string;
-  onAuthorityChange: (changedAuthority: string) => void;
+  authority: string;
+  onAuthorityChange: (authority: string) => void;
 }
 
 export const AuthoritySelector = ({
-  Authority,
+  authority,
   onAuthorityChange,
 }: ParentProps) => {
+  const [auth, setAuth] = useState(authority);
   const [showOptions, setShowOptions] = useState(false);
   const BoxClick = useCallback(() => {
     setShowOptions((prev) => !prev);
   }, []);
-  const [selectedOption, setSelectedOption] = useState(Authority);
 
   useEffect(() => {
-    setSelectedOption(Authority);
-  }, [Authority]);
+    setAuth(authority);
+  }, [authority]);
 
   const handleSetSelectedOption = useCallback(
     (e: React.MouseEvent) => {
       const { innerText } = e.target as HTMLElement;
-      setSelectedOption(innerText);
+      setAuth(innerText);
       onAuthorityChange(innerText);
     },
     [onAuthorityChange]
   );
 
   return (
-    <SelectBox show={showOptions} onClick={BoxClick}>
+    <SelectBox show={showOptions}>
       <SelectedBox>
-        <FilterImage src={under} alt="filter" />
-        <Selected>{selectedOption}</Selected>
+        <FilterImage src={under} alt="filter" onClick={BoxClick} />
+        <Selected>{auth}</Selected>
       </SelectedBox>
-      <Options show={showOptions}>
+      <Options show={showOptions} onClick={BoxClick}>
         <Option onClick={handleSetSelectedOption}>USER</Option>
         <Option onClick={handleSetSelectedOption}>ADMIN</Option>
       </Options>

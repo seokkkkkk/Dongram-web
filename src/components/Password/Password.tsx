@@ -1,11 +1,12 @@
 import { InputPassword } from "@components/InputLargeForPassword/InputLargeForPassword";
 import { PasswordCorrect } from "./Password.styled";
+import { Dispatch, SetStateAction } from "react";
 
 interface Input {
   password: string;
   confirmPassword: string;
-  setPassword: (value: string) => void;
-  setConfirmPassword: (value: string) => void;
+  setPassword: Dispatch<SetStateAction<string>>;
+  setConfirmPassword: Dispatch<SetStateAction<string>>;
 }
 
 export function Password({

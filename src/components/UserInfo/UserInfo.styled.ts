@@ -18,7 +18,7 @@ export const Text = styled.div`
   line-height: 140%;
   margin-left: 0.5rem;
 `;
-export const Value = styled(Text)`
+export const Value = styled.input`
   width: 52rem;
   height: 4.8rem;
   padding: 1.2rem 1.6rem;
@@ -28,6 +28,10 @@ export const Value = styled(Text)`
   border-radius: 0.8rem;
   border-bottom: 1px solid #c1c7cd;
   background: #f2f4f8;
+  font-size: 1.8rem;
+  line-height: 140%;
+  margin-left: 0.5rem;
+  outline: none;
 `;
 export const Clubs = styled.div`
   display: flex;
@@ -81,4 +85,20 @@ export const Save = styled(Cancle)`
   border: 1px solid #0090f9;
   background: #0090f9;
   color: white;
+`;
+
+export const Majors = styled(Text)`
+  background: none;
+  border: none;
+  display: flex;
+  gap: 1rem;
+  width: 52rem;
+  height: 4.8rem;
+  padding: 1.2rem 1.6rem;
+  margin-left: 0rem;
+  margin-bottom: 0.9rem;
+  margin-top: 1.2rem;
+  font-size: 1.8rem;
+  line-height: 140%;
+  margin-left: 0.5rem;
 `;

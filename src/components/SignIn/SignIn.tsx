@@ -1,7 +1,7 @@
 import { InputLarge } from "@components/InputLarge/InputLarge";
 import { Password } from "@components/InputLargeWithShowOption/InputLargeWithShowOption";
 import { useState, useCallback } from "react";
-import axios from "axios";
+import { customAxios } from "@/Utils/customAxios";
 import { setCookie } from "@/Utils/customAxios";
 import {
   PageContainer,
@@ -31,12 +31,12 @@ export function SignIn({ signInModal, toggleSignUp, toggleSignIn }: Modal) {
       studentId: id,
       password: pw,
     };
-    axios //api post 예시
-      .post("http://52.79.111.78:8080/login", formData)
+    customAxios //api post 예시
+      .post("http://13.125.162.181:8080/login", formData)
       .then((res) => {
         console.log(res.data);
         const Token = res.data.data;
-        axios.defaults.headers.common[
+        customAxios.defaults.headers.common[
           "Authorization"
         ] = `Bearer ${Token.accessToken}`;
         localStorage.setItem("accessToken", Token.accessToken);
@@ -63,13 +63,15 @@ export function SignIn({ signInModal, toggleSignUp, toggleSignIn }: Modal) {
               setId(e.target.value);
             }}
           />
-          <Password
-            text="비밀번호"
-            placeholder="비밀번호"
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-              setPw(e.target.value);
-            }}
-          />
+          <form>
+            <Password
+              text="비밀번호"
+              placeholder="비밀번호"
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                setPw(e.target.value);
+              }}
+            />
+          </form>
           <LoginPasswordContainer>
             <ForgetPassword onClick={toggleSignIn}>
               비밀번호를 잊으셨나요?

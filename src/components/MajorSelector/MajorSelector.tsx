@@ -1,19 +1,37 @@
 //sttyled 보류
-import { useEffect, useState } from "react";
+import { SetStateAction, useEffect, useState, Dispatch } from "react";
 import styled from "@emotion/styled";
 
 interface InputData {
   filePath: string;
   first: boolean;
-  college: string | null;
-  major: string | null;
-  setCollege: (value: string | null) => void;
-  setMajor: (value: string | null) => void;
+  college: string;
+  major: string;
+  setCollege: Dispatch<SetStateAction<string>>;
+  setMajor: Dispatch<SetStateAction<string>>;
 }
 
 interface MajorData {
   [key: string]: string[];
 }
+
+const MajorSubMajorText = styled.div`
+  margin-left: 4rem;
+  margin-top: 0.8rem;
+  color: #7e7f81;
+  font-size: 1.4rem;
+`;
+const Container = styled.div` 
+margin-left: 4rem;,
+margin-bottom: 1rem;
+display:flex;
+`;
+
+const College = styled.div`
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+`;
+const Border = styled.div``;
 
 export function MajorSelector({
   filePath,
@@ -37,34 +55,20 @@ export function MajorSelector({
   useEffect(() => {
     if (college && data[college]) {
       setMajors(data[college]);
-      setMajor(null);
+      setMajor("");
     }
   }, [college, data, setMajor]);
-
-  const MajorSubMajorText = styled.div`
-    margin-left: 4rem;
-    margin-top: 0.8rem;
-    color: #7e7f81;
-    font-size: 1.4rem;
-  `;
-  const Container = styled.div``;
-
-  const DanGGwaDae = styled.div`
-    margin-bottom: 1rem;
-    font-size: 1.4rem;
-  `;
-  const Border = styled.div``;
 
   return (
     <div>
       <MajorSubMajorText>{first ? "" : "부/복수전공"}</MajorSubMajorText>
-      <div className="ml-[4rem] mb-10 flex">
+      <Container>
         {/*오류발생 나중에 질문  >> select를 포함하는 div를 수정할 경우 오류가 발생함*/}
         <div>
-          <DanGGwaDae>단과대{first ? "*" : ""}</DanGGwaDae>
+          <College>단과대{first ? "*" : ""}</College>
           <div className="w-[24.4rem] h-[4.8rem] bg-[#F2F4F8] border-b-[#C1C7CD] border-b-[0.1rem] flex place-content-center place-items-center">
             <select
-              defaultValue=""
+              value={college}
               className="w-[21.2rem] h-[2.2rem] text-[1.6rem] bg-transparent outline-none hover:cursor-pointer"
               onChange={(e) => setCollege(e.target.value)}
             >
@@ -99,7 +103,7 @@ export function MajorSelector({
             </select>
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }

@@ -34,7 +34,7 @@ export const UserManageTable = ({ ParentClickedId }: ParentProps) => {
   const [inputText, setInputText] = useState("");
   const [searchText, setSearchText] = useState("");
   const [searchOption, setSearchOption] = useState("ID");
-  const [clickedId, setClickedId] = useState<string | null>(null);
+  const [clickedId, setClickedId] = useState<string>();
 
   const handleClicked = useCallback(
     (id: string) => {

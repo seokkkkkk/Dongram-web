@@ -15,7 +15,6 @@ export const SelectBox = styled.div<OptionShow>`
   background: ${(props) => (props.show ? "#e0e5eb" : "#f2f4f8")};
   border-radius: 0.6rem;
   border-bottom: 1px solid #c1c7cd;
-  cursor: pointer;
 `;
 export const Selected = styled.label`
   font-size: 1.6rem;
@@ -52,11 +51,13 @@ export const Option = styled.li`
   &:hover {
     background-color: #e0e5eb;
   }
+  cursor: pointer;
 `;
 export const FilterImage = styled(Image)`
   width: 2.4rem;
   height: 2.4rem;
   margin-right: 0.5rem;
+  cursor: pointer;
 `;
 export const SelectedBox = styled.div`
   display: flex;

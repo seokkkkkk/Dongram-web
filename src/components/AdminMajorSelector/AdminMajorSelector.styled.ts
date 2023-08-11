@@ -4,6 +4,26 @@ import styled from "@emotion/styled";
 interface OptionShow {
   show: boolean;
 }
+
+export const MajorBox = styled.div`
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  text-overflow: ellipsis;
+  border-radius: 0.5rem;
+  background: #c1c7cd;
+  font-size: 1.4rem;
+  line-height: 140%;
+`;
+
+export const XImage = styled(Image)`
+  width: 1.6rem;
+  height: 1.6rem;
+  cursor: pointer;
+`;
+
 export const SelectBox = styled.div<OptionShow>`
   margin-top: 1rem;
   align-items: center;
@@ -16,7 +36,6 @@ export const SelectBox = styled.div<OptionShow>`
   background: ${(props) => (props.show ? "#e0e5eb" : "#f2f4f8")};
   border-radius: 0.8rem;
   border-bottom: 1px solid #c1c7cd;
-  cursor: pointer;
 `;
 export const Selected = styled.label`
   font-size: 1.6rem;
@@ -30,8 +49,8 @@ export const Options = styled.ul<OptionShow>`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 9.6rem;
-  overflow: hidden;
+  height: 14rem;
+  overflow-y: scroll;
   top: 5.4rem;
   left: 0;
   background: #f2f4f8;
@@ -57,15 +76,12 @@ export const Option = styled.li`
 export const FilterImage = styled(Image)`
   width: 2.4rem;
   height: 2.4rem;
+  cursor: pointer;
 `;
 export const SelectedBox = styled.div`
   display: flex;
   align-items: center;
   margin-left: -0.5rem;
-  justify-content: space-between;
-`;
-
-export const Children = styled.div`
-  display: flex;
-  gap: 0.8rem;
+  width: 52rem;
+  gap: 1.5rem;
 `;
