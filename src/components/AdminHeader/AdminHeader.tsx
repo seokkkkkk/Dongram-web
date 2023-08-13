@@ -1,14 +1,21 @@
-import { useCallback, useState } from "react";
+import { Dispatch, SetStateAction, useCallback, useState } from "react";
 import { Header, Title, UserMenu, ClubMenu } from "./AdminHeader.styled";
 
-export const AdminHeader = () => {
-  const [isUserPage, setIsUserPage] = useState(true);
+interface AdminHeaderProps {
+  isUserPage: boolean;
+  setIsUserPage: Dispatch<SetStateAction<boolean>>;
+}
+
+export const AdminHeader = ({
+  isUserPage,
+  setIsUserPage,
+}: AdminHeaderProps) => {
   const UserClick = useCallback(() => {
     setIsUserPage(true);
-  }, []);
+  }, [setIsUserPage]);
   const ClubClick = useCallback(() => {
     setIsUserPage(false);
-  }, []);
+  }, [setIsUserPage]);
   return (
     <Header>
       <Title>어드민 페이지</Title>

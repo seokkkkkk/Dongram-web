@@ -107,6 +107,9 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
   const handelCancleClick = useCallback(() => {
     setChangedUser(user);
   }, [user]);
+  const handleSaveClick = useCallback(() => {
+    setUser(changedUser);
+  }, [changedUser]);
 
   return (
     <UserContainer>
@@ -150,7 +153,7 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
           <Delete>회원삭제</Delete>
           <CompleteButtons>
             <Cancle onClick={handelCancleClick}>취소</Cancle>
-            <Save>저장</Save>
+            <Save onClick={handleSaveClick}>저장</Save>
           </CompleteButtons>
         </Buttons>
       </Body>

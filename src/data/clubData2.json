@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "name": "a",
+    "admin": "aa",
+    "major": "컴퓨터공학과",
+    "date": "23.07.19",
+    "college": "정보통신대",
+    "department": "학술분과",
+    "recruit": true,
+    "recruitDate": "23/08/13~23/09/20",
+    "introduction": "Tools입니다."
+  },
+  {
+    "id": "2",
+    "name": "b",
+    "admin": "bb",
+    "major": "",
+    "date": "23.07.19",
+    "college": "중앙동아리",
+    "department": "전시분과",
+    "recruit": true,
+    "recruitDate": "23/08/13~23/09/20",
+    "introduction": "중동입니다."
+  },
+  {
+    "id": "3",
+    "name": "c",
+    "admin": "cc",
+    "major": "컴퓨터공학과",
+    "date": "23.07.19",
+    "college": "정보통신대",
+    "department": "학술분과",
+    "recruit": false,
+    "recruitDate": "",
+    "introduction": "c동아리 입니다."
+  },
+  {
+    "id": "4",
+    "name": "d",
+    "admin": "dd",
+    "major": "컴퓨터공학과",
+    "date": "23.07.19",
+    "college": "정보통신대",
+    "department": "학술분과",
+    "recruit": false,
+    "recruitDate": "",
+    "introduction": "d동아리 입니다."
+  }
+]
