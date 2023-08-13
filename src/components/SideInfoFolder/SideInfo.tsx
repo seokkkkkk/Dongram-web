@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import createClubIcon from "@public/createClubIcon.svg";
 import memberInfoIcon from "@public/memberInfoIcon.svg";
 import { PageContainer } from "./SideInfoStyle";
@@ -14,11 +15,15 @@ export function SideInfo() {
       <SideMenuContainer>
         <ImageTextContainer>
           <IconCss src={memberInfoIcon} alt="member-Info" />
-          <ImageText>회원정보</ImageText>
+          <ImageText>
+            <Link href="memberInfo">회원정보</Link>
+          </ImageText>
         </ImageTextContainer>
         <ImageTextContainer>
           <IconCss src={createClubIcon} alt="createClub" />
-          <ImageText>동아리 생성</ImageText>
+          <ImageText>
+            <Link href="creatingClub">동아리 생성</Link>
+          </ImageText>
         </ImageTextContainer>
       </SideMenuContainer>
       <ColumnBorder></ColumnBorder>

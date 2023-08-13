@@ -1,10 +1,10 @@
 //Emotion 완료
-import bell from "@public/bell.svg";
+import bell from "@public/bell.svg"; //벨사진 없다고 오류뜨길래 넣어놨음
 import setting from "@public/setting.svg";
 import user from "@public/user.svg";
 import Image from "next/image";
 import styled from "@emotion/styled";
-
+import Link from "next/link";
 const UserButtonContainer = styled.div`
   margin-left: 6rem;
   display: flex;
@@ -26,16 +26,16 @@ export function UserButton() {
       </button>
       <SettingButtonCss>
         <button>
-          <ImageCss src={setting} alt="bell" />{" "}
+          <ImageCss src={setting} alt="bell" />
         </button>
       </SettingButtonCss>
       <UserButtonCss>
-        <button>
-          <ImageCss src={user} alt="bell" />{" "}
-        </button>
+        <Link href="/memberInfo">
+          <button>
+            <ImageCss src={user} alt="bell" />
+          </button>
+        </Link>
       </UserButtonCss>
     </UserButtonContainer>
   );
 }
-
-//테스트

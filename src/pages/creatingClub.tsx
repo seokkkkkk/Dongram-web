@@ -1,7 +1,7 @@
 import { Header } from "@components/Header";
 import { SideInfo } from "@/components/SideInfoFolder/SideInfo";
 import styled from "@emotion/styled";
-import { MainInfo } from "@/components/MainInfoFolder/MainInfo";
+import { CreateClubTop } from "@/components/CreatingClubFolder/CreateClubTop";
 
 const PageConatiner = styled.div`
   display: flex; /* Flexbox 컨테이너로 설정 */
@@ -14,16 +14,14 @@ const InfoContainer = styled.div`
   justify-content: space-between;
 `;
 
-export default function memberInfo() {
+export default function creatingClub() {
   return (
-    <>
-      <PageConatiner>
-        <Header />
-        <InfoContainer>
-          <SideInfo />
-          <MainInfo />
-        </InfoContainer>
-      </PageConatiner>
-    </>
+    <PageConatiner>
+      <Header />
+      <InfoContainer>
+        <SideInfo />
+        <CreateClubTop />
+      </InfoContainer>
+    </PageConatiner>
   );
 }

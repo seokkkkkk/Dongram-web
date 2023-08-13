@@ -4,7 +4,6 @@ import { Banner } from "@components/Banner";
 import { MyClub } from "@components/MyClub";
 import { RecruitClub } from "@components/RecruitClub";
 import styled from "@emotion/styled";
-import Link from "next/link";
 
 const PageConatiner = styled.div`
   display: flex; /* Flexbox 컨테이너로 설정 */
@@ -12,11 +11,11 @@ const PageConatiner = styled.div`
   align-items: center; /* 수직 가운데 정렬 */
   justify-content: center; /* 수평 가운데 정렬 */
 `;
-
+//회원정보를 확인하는 페이지와, 동아리 생성 홈페이지는 로그인후 나타나는 유저아이콘 사진에 링크를 넣어놨음
 export default function Home() {
   return (
     <>
-      <Link href="../memberInfo">회원정보 임시</Link>
+    
       <PageConatiner>
         <Header />
         <Banner />

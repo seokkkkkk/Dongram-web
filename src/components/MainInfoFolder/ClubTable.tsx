@@ -1,6 +1,7 @@
 import React from "react";
 import clubTableData from "../../data/clubTableData.json";
 import styled from "@emotion/styled";
+//테이블로 갈기
 
 const TableContainer = styled.div`
   margin-top: 2rem;

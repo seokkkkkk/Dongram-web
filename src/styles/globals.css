@@ -11,3 +11,8 @@ html {
     font-size: 8px;
   }
 }
+
+input:disabled {
+  background-color: #ccc;
+  /* disabled 됐을 때 input란 안에 색깔 defalut값 */
+}

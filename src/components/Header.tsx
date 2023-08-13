@@ -89,9 +89,9 @@ export function Header() {
           <SearchInput type="text" placeholder="Search for..." />
         </SearchContainer>
         {/*로그인X*/}
-        <LoginButton />
+        {/* <LoginButton /> */}
         {/*로그인O*/}
-        {/* <UserButton />* */}
+        <UserButton />*
       </HeaderContainer>
 
       <GreyBorder></GreyBorder>
