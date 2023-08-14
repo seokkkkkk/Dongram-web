@@ -1,4 +1,4 @@
-import { Header } from "@components/Header";
+import { Header } from "@components/Header/Header";
 import { SideInfo } from "@/components/SideInfoFolder/SideInfo";
 import styled from "@emotion/styled";
 import { MainInfo } from "@/components/MainInfoFolder/MainInfo";

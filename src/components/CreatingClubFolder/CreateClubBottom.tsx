@@ -1,7 +1,6 @@
-//모집여부,모집기간, 본문 디자인 구현하고 각각 useState로 설정해서 data수정하게끔하고 formData에 실어서 보내기
 import React from "react";
+import { customAxios } from "@/Utils/customAxios";
 import { useState, useCallback, useEffect } from "react";
-import axios from "axios";
 import { CreateClubSelect } from "./CreateClubSelect";
 import {
   ClubNameInput,
@@ -21,10 +20,10 @@ import {
 export function CreateClubBottom() {
   const [clubNameInput, setClubNameInput] = useState(""); //input란
   const [clubIntroInput, setClubIntroInput] = useState(""); //input란 관리
-  const [clubName, setClubName] = useState<string | null>(null); // 동아리 이름
-  const [col, setCol] = useState<string | null>(null); // 중동 vs 과동
-  const [maj, setMaj] = useState<string | null>(null); // 중동 -> 중동, 과동 -> 과 선택
-  const [dep, setDep] = useState<string | null>(null); // 분과 선택
+  const [clubName, setClubName] = useState(""); // 동아리 이름
+  const [col, setCol] = useState(""); // 중동 vs 과동
+  const [maj, setMaj] = useState(""); // 중동 -> 중동, 과동 -> 과 선택
+  const [dep, setDep] = useState(""); // 분과 선택
   const [onRecruit, setOnRecruit] = useState(false); // 모집중 여부 -> 초기값은 false
   const [recruitDateFrom, setRecruitDateFrom] = useState(""); //모집기간시작
   const [recruitDateTo, setRecruitDateTo] = useState(""); //모집기간끝
@@ -55,9 +54,9 @@ export function CreateClubBottom() {
     setRecruitDateTo("");
     // 여기까지는 input란 지우기
     setClubName("");
-    setCol(null);
-    setMaj(null);
-    setDep(null);
+    setCol("");
+    setMaj("");
+    setDep("");
     setOnRecruit(false);
     setRecruitDate("");
     setClubIntroduction("");
@@ -74,18 +73,19 @@ export function CreateClubBottom() {
       recruitmentPeriod: recruitDate,
       clubIntroduction: clubIntroduction,
     };
-    console.log({ clubName });
-    console.log({ col });
-    console.log({ maj });
-    console.log({ dep });
-    console.log({ onRecruit });
-    console.log({ recruitDate });
-    console.log({ clubIntroduction });
-    // 객체가 잘 저장되었는지 확인해보기
-    axios //api post 예시
-      .post("", formData) //여기에 pst주소입력
+
+    customAxios //api post 예시
+      .post("/adfs", formData) //여기에 pst주소입력
       .then((res) => {
         console.log("저장 완료");
+        console.log({ clubName });
+        console.log({ col });
+        console.log({ maj });
+        console.log({ dep });
+        console.log({ onRecruit });
+        console.log({ recruitDate });
+        console.log({ clubIntroduction });
+        // 객체가 잘 저장되었는지 확인해보기
       })
       .catch((error) => {
         console.log("저장 실패");

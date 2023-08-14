@@ -1,16 +1,16 @@
 //sttyled 보류
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import styled from "@emotion/styled";
 
 interface InputData {
   filePath: string;
   first: boolean;
-  college: string | null;
-  major: string | null;
-  dep: string | null;
-  setCollege: (value: string | null) => void;
-  setMajor: (value: string | null) => void;
-  setDep: (value: string | null) => void;
+  college: string;
+  major: string;
+  dep: string;
+  setCollege: Dispatch<SetStateAction<string>>;
+  setMajor: Dispatch<SetStateAction<string>>;
+  setDep: Dispatch<SetStateAction<string>>;
 }
 
 interface MajorData {
@@ -42,7 +42,7 @@ export function CreateClubSelect({
     if (college && data[college]) {
       setMajors(data[college]);
       setDeps(data["분과"]);
-      setMajor(null);
+      setMajor("");
       if (college === "중앙동아리") {
         //중동선택하면 Major도 걍 중동처리해버리기
         setMajor("중앙동아리");
