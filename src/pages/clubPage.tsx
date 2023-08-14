@@ -1,6 +1,5 @@
-//styled 완료
-import { Header } from "@components/Header";
-import Categories from "@components/Categories";
+import { Header } from "@components/Header/Header";
+import Categories from "@components/Categories/Categories";
 import styled from "@emotion/styled";
 
 const PageContainer = styled.div`

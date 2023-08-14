@@ -11,7 +11,7 @@ export const getCookie = (name: string) => {
   return cookies.get(name);
 };
 
-const customAxios = axios.create({
+export const customAxios = axios.create({
   baseURL: `${process.env.NEXT_PUBLIC_API_BASEURL}`,
   headers: {
     Authorization: `Bearer ${
@@ -54,5 +54,3 @@ customAxios.interceptors.response.use(
     return Promise.reject(error);
   }
 );
-
-export { customAxios };
