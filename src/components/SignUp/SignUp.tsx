@@ -3,7 +3,7 @@ import { InputLarge } from "@components/InputLarge/InputLarge";
 import { InputSmall } from "@components/InputSmall/InputSmall";
 import { MajorSelector } from "@components/MajorSelector/MajorSelector";
 import { Password } from "@components/Password/Password";
-import axios from "axios";
+import { customAxios } from "@/Utils/customAxios";
 import {
   PageContainer,
   PageTextAlign,
@@ -26,10 +26,10 @@ export function SignUp({ signUpModal, toggleSignUp, toggleSignIn }: Modal) {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [checkPassword, setCheckPassword] = useState("");
-  const [col1, setCol1] = useState<string | null>(null);
-  const [col2, setCol2] = useState<string | null>(null);
-  const [major1, setMajor1] = useState<string | null>(null);
-  const [major2, setMajor2] = useState<string | null>(null);
+  const [col1, setCol1] = useState<string>("");
+  const [col2, setCol2] = useState<string>("");
+  const [major1, setMajor1] = useState<string>("");
+  const [major2, setMajor2] = useState<string>("");
 
   const onSubmit = useCallback(() => {
     const formData = {
@@ -43,8 +43,8 @@ export function SignUp({ signUpModal, toggleSignUp, toggleSignIn }: Modal) {
       major2: major2,
     };
 
-    axios //api post 예시
-      .post("http://52.79.111.78:8080/join", formData)
+    customAxios //api post 예시
+      .post("http://13.125.162.181:8080/join", formData)
       .then((res) => {
         console.log("저장 완료");
         toggleSignUp();

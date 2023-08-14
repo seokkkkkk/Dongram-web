@@ -1,0 +1,9601 @@
+[
+  {
+    "id": "1",
+    "name": "정윤석0",
+    "studentId": "201012900",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "정윤석1",
+    "studentId": "201012901",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "정윤석2",
+    "studentId": "201012902",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "정윤석3",
+    "studentId": "201012903",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "정윤석4",
+    "studentId": "201012904",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "정윤석5",
+    "studentId": "201012905",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "name": "정윤석6",
+    "studentId": "201012906",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "name": "정윤석7",
+    "studentId": "201012907",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "name": "정윤석8",
+    "studentId": "201012908",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "name": "정윤석9",
+    "studentId": "201012909",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "name": "정윤석10",
+    "studentId": "2010129010",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "name": "정윤석11",
+    "studentId": "2010129011",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "name": "정윤석12",
+    "studentId": "2010129012",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "name": "정윤석13",
+    "studentId": "2010129013",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "name": "정윤석14",
+    "studentId": "2010129014",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "name": "정윤석15",
+    "studentId": "2010129015",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "name": "정윤석16",
+    "studentId": "2010129016",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "name": "정윤석17",
+    "studentId": "2010129017",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "name": "정윤석18",
+    "studentId": "2010129018",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "name": "정윤석19",
+    "studentId": "2010129019",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "name": "정윤석20",
+    "studentId": "2010129020",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "name": "정윤석21",
+    "studentId": "2010129021",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "name": "정윤석22",
+    "studentId": "2010129022",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "name": "정윤석23",
+    "studentId": "2010129023",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "25",
+    "name": "정윤석24",
+    "studentId": "2010129024",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "26",
+    "name": "정윤석25",
+    "studentId": "2010129025",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "27",
+    "name": "정윤석26",
+    "studentId": "2010129026",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "28",
+    "name": "정윤석27",
+    "studentId": "2010129027",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "29",
+    "name": "정윤석28",
+    "studentId": "2010129028",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "30",
+    "name": "정윤석29",
+    "studentId": "2010129029",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "31",
+    "name": "정윤석30",
+    "studentId": "2010129030",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "32",
+    "name": "정윤석31",
+    "studentId": "2010129031",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "33",
+    "name": "정윤석32",
+    "studentId": "2010129032",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "34",
+    "name": "정윤석33",
+    "studentId": "2010129033",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "35",
+    "name": "정윤석34",
+    "studentId": "2010129034",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "36",
+    "name": "정윤석35",
+    "studentId": "2010129035",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "37",
+    "name": "정윤석36",
+    "studentId": "2010129036",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "38",
+    "name": "정윤석37",
+    "studentId": "2010129037",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "name": "정윤석38",
+    "studentId": "2010129038",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "40",
+    "name": "정윤석39",
+    "studentId": "2010129039",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "41",
+    "name": "정윤석40",
+    "studentId": "2010129040",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "name": "정윤석41",
+    "studentId": "2010129041",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "43",
+    "name": "정윤석42",
+    "studentId": "2010129042",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "44",
+    "name": "정윤석43",
+    "studentId": "2010129043",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "45",
+    "name": "정윤석44",
+    "studentId": "2010129044",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "46",
+    "name": "정윤석45",
+    "studentId": "2010129045",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "47",
+    "name": "정윤석46",
+    "studentId": "2010129046",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "48",
+    "name": "정윤석47",
+    "studentId": "2010129047",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "49",
+    "name": "정윤석48",
+    "studentId": "2010129048",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "50",
+    "name": "정윤석49",
+    "studentId": "2010129049",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "51",
+    "name": "정윤석50",
+    "studentId": "2010129050",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "52",
+    "name": "정윤석51",
+    "studentId": "2010129051",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "53",
+    "name": "정윤석52",
+    "studentId": "2010129052",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "54",
+    "name": "정윤석53",
+    "studentId": "2010129053",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "55",
+    "name": "정윤석54",
+    "studentId": "2010129054",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "56",
+    "name": "정윤석55",
+    "studentId": "2010129055",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "57",
+    "name": "정윤석56",
+    "studentId": "2010129056",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "58",
+    "name": "정윤석57",
+    "studentId": "2010129057",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "59",
+    "name": "정윤석58",
+    "studentId": "2010129058",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "60",
+    "name": "정윤석59",
+    "studentId": "2010129059",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "61",
+    "name": "정윤석60",
+    "studentId": "2010129060",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "62",
+    "name": "정윤석61",
+    "studentId": "2010129061",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "63",
+    "name": "정윤석62",
+    "studentId": "2010129062",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "64",
+    "name": "정윤석63",
+    "studentId": "2010129063",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "65",
+    "name": "정윤석64",
+    "studentId": "2010129064",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "66",
+    "name": "정윤석65",
+    "studentId": "2010129065",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "67",
+    "name": "정윤석66",
+    "studentId": "2010129066",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "68",
+    "name": "정윤석67",
+    "studentId": "2010129067",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "69",
+    "name": "정윤석68",
+    "studentId": "2010129068",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "70",
+    "name": "정윤석69",
+    "studentId": "2010129069",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "71",
+    "name": "정윤석70",
+    "studentId": "2010129070",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "72",
+    "name": "정윤석71",
+    "studentId": "2010129071",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "73",
+    "name": "정윤석72",
+    "studentId": "2010129072",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "74",
+    "name": "정윤석73",
+    "studentId": "2010129073",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "75",
+    "name": "정윤석74",
+    "studentId": "2010129074",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "76",
+    "name": "정윤석75",
+    "studentId": "2010129075",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "77",
+    "name": "정윤석76",
+    "studentId": "2010129076",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "78",
+    "name": "정윤석77",
+    "studentId": "2010129077",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "79",
+    "name": "정윤석78",
+    "studentId": "2010129078",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "80",
+    "name": "정윤석79",
+    "studentId": "2010129079",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "81",
+    "name": "정윤석80",
+    "studentId": "2010129080",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "82",
+    "name": "정윤석81",
+    "studentId": "2010129081",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "83",
+    "name": "정윤석82",
+    "studentId": "2010129082",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "84",
+    "name": "정윤석83",
+    "studentId": "2010129083",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "85",
+    "name": "정윤석84",
+    "studentId": "2010129084",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "86",
+    "name": "정윤석85",
+    "studentId": "2010129085",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "87",
+    "name": "정윤석86",
+    "studentId": "2010129086",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "88",
+    "name": "정윤석87",
+    "studentId": "2010129087",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "89",
+    "name": "정윤석88",
+    "studentId": "2010129088",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "90",
+    "name": "정윤석89",
+    "studentId": "2010129089",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "91",
+    "name": "정윤석90",
+    "studentId": "2010129090",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "92",
+    "name": "정윤석91",
+    "studentId": "2010129091",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "93",
+    "name": "정윤석92",
+    "studentId": "2010129092",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "94",
+    "name": "정윤석93",
+    "studentId": "2010129093",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "95",
+    "name": "정윤석94",
+    "studentId": "2010129094",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "96",
+    "name": "정윤석95",
+    "studentId": "2010129095",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "97",
+    "name": "정윤석96",
+    "studentId": "2010129096",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "98",
+    "name": "정윤석97",
+    "studentId": "2010129097",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "99",
+    "name": "정윤석98",
+    "studentId": "2010129098",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "100",
+    "name": "정윤석99",
+    "studentId": "2010129099",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "101",
+    "name": "정윤석100",
+    "studentId": "20101290100",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "102",
+    "name": "정윤석101",
+    "studentId": "20101290101",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "103",
+    "name": "정윤석102",
+    "studentId": "20101290102",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "104",
+    "name": "정윤석103",
+    "studentId": "20101290103",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "105",
+    "name": "정윤석104",
+    "studentId": "20101290104",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "106",
+    "name": "정윤석105",
+    "studentId": "20101290105",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "107",
+    "name": "정윤석106",
+    "studentId": "20101290106",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "108",
+    "name": "정윤석107",
+    "studentId": "20101290107",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "109",
+    "name": "정윤석108",
+    "studentId": "20101290108",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "110",
+    "name": "정윤석109",
+    "studentId": "20101290109",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "111",
+    "name": "정윤석110",
+    "studentId": "20101290110",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "112",
+    "name": "정윤석111",
+    "studentId": "20101290111",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "113",
+    "name": "정윤석112",
+    "studentId": "20101290112",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "114",
+    "name": "정윤석113",
+    "studentId": "20101290113",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "115",
+    "name": "정윤석114",
+    "studentId": "20101290114",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "116",
+    "name": "정윤석115",
+    "studentId": "20101290115",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "117",
+    "name": "정윤석116",
+    "studentId": "20101290116",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "118",
+    "name": "정윤석117",
+    "studentId": "20101290117",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "119",
+    "name": "정윤석118",
+    "studentId": "20101290118",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "120",
+    "name": "정윤석119",
+    "studentId": "20101290119",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "121",
+    "name": "정윤석120",
+    "studentId": "20101290120",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "122",
+    "name": "정윤석121",
+    "studentId": "20101290121",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "123",
+    "name": "정윤석122",
+    "studentId": "20101290122",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "124",
+    "name": "정윤석123",
+    "studentId": "20101290123",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "125",
+    "name": "정윤석124",
+    "studentId": "20101290124",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "126",
+    "name": "정윤석125",
+    "studentId": "20101290125",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "127",
+    "name": "정윤석126",
+    "studentId": "20101290126",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "128",
+    "name": "정윤석127",
+    "studentId": "20101290127",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "129",
+    "name": "정윤석128",
+    "studentId": "20101290128",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "130",
+    "name": "정윤석129",
+    "studentId": "20101290129",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "131",
+    "name": "정윤석130",
+    "studentId": "20101290130",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "132",
+    "name": "정윤석131",
+    "studentId": "20101290131",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "133",
+    "name": "정윤석132",
+    "studentId": "20101290132",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "134",
+    "name": "정윤석133",
+    "studentId": "20101290133",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "135",
+    "name": "정윤석134",
+    "studentId": "20101290134",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "136",
+    "name": "정윤석135",
+    "studentId": "20101290135",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "137",
+    "name": "정윤석136",
+    "studentId": "20101290136",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "138",
+    "name": "정윤석137",
+    "studentId": "20101290137",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "139",
+    "name": "정윤석138",
+    "studentId": "20101290138",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "140",
+    "name": "정윤석139",
+    "studentId": "20101290139",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "141",
+    "name": "정윤석140",
+    "studentId": "20101290140",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "142",
+    "name": "정윤석141",
+    "studentId": "20101290141",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "143",
+    "name": "정윤석142",
+    "studentId": "20101290142",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "144",
+    "name": "정윤석143",
+    "studentId": "20101290143",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "145",
+    "name": "정윤석144",
+    "studentId": "20101290144",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "146",
+    "name": "정윤석145",
+    "studentId": "20101290145",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "147",
+    "name": "정윤석146",
+    "studentId": "20101290146",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "148",
+    "name": "정윤석147",
+    "studentId": "20101290147",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "149",
+    "name": "정윤석148",
+    "studentId": "20101290148",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "150",
+    "name": "정윤석149",
+    "studentId": "20101290149",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "151",
+    "name": "정윤석150",
+    "studentId": "20101290150",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "152",
+    "name": "정윤석151",
+    "studentId": "20101290151",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "153",
+    "name": "정윤석152",
+    "studentId": "20101290152",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "154",
+    "name": "정윤석153",
+    "studentId": "20101290153",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "155",
+    "name": "정윤석154",
+    "studentId": "20101290154",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "156",
+    "name": "정윤석155",
+    "studentId": "20101290155",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "157",
+    "name": "정윤석156",
+    "studentId": "20101290156",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "158",
+    "name": "정윤석157",
+    "studentId": "20101290157",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "159",
+    "name": "정윤석158",
+    "studentId": "20101290158",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "160",
+    "name": "정윤석159",
+    "studentId": "20101290159",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "161",
+    "name": "정윤석160",
+    "studentId": "20101290160",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "162",
+    "name": "정윤석161",
+    "studentId": "20101290161",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "163",
+    "name": "정윤석162",
+    "studentId": "20101290162",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "164",
+    "name": "정윤석163",
+    "studentId": "20101290163",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "165",
+    "name": "정윤석164",
+    "studentId": "20101290164",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "166",
+    "name": "정윤석165",
+    "studentId": "20101290165",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "167",
+    "name": "정윤석166",
+    "studentId": "20101290166",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "168",
+    "name": "정윤석167",
+    "studentId": "20101290167",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "169",
+    "name": "정윤석168",
+    "studentId": "20101290168",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "170",
+    "name": "정윤석169",
+    "studentId": "20101290169",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "171",
+    "name": "정윤석170",
+    "studentId": "20101290170",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "172",
+    "name": "정윤석171",
+    "studentId": "20101290171",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "173",
+    "name": "정윤석172",
+    "studentId": "20101290172",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "174",
+    "name": "정윤석173",
+    "studentId": "20101290173",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "175",
+    "name": "정윤석174",
+    "studentId": "20101290174",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "176",
+    "name": "정윤석175",
+    "studentId": "20101290175",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "177",
+    "name": "정윤석176",
+    "studentId": "20101290176",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "178",
+    "name": "정윤석177",
+    "studentId": "20101290177",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "179",
+    "name": "정윤석178",
+    "studentId": "20101290178",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "180",
+    "name": "정윤석179",
+    "studentId": "20101290179",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "181",
+    "name": "정윤석180",
+    "studentId": "20101290180",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "182",
+    "name": "정윤석181",
+    "studentId": "20101290181",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "183",
+    "name": "정윤석182",
+    "studentId": "20101290182",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "184",
+    "name": "정윤석183",
+    "studentId": "20101290183",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "185",
+    "name": "정윤석184",
+    "studentId": "20101290184",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "186",
+    "name": "정윤석185",
+    "studentId": "20101290185",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "187",
+    "name": "정윤석186",
+    "studentId": "20101290186",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "188",
+    "name": "정윤석187",
+    "studentId": "20101290187",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "189",
+    "name": "정윤석188",
+    "studentId": "20101290188",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "190",
+    "name": "정윤석189",
+    "studentId": "20101290189",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "191",
+    "name": "정윤석190",
+    "studentId": "20101290190",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "192",
+    "name": "정윤석191",
+    "studentId": "20101290191",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "193",
+    "name": "정윤석192",
+    "studentId": "20101290192",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "194",
+    "name": "정윤석193",
+    "studentId": "20101290193",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "195",
+    "name": "정윤석194",
+    "studentId": "20101290194",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "196",
+    "name": "정윤석195",
+    "studentId": "20101290195",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "197",
+    "name": "정윤석196",
+    "studentId": "20101290196",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "198",
+    "name": "정윤석197",
+    "studentId": "20101290197",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "199",
+    "name": "정윤석198",
+    "studentId": "20101290198",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "200",
+    "name": "정윤석199",
+    "studentId": "20101290199",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "201",
+    "name": "정윤석200",
+    "studentId": "20101290200",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "202",
+    "name": "정윤석201",
+    "studentId": "20101290201",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "203",
+    "name": "정윤석202",
+    "studentId": "20101290202",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "204",
+    "name": "정윤석203",
+    "studentId": "20101290203",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "205",
+    "name": "정윤석204",
+    "studentId": "20101290204",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "206",
+    "name": "정윤석205",
+    "studentId": "20101290205",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "207",
+    "name": "정윤석206",
+    "studentId": "20101290206",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "208",
+    "name": "정윤석207",
+    "studentId": "20101290207",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "209",
+    "name": "정윤석208",
+    "studentId": "20101290208",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "210",
+    "name": "정윤석209",
+    "studentId": "20101290209",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "211",
+    "name": "정윤석210",
+    "studentId": "20101290210",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "212",
+    "name": "정윤석211",
+    "studentId": "20101290211",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "213",
+    "name": "정윤석212",
+    "studentId": "20101290212",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "214",
+    "name": "정윤석213",
+    "studentId": "20101290213",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "215",
+    "name": "정윤석214",
+    "studentId": "20101290214",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "216",
+    "name": "정윤석215",
+    "studentId": "20101290215",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "217",
+    "name": "정윤석216",
+    "studentId": "20101290216",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "218",
+    "name": "정윤석217",
+    "studentId": "20101290217",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "219",
+    "name": "정윤석218",
+    "studentId": "20101290218",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "220",
+    "name": "정윤석219",
+    "studentId": "20101290219",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "221",
+    "name": "정윤석220",
+    "studentId": "20101290220",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "222",
+    "name": "정윤석221",
+    "studentId": "20101290221",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "223",
+    "name": "정윤석222",
+    "studentId": "20101290222",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "224",
+    "name": "정윤석223",
+    "studentId": "20101290223",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "225",
+    "name": "정윤석224",
+    "studentId": "20101290224",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "226",
+    "name": "정윤석225",
+    "studentId": "20101290225",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "227",
+    "name": "정윤석226",
+    "studentId": "20101290226",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "228",
+    "name": "정윤석227",
+    "studentId": "20101290227",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "229",
+    "name": "정윤석228",
+    "studentId": "20101290228",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "230",
+    "name": "정윤석229",
+    "studentId": "20101290229",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "231",
+    "name": "정윤석230",
+    "studentId": "20101290230",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "232",
+    "name": "정윤석231",
+    "studentId": "20101290231",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "233",
+    "name": "정윤석232",
+    "studentId": "20101290232",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "234",
+    "name": "정윤석233",
+    "studentId": "20101290233",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "235",
+    "name": "정윤석234",
+    "studentId": "20101290234",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "236",
+    "name": "정윤석235",
+    "studentId": "20101290235",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "237",
+    "name": "정윤석236",
+    "studentId": "20101290236",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "238",
+    "name": "정윤석237",
+    "studentId": "20101290237",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "239",
+    "name": "정윤석238",
+    "studentId": "20101290238",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "240",
+    "name": "정윤석239",
+    "studentId": "20101290239",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "241",
+    "name": "정윤석240",
+    "studentId": "20101290240",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "242",
+    "name": "정윤석241",
+    "studentId": "20101290241",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "243",
+    "name": "정윤석242",
+    "studentId": "20101290242",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "244",
+    "name": "정윤석243",
+    "studentId": "20101290243",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "245",
+    "name": "정윤석244",
+    "studentId": "20101290244",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "246",
+    "name": "정윤석245",
+    "studentId": "20101290245",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "247",
+    "name": "정윤석246",
+    "studentId": "20101290246",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "248",
+    "name": "정윤석247",
+    "studentId": "20101290247",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "249",
+    "name": "정윤석248",
+    "studentId": "20101290248",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "250",
+    "name": "정윤석249",
+    "studentId": "20101290249",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "251",
+    "name": "정윤석250",
+    "studentId": "20101290250",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "252",
+    "name": "정윤석251",
+    "studentId": "20101290251",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "253",
+    "name": "정윤석252",
+    "studentId": "20101290252",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "254",
+    "name": "정윤석253",
+    "studentId": "20101290253",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "255",
+    "name": "정윤석254",
+    "studentId": "20101290254",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "256",
+    "name": "정윤석255",
+    "studentId": "20101290255",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "257",
+    "name": "정윤석256",
+    "studentId": "20101290256",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "258",
+    "name": "정윤석257",
+    "studentId": "20101290257",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "259",
+    "name": "정윤석258",
+    "studentId": "20101290258",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "260",
+    "name": "정윤석259",
+    "studentId": "20101290259",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "261",
+    "name": "정윤석260",
+    "studentId": "20101290260",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "262",
+    "name": "정윤석261",
+    "studentId": "20101290261",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "263",
+    "name": "정윤석262",
+    "studentId": "20101290262",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "264",
+    "name": "정윤석263",
+    "studentId": "20101290263",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "265",
+    "name": "정윤석264",
+    "studentId": "20101290264",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "266",
+    "name": "정윤석265",
+    "studentId": "20101290265",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "267",
+    "name": "정윤석266",
+    "studentId": "20101290266",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "268",
+    "name": "정윤석267",
+    "studentId": "20101290267",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "269",
+    "name": "정윤석268",
+    "studentId": "20101290268",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "270",
+    "name": "정윤석269",
+    "studentId": "20101290269",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "271",
+    "name": "정윤석270",
+    "studentId": "20101290270",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "272",
+    "name": "정윤석271",
+    "studentId": "20101290271",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "273",
+    "name": "정윤석272",
+    "studentId": "20101290272",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "274",
+    "name": "정윤석273",
+    "studentId": "20101290273",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "275",
+    "name": "정윤석274",
+    "studentId": "20101290274",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "276",
+    "name": "정윤석275",
+    "studentId": "20101290275",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "277",
+    "name": "정윤석276",
+    "studentId": "20101290276",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "278",
+    "name": "정윤석277",
+    "studentId": "20101290277",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "279",
+    "name": "정윤석278",
+    "studentId": "20101290278",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "280",
+    "name": "정윤석279",
+    "studentId": "20101290279",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "281",
+    "name": "정윤석280",
+    "studentId": "20101290280",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "282",
+    "name": "정윤석281",
+    "studentId": "20101290281",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "283",
+    "name": "정윤석282",
+    "studentId": "20101290282",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "284",
+    "name": "정윤석283",
+    "studentId": "20101290283",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "285",
+    "name": "정윤석284",
+    "studentId": "20101290284",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "286",
+    "name": "정윤석285",
+    "studentId": "20101290285",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "287",
+    "name": "정윤석286",
+    "studentId": "20101290286",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "288",
+    "name": "정윤석287",
+    "studentId": "20101290287",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "289",
+    "name": "정윤석288",
+    "studentId": "20101290288",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "290",
+    "name": "정윤석289",
+    "studentId": "20101290289",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "291",
+    "name": "정윤석290",
+    "studentId": "20101290290",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "292",
+    "name": "정윤석291",
+    "studentId": "20101290291",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "293",
+    "name": "정윤석292",
+    "studentId": "20101290292",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "294",
+    "name": "정윤석293",
+    "studentId": "20101290293",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "295",
+    "name": "정윤석294",
+    "studentId": "20101290294",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "296",
+    "name": "정윤석295",
+    "studentId": "20101290295",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "297",
+    "name": "정윤석296",
+    "studentId": "20101290296",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "298",
+    "name": "정윤석297",
+    "studentId": "20101290297",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "299",
+    "name": "정윤석298",
+    "studentId": "20101290298",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "300",
+    "name": "정윤석299",
+    "studentId": "20101290299",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "301",
+    "name": "정윤석300",
+    "studentId": "20101290300",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "302",
+    "name": "정윤석301",
+    "studentId": "20101290301",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "303",
+    "name": "정윤석302",
+    "studentId": "20101290302",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "304",
+    "name": "정윤석303",
+    "studentId": "20101290303",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "305",
+    "name": "정윤석304",
+    "studentId": "20101290304",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "306",
+    "name": "정윤석305",
+    "studentId": "20101290305",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "307",
+    "name": "정윤석306",
+    "studentId": "20101290306",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "308",
+    "name": "정윤석307",
+    "studentId": "20101290307",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "309",
+    "name": "정윤석308",
+    "studentId": "20101290308",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "310",
+    "name": "정윤석309",
+    "studentId": "20101290309",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "311",
+    "name": "정윤석310",
+    "studentId": "20101290310",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "312",
+    "name": "정윤석311",
+    "studentId": "20101290311",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "313",
+    "name": "정윤석312",
+    "studentId": "20101290312",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "314",
+    "name": "정윤석313",
+    "studentId": "20101290313",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "315",
+    "name": "정윤석314",
+    "studentId": "20101290314",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "316",
+    "name": "정윤석315",
+    "studentId": "20101290315",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "317",
+    "name": "정윤석316",
+    "studentId": "20101290316",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "318",
+    "name": "정윤석317",
+    "studentId": "20101290317",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "319",
+    "name": "정윤석318",
+    "studentId": "20101290318",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "320",
+    "name": "정윤석319",
+    "studentId": "20101290319",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "321",
+    "name": "정윤석320",
+    "studentId": "20101290320",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "322",
+    "name": "정윤석321",
+    "studentId": "20101290321",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "323",
+    "name": "정윤석322",
+    "studentId": "20101290322",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "324",
+    "name": "정윤석323",
+    "studentId": "20101290323",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "325",
+    "name": "정윤석324",
+    "studentId": "20101290324",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "326",
+    "name": "정윤석325",
+    "studentId": "20101290325",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "327",
+    "name": "정윤석326",
+    "studentId": "20101290326",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "328",
+    "name": "정윤석327",
+    "studentId": "20101290327",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "329",
+    "name": "정윤석328",
+    "studentId": "20101290328",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "330",
+    "name": "정윤석329",
+    "studentId": "20101290329",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "331",
+    "name": "정윤석330",
+    "studentId": "20101290330",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "332",
+    "name": "정윤석331",
+    "studentId": "20101290331",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "333",
+    "name": "정윤석332",
+    "studentId": "20101290332",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "334",
+    "name": "정윤석333",
+    "studentId": "20101290333",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "335",
+    "name": "정윤석334",
+    "studentId": "20101290334",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "336",
+    "name": "정윤석335",
+    "studentId": "20101290335",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "337",
+    "name": "정윤석336",
+    "studentId": "20101290336",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "338",
+    "name": "정윤석337",
+    "studentId": "20101290337",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "339",
+    "name": "정윤석338",
+    "studentId": "20101290338",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "340",
+    "name": "정윤석339",
+    "studentId": "20101290339",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "341",
+    "name": "정윤석340",
+    "studentId": "20101290340",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "342",
+    "name": "정윤석341",
+    "studentId": "20101290341",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "343",
+    "name": "정윤석342",
+    "studentId": "20101290342",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "344",
+    "name": "정윤석343",
+    "studentId": "20101290343",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "345",
+    "name": "정윤석344",
+    "studentId": "20101290344",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "346",
+    "name": "정윤석345",
+    "studentId": "20101290345",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "347",
+    "name": "정윤석346",
+    "studentId": "20101290346",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "348",
+    "name": "정윤석347",
+    "studentId": "20101290347",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "349",
+    "name": "정윤석348",
+    "studentId": "20101290348",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "350",
+    "name": "정윤석349",
+    "studentId": "20101290349",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "351",
+    "name": "정윤석350",
+    "studentId": "20101290350",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "352",
+    "name": "정윤석351",
+    "studentId": "20101290351",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "353",
+    "name": "정윤석352",
+    "studentId": "20101290352",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "354",
+    "name": "정윤석353",
+    "studentId": "20101290353",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "355",
+    "name": "정윤석354",
+    "studentId": "20101290354",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "356",
+    "name": "정윤석355",
+    "studentId": "20101290355",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "357",
+    "name": "정윤석356",
+    "studentId": "20101290356",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "358",
+    "name": "정윤석357",
+    "studentId": "20101290357",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "359",
+    "name": "정윤석358",
+    "studentId": "20101290358",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "360",
+    "name": "정윤석359",
+    "studentId": "20101290359",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "361",
+    "name": "정윤석360",
+    "studentId": "20101290360",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "362",
+    "name": "정윤석361",
+    "studentId": "20101290361",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "363",
+    "name": "정윤석362",
+    "studentId": "20101290362",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "364",
+    "name": "정윤석363",
+    "studentId": "20101290363",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "365",
+    "name": "정윤석364",
+    "studentId": "20101290364",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "366",
+    "name": "정윤석365",
+    "studentId": "20101290365",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "367",
+    "name": "정윤석366",
+    "studentId": "20101290366",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "368",
+    "name": "정윤석367",
+    "studentId": "20101290367",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "369",
+    "name": "정윤석368",
+    "studentId": "20101290368",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "370",
+    "name": "정윤석369",
+    "studentId": "20101290369",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "371",
+    "name": "정윤석370",
+    "studentId": "20101290370",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "372",
+    "name": "정윤석371",
+    "studentId": "20101290371",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "373",
+    "name": "정윤석372",
+    "studentId": "20101290372",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "374",
+    "name": "정윤석373",
+    "studentId": "20101290373",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "375",
+    "name": "정윤석374",
+    "studentId": "20101290374",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "376",
+    "name": "정윤석375",
+    "studentId": "20101290375",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "377",
+    "name": "정윤석376",
+    "studentId": "20101290376",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "378",
+    "name": "정윤석377",
+    "studentId": "20101290377",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "379",
+    "name": "정윤석378",
+    "studentId": "20101290378",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "380",
+    "name": "정윤석379",
+    "studentId": "20101290379",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "381",
+    "name": "정윤석380",
+    "studentId": "20101290380",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "382",
+    "name": "정윤석381",
+    "studentId": "20101290381",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "383",
+    "name": "정윤석382",
+    "studentId": "20101290382",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "384",
+    "name": "정윤석383",
+    "studentId": "20101290383",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "385",
+    "name": "정윤석384",
+    "studentId": "20101290384",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "386",
+    "name": "정윤석385",
+    "studentId": "20101290385",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "387",
+    "name": "정윤석386",
+    "studentId": "20101290386",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "388",
+    "name": "정윤석387",
+    "studentId": "20101290387",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "389",
+    "name": "정윤석388",
+    "studentId": "20101290388",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "390",
+    "name": "정윤석389",
+    "studentId": "20101290389",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "391",
+    "name": "정윤석390",
+    "studentId": "20101290390",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "392",
+    "name": "정윤석391",
+    "studentId": "20101290391",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "393",
+    "name": "정윤석392",
+    "studentId": "20101290392",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "394",
+    "name": "정윤석393",
+    "studentId": "20101290393",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "395",
+    "name": "정윤석394",
+    "studentId": "20101290394",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "396",
+    "name": "정윤석395",
+    "studentId": "20101290395",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "397",
+    "name": "정윤석396",
+    "studentId": "20101290396",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "398",
+    "name": "정윤석397",
+    "studentId": "20101290397",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "399",
+    "name": "정윤석398",
+    "studentId": "20101290398",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "400",
+    "name": "정윤석399",
+    "studentId": "20101290399",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "401",
+    "name": "정윤석400",
+    "studentId": "20101290400",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "402",
+    "name": "정윤석401",
+    "studentId": "20101290401",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "403",
+    "name": "정윤석402",
+    "studentId": "20101290402",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "404",
+    "name": "정윤석403",
+    "studentId": "20101290403",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "405",
+    "name": "정윤석404",
+    "studentId": "20101290404",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "406",
+    "name": "정윤석405",
+    "studentId": "20101290405",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "407",
+    "name": "정윤석406",
+    "studentId": "20101290406",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "408",
+    "name": "정윤석407",
+    "studentId": "20101290407",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "409",
+    "name": "정윤석408",
+    "studentId": "20101290408",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "410",
+    "name": "정윤석409",
+    "studentId": "20101290409",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "411",
+    "name": "정윤석410",
+    "studentId": "20101290410",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "412",
+    "name": "정윤석411",
+    "studentId": "20101290411",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "413",
+    "name": "정윤석412",
+    "studentId": "20101290412",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "414",
+    "name": "정윤석413",
+    "studentId": "20101290413",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "415",
+    "name": "정윤석414",
+    "studentId": "20101290414",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "416",
+    "name": "정윤석415",
+    "studentId": "20101290415",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "417",
+    "name": "정윤석416",
+    "studentId": "20101290416",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "418",
+    "name": "정윤석417",
+    "studentId": "20101290417",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "419",
+    "name": "정윤석418",
+    "studentId": "20101290418",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "420",
+    "name": "정윤석419",
+    "studentId": "20101290419",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "421",
+    "name": "정윤석420",
+    "studentId": "20101290420",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "422",
+    "name": "정윤석421",
+    "studentId": "20101290421",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "423",
+    "name": "정윤석422",
+    "studentId": "20101290422",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "424",
+    "name": "정윤석423",
+    "studentId": "20101290423",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "425",
+    "name": "정윤석424",
+    "studentId": "20101290424",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "426",
+    "name": "정윤석425",
+    "studentId": "20101290425",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "427",
+    "name": "정윤석426",
+    "studentId": "20101290426",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "428",
+    "name": "정윤석427",
+    "studentId": "20101290427",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "429",
+    "name": "정윤석428",
+    "studentId": "20101290428",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "430",
+    "name": "정윤석429",
+    "studentId": "20101290429",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "431",
+    "name": "정윤석430",
+    "studentId": "20101290430",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "432",
+    "name": "정윤석431",
+    "studentId": "20101290431",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "433",
+    "name": "정윤석432",
+    "studentId": "20101290432",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "434",
+    "name": "정윤석433",
+    "studentId": "20101290433",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "435",
+    "name": "정윤석434",
+    "studentId": "20101290434",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "436",
+    "name": "정윤석435",
+    "studentId": "20101290435",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "437",
+    "name": "정윤석436",
+    "studentId": "20101290436",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "438",
+    "name": "정윤석437",
+    "studentId": "20101290437",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "439",
+    "name": "정윤석438",
+    "studentId": "20101290438",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "440",
+    "name": "정윤석439",
+    "studentId": "20101290439",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "441",
+    "name": "정윤석440",
+    "studentId": "20101290440",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "442",
+    "name": "정윤석441",
+    "studentId": "20101290441",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "443",
+    "name": "정윤석442",
+    "studentId": "20101290442",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "444",
+    "name": "정윤석443",
+    "studentId": "20101290443",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "445",
+    "name": "정윤석444",
+    "studentId": "20101290444",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "446",
+    "name": "정윤석445",
+    "studentId": "20101290445",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "447",
+    "name": "정윤석446",
+    "studentId": "20101290446",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "448",
+    "name": "정윤석447",
+    "studentId": "20101290447",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "449",
+    "name": "정윤석448",
+    "studentId": "20101290448",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "450",
+    "name": "정윤석449",
+    "studentId": "20101290449",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "451",
+    "name": "정윤석450",
+    "studentId": "20101290450",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "452",
+    "name": "정윤석451",
+    "studentId": "20101290451",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "453",
+    "name": "정윤석452",
+    "studentId": "20101290452",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "454",
+    "name": "정윤석453",
+    "studentId": "20101290453",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "455",
+    "name": "정윤석454",
+    "studentId": "20101290454",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "456",
+    "name": "정윤석455",
+    "studentId": "20101290455",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "457",
+    "name": "정윤석456",
+    "studentId": "20101290456",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "458",
+    "name": "정윤석457",
+    "studentId": "20101290457",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "459",
+    "name": "정윤석458",
+    "studentId": "20101290458",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "460",
+    "name": "정윤석459",
+    "studentId": "20101290459",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "461",
+    "name": "정윤석460",
+    "studentId": "20101290460",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "462",
+    "name": "정윤석461",
+    "studentId": "20101290461",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "463",
+    "name": "정윤석462",
+    "studentId": "20101290462",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "464",
+    "name": "정윤석463",
+    "studentId": "20101290463",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "465",
+    "name": "정윤석464",
+    "studentId": "20101290464",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계ㆍ자동차공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "466",
+    "name": "정윤석465",
+    "studentId": "20101290465",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "467",
+    "name": "정윤석466",
+    "studentId": "20101290466",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "468",
+    "name": "정윤석467",
+    "studentId": "20101290467",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "469",
+    "name": "정윤석468",
+    "studentId": "20101290468",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "470",
+    "name": "정윤석469",
+    "studentId": "20101290469",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "471",
+    "name": "정윤석470",
+    "studentId": "20101290470",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "472",
+    "name": "정윤석471",
+    "studentId": "20101290471",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "473",
+    "name": "정윤석472",
+    "studentId": "20101290472",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축기계설비공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "474",
+    "name": "정윤석473",
+    "studentId": "20101290473",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "475",
+    "name": "정윤석474",
+    "studentId": "20101290474",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "476",
+    "name": "정윤석475",
+    "studentId": "20101290475",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "477",
+    "name": "정윤석476",
+    "studentId": "20101290476",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "478",
+    "name": "정윤석477",
+    "studentId": "20101290477",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축공학전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "479",
+    "name": "정윤석478",
+    "studentId": "20101290478",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "480",
+    "name": "정윤석479",
+    "studentId": "20101290479",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "481",
+    "name": "정윤석480",
+    "studentId": "20101290480",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "482",
+    "name": "정윤석481",
+    "studentId": "20101290481",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(경영학전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "483",
+    "name": "정윤석482",
+    "studentId": "20101290482",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건설시스템공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "484",
+    "name": "정윤석483",
+    "studentId": "20101290483",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      }
+    ]
+  },
+  {
+    "id": "485",
+    "name": "정윤석484",
+    "studentId": "20101290484",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "486",
+    "name": "정윤석485",
+    "studentId": "20101290485",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "487",
+    "name": "정윤석486",
+    "studentId": "20101290486",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "488",
+    "name": "정윤석487",
+    "studentId": "20101290487",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "489",
+    "name": "정윤석488",
+    "studentId": "20101290488",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "490",
+    "name": "정윤석489",
+    "studentId": "20101290489",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "경영학과(글로벌테크노경영전공)",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "491",
+    "name": "정윤석490",
+    "studentId": "20101290490",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "기계시스템디자인공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      }
+    ]
+  },
+  {
+    "id": "492",
+    "name": "정윤석491",
+    "studentId": "20101290491",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "MSDE학과",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "493",
+    "name": "정윤석492",
+    "studentId": "20101290492",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "신소재공학과",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "494",
+    "name": "정윤석493",
+    "studentId": "20101290493",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "495",
+    "name": "정윤석494",
+    "studentId": "20101290494",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "",
+    "clubs": [
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "496",
+    "name": "정윤석495",
+    "studentId": "20101290495",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "안전공학과",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      }
+    ]
+  },
+  {
+    "id": "497",
+    "name": "정윤석496",
+    "studentId": "20101290496",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(산업정보시스템전공)",
+    "clubs": [
+      {
+        "name": "세마치"
+      },
+      {
+        "name": "홍길동아리"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "그레이무드"
+      }
+    ]
+  },
+  {
+    "id": "498",
+    "name": "정윤석497",
+    "studentId": "20101290497",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "건축학부(건축학전공)",
+    "clubs": [
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "499",
+    "name": "정윤석498",
+    "studentId": "20101290498",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "그레이무드"
+      },
+      {
+        "name": "Tools"
+      },
+      {
+        "name": "STCE"
+      },
+      {
+        "name": "홍길동아리"
+      }
+    ]
+  },
+  {
+    "id": "500",
+    "name": "정윤석499",
+    "studentId": "20101290499",
+    "major": "컴퓨터공학과",
+    "authority": "USER",
+    "major2": "산업공학과(ITM전공)",
+    "clubs": [
+      {
+        "name": "Tools"
+      }
+    ]
+  }
+]
