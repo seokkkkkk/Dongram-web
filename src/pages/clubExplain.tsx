@@ -9,7 +9,7 @@ const PageContainer = styled.div`
   justify-content: center; /* 수평 가운데 정렬 */
 `;
 
-export default function Home() {
+export default function clubExplain() {
   return (
     <>
       <PageContainer>
