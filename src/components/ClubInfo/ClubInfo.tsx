@@ -255,6 +255,7 @@ export const ClubInfo = ({ ClickedId }: ParentProps) => {
           />
           <Text>~</Text>
           <RecruitDate
+            disabled={changedClub?.recruit === false}
             value={changedClub ? recruitDates[1] : "로딩 중..."}
             onChange={handleRecruitEndChange}
           />
