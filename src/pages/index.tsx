@@ -15,7 +15,6 @@ const PageConatiner = styled.div`
 export default function Home() {
   return (
     <>
-    
       <PageConatiner>
         <Header />
         <Banner />

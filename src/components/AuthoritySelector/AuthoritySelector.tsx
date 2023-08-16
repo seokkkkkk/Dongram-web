@@ -31,7 +31,7 @@ export const AuthoritySelector = ({
   const handleSetSelectedOption = useCallback(
     (e: React.MouseEvent) => {
       const { innerText } = e.target as HTMLElement;
-      setAuth(innerText);
+      setAuth(`ROLE_${innerText}`);
       onAuthorityChange(innerText);
     },
     [onAuthorityChange]

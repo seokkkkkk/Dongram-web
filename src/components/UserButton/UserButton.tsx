@@ -5,6 +5,9 @@ import user from "@public/user.svg";
 import Image from "next/image";
 import styled from "@emotion/styled";
 import Link from "next/link";
+import { Logout } from "../Logout/Logout";
+import { Dispatch, SetStateAction } from "react";
+import { removeCookie } from "@/Utils/customAxios";
 const UserButtonContainer = styled.div`
   margin-left: 6rem;
   display: flex;
@@ -17,15 +20,23 @@ const SettingButtonCss = styled.div`
   margin-left: 2.7rem;
 `;
 const UserButtonCss = styled(SettingButtonCss)``; // 상속스타일 예시 ()안에는 컴포넌트
+interface Login {
+  LoginControl: Dispatch<SetStateAction<boolean>>;
+}
 
-export function UserButton() {
+export function UserButton({ LoginControl }: Login) {
+  const Logout = () => {
+    localStorage.removeItem("accessToken");
+    removeCookie("refreshToken");
+    LoginControl(false);
+  };
   return (
     <UserButtonContainer>
       <button>
         <ImageCss src={bell} alt="bell" />
       </button>
       <SettingButtonCss>
-        <button>
+        <button onClick={Logout}>
           <ImageCss src={setting} alt="bell" />
         </button>
       </SettingButtonCss>

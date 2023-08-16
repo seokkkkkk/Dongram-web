@@ -17,15 +17,16 @@ import {
   Save,
   Majors,
 } from "./UserInfo.styled";
+import { customAxios } from "@/Utils/customAxios";
 
 interface DataRow {
-  id: string;
-  name: string;
+  memberId: string;
   studentId: string;
-  major: string;
-  authority: string;
+  memberName: string;
+  major1: string;
+  role: string;
   major2: string;
-  clubs: Club[];
+  clubList: Club[];
 }
 
 interface Club {
@@ -37,22 +38,17 @@ interface ParentProps {
 }
 
 export const UserInfo = ({ ClickedId }: ParentProps) => {
-  const [data, setData] = useState<DataRow[]>([]);
   const [user, setUser] = useState<DataRow>();
   const [changedUser, setChangedUser] = useState<DataRow>();
 
   useEffect(() => {
-    import(`../../data/updated_dummy_users.json`)
+    customAxios
+      .get(`/admin/members/${ClickedId}`)
       .then((data) => {
-        setData(data.default);
-        const selectedUser = data.default.find((data) => data.id === ClickedId);
-        selectedUser
-          ? (setUser(selectedUser), setChangedUser(selectedUser))
-          : (setUser(data.default.find((data) => data.id === "1")),
-            setChangedUser(data.default.find((data) => data.id === "1")));
+        setUser(data.data), setChangedUser(data.data);
       })
       .catch((error) => {
-        console.error("에러 발생:", error);
+        console.error("에러:", error);
       });
   }, [ClickedId]);
 
@@ -60,7 +56,7 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const changedName = e.target.value;
       if (changedUser) {
-        setChangedUser({ ...changedUser, name: changedName });
+        setChangedUser({ ...changedUser, memberName: changedName });
       }
     },
     [changedUser]
@@ -77,7 +73,7 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
   const handleMajorChange = useCallback(
     (changedMajor: string) => {
       if (changedUser) {
-        setChangedUser({ ...changedUser, major: changedMajor });
+        setChangedUser({ ...changedUser, major1: changedMajor });
       }
     },
     [changedUser]
@@ -92,14 +88,14 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
   );
   const handleClubsChange = (changedClub: Club) => {
     if (changedUser) {
-      const updatedClubs = [...changedUser.clubs, changedClub];
-      setUser({ ...changedUser, clubs: updatedClubs });
+      const updatedclubList = [...changedUser.clubList, changedClub];
+      setUser({ ...changedUser, clubList: updatedclubList });
     }
   };
   const handleAuthorityChange = useCallback(
     (changedAuthority: string) => {
       if (changedUser) {
-        setChangedUser({ ...changedUser, authority: changedAuthority });
+        setChangedUser({ ...changedUser, role: changedAuthority });
       }
     },
     [changedUser]
@@ -117,7 +113,7 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
       <Body>
         <Text>이름</Text>
         <Value
-          value={changedUser ? changedUser.name : "로딩 중..."}
+          value={changedUser ? changedUser.memberName : "로딩 중..."}
           type="text"
           onChange={handleNameChange}
         />
@@ -130,7 +126,7 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
         <Text>학과</Text>
         <Majors>
           <AdminMajorSelector
-            major={changedUser ? changedUser.major : "로딩 중..."}
+            major={changedUser ? changedUser.major1 : "로딩 중..."}
             major2={changedUser ? changedUser.major2 : ""}
             onMajorChange={handleMajorChange}
             onMajor2Change={handleMajor2Change}
@@ -139,14 +135,14 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
         <Text>소속 동아리</Text>
         <Clubs>
           {changedUser
-            ? changedUser.clubs.map((club, index) => (
+            ? changedUser.clubList.map((club, index) => (
                 <ClubBox key={index}>{club.name}</ClubBox>
               ))
             : "로딩 중..."}
         </Clubs>
         <Text>권한</Text>
         <AuthoritySelector
-          authority={changedUser ? changedUser.authority : "로딩 중..."}
+          authority={changedUser ? changedUser.role : "로딩 중..."}
           onAuthorityChange={handleAuthorityChange}
         />
         <Buttons>

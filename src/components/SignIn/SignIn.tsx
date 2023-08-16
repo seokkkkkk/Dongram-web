@@ -1,6 +1,6 @@
 import { InputLarge } from "@components/InputLarge/InputLarge";
 import { Password } from "@components/InputLargeWithShowOption/InputLargeWithShowOption";
-import { useState, useCallback } from "react";
+import { useState, useCallback, Dispatch, SetStateAction } from "react";
 import { customAxios } from "@/Utils/customAxios";
 import { setCookie } from "@/Utils/customAxios";
 import {
@@ -20,9 +20,15 @@ interface Modal {
   signInModal: boolean;
   toggleSignUp: () => void;
   toggleSignIn: () => void;
+  LoginControl: Dispatch<SetStateAction<boolean>>;
 }
 
-export function SignIn({ signInModal, toggleSignUp, toggleSignIn }: Modal) {
+export function SignIn({
+  signInModal,
+  toggleSignUp,
+  toggleSignIn,
+  LoginControl,
+}: Modal) {
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
 
@@ -32,7 +38,7 @@ export function SignIn({ signInModal, toggleSignUp, toggleSignIn }: Modal) {
       password: pw,
     };
     customAxios //api post 예시
-      .post("http://13.125.162.181:8080/login", formData)
+      .post("/login", formData)
       .then((res) => {
         console.log(res.data);
         const Token = res.data.data;
@@ -42,11 +48,12 @@ export function SignIn({ signInModal, toggleSignUp, toggleSignIn }: Modal) {
         localStorage.setItem("accessToken", Token.accessToken);
         setCookie("refreshToken", Token.refreshToken);
         toggleSignIn();
+        LoginControl(true);
       })
       .catch((error) => {
         alert("저장 실패");
       });
-  }, [id, pw, toggleSignIn]);
+  }, [id, pw, toggleSignIn, LoginControl]);
 
   return signInModal ? (
     <PageContainer>

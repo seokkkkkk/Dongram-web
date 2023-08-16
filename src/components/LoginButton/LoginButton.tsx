@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, Dispatch, SetStateAction } from "react";
 import { SignUp } from "@components/SignUp/SignUp";
 import { SignIn } from "@components/SignIn/SignIn";
 import {
@@ -7,7 +7,11 @@ import {
   PasswordButtonCss,
 } from "./LoginButton.styled";
 
-export function LoginButton() {
+interface Login {
+  LoginControl: Dispatch<SetStateAction<boolean>>;
+}
+
+export function LoginButton({ LoginControl }: Login) {
   const [signInModal, setSignInModal] = useState(false);
   const [signUpModal, setSignUpModal] = useState(false);
   const toggleSignUp = () => setSignUpModal(!signUpModal);
@@ -36,6 +40,7 @@ export function LoginButton() {
         signInModal={signInModal}
         toggleSignUp={toggleAll}
         toggleSignIn={toggleSignIn}
+        LoginControl={LoginControl}
       />
     </>
   );

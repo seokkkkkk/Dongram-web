@@ -11,6 +11,10 @@ export const getCookie = (name: string) => {
   return cookies.get(name);
 };
 
+export const removeCookie = (name: string) => {
+  return cookies.remove(name);
+};
+
 export const customAxios = axios.create({
   baseURL: `${process.env.NEXT_PUBLIC_API_BASEURL}`,
   headers: {
