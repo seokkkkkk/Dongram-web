@@ -5,9 +5,9 @@ import user from "@public/user.svg";
 import Image from "next/image";
 import styled from "@emotion/styled";
 import Link from "next/link";
-import { Logout } from "../Logout/Logout";
 import { Dispatch, SetStateAction } from "react";
 import { removeCookie } from "@/Utils/customAxios";
+import { customAxios } from "@/Utils/customAxios";
 const UserButtonContainer = styled.div`
   margin-left: 6rem;
   display: flex;
@@ -26,10 +26,16 @@ interface Login {
 
 export function UserButton({ LoginControl }: Login) {
   const Logout = () => {
-    localStorage.removeItem("accessToken");
-    removeCookie("refreshToken");
-    LoginControl(false);
+    customAxios //api post 예시
+      .get("/clubs/1")
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
+
   return (
     <UserButtonContainer>
       <button>
