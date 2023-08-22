@@ -27,7 +27,7 @@ interface Login {
 export function UserButton({ LoginControl }: Login) {
   const Logout = () => {
     customAxios //api post 예시
-      .get("/clubs/1")
+      .get("/colleges/1")
       .then((res) => {
         console.log(res.data);
       })

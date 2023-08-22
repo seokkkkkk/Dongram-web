@@ -18,7 +18,7 @@ export const removeCookie = (name: string) => {
 export const customAxios = axios.create({
   baseURL: `${process.env.NEXT_PUBLIC_API_BASEURL}`,
   headers: {
-    Authorization: `${
+    Access_Token: `${
       typeof window != "undefined" ? localStorage.getItem("accessToken") : ""
     }`,
   },
@@ -45,8 +45,8 @@ customAxios.interceptors.response.use(
         const newToken = response.data;
         localStorage.setItem("accessToken", newToken.accessToken);
         setCookie("refreshToken", newToken.refreshToken);
-        customAxios.defaults.headers.common.Authorization = `${newToken.accessToken}`;
-        originRequest.headers.Authorization = `${newToken.accessToken}`;
+        customAxios.defaults.headers.common.Access_Token = `${newToken.accessToken}`;
+        originRequest.headers.Access_Token = `${newToken.accessToken}`;
         return axios(originRequest);
       } else if (response.status === 401) {
         alert("로그인 실패");
