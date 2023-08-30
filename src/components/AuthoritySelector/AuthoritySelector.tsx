@@ -31,7 +31,7 @@ export const AuthoritySelector = ({
   const handleSetSelectedOption = useCallback(
     (e: React.MouseEvent) => {
       const { innerText } = e.target as HTMLElement;
-      setAuth(`ROLE_${innerText}`);
+      setAuth(innerText);
       onAuthorityChange(innerText);
     },
     [onAuthorityChange]
@@ -44,8 +44,8 @@ export const AuthoritySelector = ({
         <Selected>{auth}</Selected>
       </SelectedBox>
       <Options show={showOptions} onClick={BoxClick}>
-        <Option onClick={handleSetSelectedOption}>USER</Option>
-        <Option onClick={handleSetSelectedOption}>ADMIN</Option>
+        <Option onClick={handleSetSelectedOption}>ROLE_USER</Option>
+        <Option onClick={handleSetSelectedOption}>ROLE_ADMIN</Option>
       </Options>
     </SelectBox>
   );

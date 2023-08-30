@@ -14,6 +14,7 @@ import {
   AlreadyHaveAccount,
   SubmitButton,
 } from "./SignUp.styled";
+import axios from "axios";
 
 interface Modal {
   signUpModal: boolean;
@@ -43,7 +44,7 @@ export function SignUp({ signUpModal, toggleSignUp, toggleSignIn }: Modal) {
       major2: major2,
     };
 
-    customAxios //api post 예시
+    axios //api post 예시
       .post("http://13.125.162.181:8080/join", formData)
       .then((res) => {
         console.log("저장 완료");

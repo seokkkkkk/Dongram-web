@@ -16,6 +16,7 @@ import {
   SearchLine,
   Container,
 } from "./ClubManageTable.styled";
+import { customAxios } from "@/Utils/customAxios";
 
 interface DataRow {
   id: string;
@@ -178,9 +179,10 @@ export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
   //여기까지
 
   useEffect(() => {
-    import(`../../data/clubData2.json`)
-      .then((data) => setData(data.default))
-      .catch((error) => console.error("에러 발생:", error));
+    customAxios
+      .get("/clubs/all")
+      .then((response) => (setData(response.data.data), console.log(response)))
+      .catch((error) => console.log("에러:", error));
   }, []);
 
   return (

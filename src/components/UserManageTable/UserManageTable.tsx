@@ -78,7 +78,10 @@ export const UserManageTable = ({ ParentClickedId }: ParentProps) => {
           break;
       }
 
-      return valueToSearch.toLowerCase().includes(searchText.toLowerCase());
+      return valueToSearch
+        .toString()
+        .toLowerCase()
+        .includes(searchText.toLowerCase());
     });
   }, [data, searchText, searchOption]);
 
@@ -180,7 +183,7 @@ export const UserManageTable = ({ ParentClickedId }: ParentProps) => {
   useEffect(() => {
     customAxios
       .get("/admin/members/all")
-      .then((data) => setData(data.data))
+      .then((response) => setData(response.data.data))
       .catch((error) => console.log("에러:", error));
   }, []);
 

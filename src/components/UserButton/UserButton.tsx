@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Dispatch, SetStateAction } from "react";
 import { removeCookie } from "@/Utils/customAxios";
 import { customAxios } from "@/Utils/customAxios";
+import axios from "axios";
 const UserButtonContainer = styled.div`
   margin-left: 6rem;
   display: flex;
@@ -27,7 +28,11 @@ interface Login {
 export function UserButton({ LoginControl }: Login) {
   const Logout = () => {
     customAxios //api post 예시
-      .get("/colleges/1")
+      .get("/members/1", {
+        headers: {
+          Access_Token: `${localStorage.getItem("accessToken")}`,
+        },
+      })
       .then((res) => {
         console.log(res.data);
       })

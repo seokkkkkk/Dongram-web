@@ -44,8 +44,8 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
   useEffect(() => {
     customAxios
       .get(`/admin/members/${ClickedId}`)
-      .then((data) => {
-        setUser(data.data), setChangedUser(data.data);
+      .then((response) => {
+        setUser(response.data.data), setChangedUser(response.data.data);
       })
       .catch((error) => {
         console.error("에러:", error);
@@ -134,7 +134,7 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
         </Majors>
         <Text>소속 동아리</Text>
         <Clubs>
-          {changedUser
+          {changedUser && changedUser.clubList
             ? changedUser.clubList.map((club, index) => (
                 <ClubBox key={index}>{club.name}</ClubBox>
               ))

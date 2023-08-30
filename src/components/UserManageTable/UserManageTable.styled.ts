@@ -27,6 +27,7 @@ export const TableText = styled.div<{ isId?: boolean }>`
   line-height: 110%;
   flex: ${(props) => (props.isId ? 0.5 : 1)};
   text-align: center;
+  white-space: nowrap;
 `;
 export const TableTitle = styled.div`
   display: flex;
