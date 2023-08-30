@@ -23,6 +23,14 @@ export const customAxios = axios.create({
     }`,
   },
 });
+customAxios.interceptors.request.use(function (config) {
+  const accessToken = localStorage.getItem("accessToken");
+  if (accessToken == "") {
+    console.log(localStorage.getItem("accessToken"));
+    config.headers.common["Access_Token"] = accessToken;
+  }
+  return config;
+});
 
 //200번대 응답이 아닐 경우 error
 customAxios.interceptors.response.use(
@@ -30,10 +38,7 @@ customAxios.interceptors.response.use(
     return response;
   },
   async (error) => {
-    const {
-      config,
-      response: { status },
-    } = error;
+    const { config, response: status } = error;
     //401 = 토큰 만료
     if (status == 401) {
       const originRequest = config;
@@ -52,7 +57,7 @@ customAxios.interceptors.response.use(
         const newToken = response.data;
         console.log(response);
         localStorage.setItem("accessToken", newToken);
-        customAxios.defaults.headers.Access_Token = `${newToken}`;
+        customAxios.defaults.headers.common.Access_Token = `${newToken}`;
         originRequest.headers.Access_Token = `${newToken.accessToken}`;
         return axios(originRequest);
       } else if (response.status === 401) {

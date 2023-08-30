@@ -22,6 +22,7 @@ import {
   Cancle,
   Save,
 } from "./ClubInfo.styled";
+import { customAxios } from "@/Utils/customAxios";
 
 interface DataRow {
   id: string;
@@ -157,15 +158,16 @@ export const ClubInfo = ({ ClickedId }: ParentProps) => {
   }, [changedClub]);
 
   useEffect(() => {
-    import(`../../data/clubData2.json`)
-      .then((data) => {
-        const clubs = data.default;
+    customAxios
+      .get(`/clubs/${ClickedId}`)
+      .then((response) => {
+        const clubs = response.data.data;
         setData(clubs);
         let selectedClub;
         if (ClickedId) {
-          selectedClub = clubs.find((club) => club.id === ClickedId);
+          selectedClub = clubs.find((club: any) => club.id === ClickedId);
         } else {
-          selectedClub = clubs.find((club) => club.id === "1");
+          selectedClub = clubs.find((club: any) => club.id === "1");
         }
         setClub(selectedClub);
         setChangedClub(selectedClub);
