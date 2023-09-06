@@ -38,7 +38,11 @@ customAxios.interceptors.response.use(
     return response;
   },
   async (error) => {
-    const { config, response: status } = error;
+    const {
+      config,
+      response: { status },
+    } = error;
+    console.log(status);
     //401 = 토큰 만료
     if (status == 401) {
       const originRequest = config;
@@ -46,6 +50,7 @@ customAxios.interceptors.response.use(
       const refreshToken = getCookie("refreshToken");
       const response = await axios.post(
         "http://13.125.162.181:8080/refreshToken",
+        {},
         {
           headers: {
             Refresh_Token: `${refreshToken}`,
@@ -53,12 +58,11 @@ customAxios.interceptors.response.use(
         }
       );
       //refreshToken 요청 성공
-      if (response.status === 201) {
-        const newToken = response.data;
-        console.log(response);
+      if (response.status === 200) {
+        const newToken = response.data.data;
         localStorage.setItem("accessToken", newToken);
         customAxios.defaults.headers.common.Access_Token = `${newToken}`;
-        originRequest.headers.Access_Token = `${newToken.accessToken}`;
+        originRequest.headers.Access_Token = `${newToken}`;
         return axios(originRequest);
       } else if (response.status === 401) {
         alert("로그인 실패");
