@@ -28,10 +28,10 @@ export default function clubPage() {
       <Header />
       <div>
         <College>
-          <Categories filePath="college" />
+          <Categories filePath="/colleges/all" fieldName="collegeName" />
         </College>
         <Department>
-          <Categories filePath="department" />
+          <Categories filePath="/division/all" fieldName="divisionName" />
         </Department>
       </div>
       <Boarder />

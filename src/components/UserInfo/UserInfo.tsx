@@ -46,6 +46,7 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
       .get(`/admin/members/${ClickedId}`)
       .then((response) => {
         setUser(response.data.data), setChangedUser(response.data.data);
+        console.log(response.data.data);
       })
       .catch((error) => {
         console.error("에러:", error);
@@ -136,7 +137,7 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
         <Clubs>
           {changedUser && changedUser.clubList
             ? changedUser.clubList.map((club, index) => (
-                <ClubBox key={index}>{club.name}</ClubBox>
+                <ClubBox key={index}>{club.toString()}</ClubBox>
               ))
             : "로딩 중..."}
         </Clubs>

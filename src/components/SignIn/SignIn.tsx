@@ -41,7 +41,6 @@ export function SignIn({
     axios //api post 예시
       .post("http://13.125.162.181:8080/login", formData)
       .then((res) => {
-        alert(res.data);
         const Token = res.data.data;
         axios.defaults.headers.common["Access_Token"] = `${Token.accessToken}`;
         localStorage.setItem("accessToken", Token.accessToken);

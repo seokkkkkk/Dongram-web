@@ -183,7 +183,9 @@ export const UserManageTable = ({ ParentClickedId }: ParentProps) => {
   useEffect(() => {
     customAxios
       .get("/admin/members/all")
-      .then((response) => setData(response.data.data))
+      .then((response) => {
+        setData(response.data.data), console.log(response.data.data);
+      })
       .catch((error) => console.log("에러:", error));
   }, []);
 
