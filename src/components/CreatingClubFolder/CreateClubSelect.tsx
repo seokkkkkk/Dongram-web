@@ -1,4 +1,3 @@
-//sttyled 보류
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import styled from "@emotion/styled";
 
@@ -18,13 +17,13 @@ interface MajorData {
 }
 
 export function CreateClubSelect({
-  dep, //
+  dep,
   filePath,
   college,
   major,
   setCollege,
   setMajor,
-  setDep, //
+  setDep,
 }: InputData) {
   const [colleges, setColleges] = useState<string[]>([]); //json에서 받아오는 배열인가
   const [majors, setMajors] = useState<string[]>([]);
@@ -85,9 +84,7 @@ export function CreateClubSelect({
               className="w-[21.2rem] h-[2.2rem] text-[1.6rem] bg-transparent outline-none hover:cursor-pointer"
             >
               <option disabled value="">
-                <span className="text-cool-gray-60 font-roboto text-base font-medium leading-[140%]">
-                  분류
-                </span>
+                분류
               </option>
               {colleges
                 .filter((college) => college !== "분과") //분과는 안읽히게 처리
@@ -109,9 +106,7 @@ export function CreateClubSelect({
               disabled={!college}
             >
               <option disabled value="">
-                <span className="text-cool-gray-60 font-roboto text-base font-medium leading-[140%]">
-                  전공
-                </span>
+                전공
               </option>
               {majors.map((major, index) => (
                 <option key={index} value={major}>
@@ -122,7 +117,6 @@ export function CreateClubSelect({
           </div>
         </div>
 
-        {/* 분과생성기 */}
         <div className="ml-[3.2rem]">
           <LabelText>분과</LabelText>
           <div className="flex w-24.3rem h-4.8rem p-3 items-center gap-2 flex-shrink-0 border border-solid border-cool-gray-30 bg-white rounded-md ">
@@ -133,9 +127,7 @@ export function CreateClubSelect({
               disabled={!college}
             >
               <option disabled value="">
-                <span className="text-cool-gray-60 font-roboto text-base font-medium leading-[140%]">
-                  분과
-                </span>
+                분과
               </option>
               {deps.map((dep, index) => (
                 <option key={index} value={dep}>
