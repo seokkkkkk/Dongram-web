@@ -32,20 +32,26 @@ export function CreateClubBottom() {
 
   useEffect(() => {
     //날짜 잘못설정하면 빠꾸치게하기
-    setRecruitDate(recruitDateFrom + " ~ " + recruitDateTo); //onClick에 두면 느려서 DateTo값이 읽히지 않음
-    if (recruitDate === " ~ ") {
-      setRecruitDate("");
-    } // 기간을 설정 안했으면 기간을 공백으로 설정
+    console.log("ㅡㅡㅡuseEffect To시작ㅡㅡㅡ");
+    console.log({ recruitDateFrom }); //추가확인
+    console.log({ recruitDateTo }); //추가확인
+    console.log({ recruitDate }); //추가확인
 
     const startDate = new Date(recruitDateFrom);
     const endDate = new Date(recruitDateTo);
+
+    if (recruitDateFrom !== "" && recruitDateTo !== "") {
+      setRecruitDate(recruitDateFrom + " ~ " + recruitDateTo); //dateFrom와 To에 값이 있을 때만 찐date값 설정하기
+      console.log({ recruitDate }); //추가확인
+    }
     if (startDate > endDate) {
       setRecruitDateFrom("");
       setRecruitDateTo("");
       setRecruitDate("");
       alert("날짜를 다시 확인해주세요");
     }
-  }, [recruitDateTo]);
+    console.log("ㅡㅡㅡuseEffect To끝ㅡㅡㅡ");
+  }, [recruitDateTo, recruitDateFrom, recruitDate]);
 
   const onDelete = () => {
     setClubIntroInput("");
@@ -63,6 +69,9 @@ export function CreateClubBottom() {
   };
 
   const onSubmit = useCallback(() => {
+    if (recruitDate === " ~ ") {
+      setRecruitDate("");
+    } // 기간을 설정 안했으면 기간을 공백으로 설정
     //데이터 전송함수, 마지막 버튼에 작용시키면 됨
     const formData = {
       clubName: clubName,
@@ -73,19 +82,20 @@ export function CreateClubBottom() {
       recruitmentPeriod: recruitDate,
       clubIntroduction: clubIntroduction,
     };
+    console.log("ㅡㅡㅡ제출ㅡㅡㅡ");
+    console.log({ clubName });
+    console.log({ col });
+    console.log({ maj });
+    console.log({ dep });
+    console.log({ onRecruit });
+    console.log({ recruitDate });
+    console.log({ clubIntroduction });
+    // 객체가 잘 저장되었는지 확인해보기
 
     customAxios //api post 예시
       .post("/adfs", formData) //여기에 pst주소입력
       .then((res) => {
         console.log("저장 완료");
-        console.log({ clubName });
-        console.log({ col });
-        console.log({ maj });
-        console.log({ dep });
-        console.log({ onRecruit });
-        console.log({ recruitDate });
-        console.log({ clubIntroduction });
-        // 객체가 잘 저장되었는지 확인해보기
       })
       .catch((error) => {
         console.log("저장 실패");

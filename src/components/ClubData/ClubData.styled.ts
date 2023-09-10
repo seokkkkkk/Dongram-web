@@ -68,7 +68,7 @@ export const ClubExplainTextGrey = styled.span`
 export const ClubExplainTextBlack = styled(ClubExplainTextGrey)`
   //상속 개념 적용
   color: #000;
-  width: 15.7rem;
+  width: 19rem;
   height: 3.1rem;
 `;
 export const RegisterButton = styled.button`
