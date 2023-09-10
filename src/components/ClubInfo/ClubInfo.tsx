@@ -25,16 +25,15 @@ import {
 import { customAxios } from "@/Utils/customAxios";
 
 interface DataRow {
-  id: string;
-  name: string;
+  clubId: string;
+  clubName: string;
   admin: string;
-  major: string;
-  date: string;
+  clubCreated: string;
   college: string;
-  department: string;
-  recruit: boolean;
-  recruitDate: string;
-  introduction: string;
+  division: string;
+  recruitment: boolean;
+  recruitmentPeriod: string;
+  content: string;
 }
 
 interface ParentProps {
@@ -60,7 +59,7 @@ export const ClubInfo = ({ ClickedId }: ParentProps) => {
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const changedName = e.target.value;
       if (changedClub) {
-        setChangedClub({ ...changedClub, name: changedName });
+        setChangedClub({ ...changedClub, clubName: changedName });
       }
     },
     [changedClub]
@@ -72,7 +71,6 @@ export const ClubInfo = ({ ClickedId }: ParentProps) => {
         if (changedCollege === "중앙동아리") {
           setChangedClub({
             ...changedClub,
-            major: "",
             college: changedCollege,
           });
         } else {
@@ -82,20 +80,11 @@ export const ClubInfo = ({ ClickedId }: ParentProps) => {
     },
     [changedClub]
   );
-  const handleMajorChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      const changedMajor = e.target.value;
-      if (changedClub) {
-        setChangedClub({ ...changedClub, major: changedMajor });
-      }
-    },
-    [changedClub]
-  );
   const handleDepartChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const changedDepart = e.target.value;
       if (changedClub) {
-        setChangedClub({ ...changedClub, department: changedDepart });
+        setChangedClub({ ...changedClub, division: changedDepart });
       }
     },
     [changedClub]
@@ -104,7 +93,7 @@ export const ClubInfo = ({ ClickedId }: ParentProps) => {
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const changedIntro = e.target.value;
       if (changedClub) {
-        setChangedClub({ ...changedClub, introduction: changedIntro });
+        setChangedClub({ ...changedClub, content: changedIntro });
       }
     },
     [changedClub]
@@ -117,7 +106,7 @@ export const ClubInfo = ({ ClickedId }: ParentProps) => {
         newRecruitDates[0] = changedDate;
         setRecruitDates(newRecruitDates);
         const changedDates = recruitDates[0] + "~" + recruitDates[1];
-        setChangedClub({ ...changedClub, recruitDate: changedDates });
+        setChangedClub({ ...changedClub, recruitmentPeriod: changedDates });
       }
     },
     [changedClub, recruitDates]
@@ -130,24 +119,24 @@ export const ClubInfo = ({ ClickedId }: ParentProps) => {
         newRecruitDates[1] = changedDate;
         setRecruitDates(newRecruitDates);
         const changedDates = recruitDates[0] + "~" + recruitDates[1];
-        setChangedClub({ ...changedClub, recruitDate: changedDates });
+        setChangedClub({ ...changedClub, recruitmentPeriod: changedDates });
       }
     },
     [changedClub, recruitDates]
   );
   const handleRecruitChange = useCallback(() => {
     if (changedClub) {
-      if (changedClub.recruit === true) {
-        changedClub.recruitDate === "";
+      if (changedClub.recruitment === true) {
+        changedClub.recruitmentPeriod === "";
         const newRecruitDates = ["", ""];
         setRecruitDates(newRecruitDates);
       }
-      setChangedClub({ ...changedClub, recruit: !changedClub.recruit });
+      setChangedClub({ ...changedClub, recruitment: !changedClub.recruitment });
     }
   }, [changedClub]);
   const handelCancleClick = useCallback(() => {
     setChangedClub(club);
-    const dates = club?.recruitDate.split("~") || [];
+    const dates = club?.recruitmentPeriod.split("~") || [];
     if (dates.length === 1 && dates[0] === "") {
       dates.push("");
     }
@@ -161,17 +150,10 @@ export const ClubInfo = ({ ClickedId }: ParentProps) => {
     customAxios
       .get(`/clubs/${ClickedId}`)
       .then((response) => {
-        const clubs = response.data.data;
-        setData(clubs);
-        let selectedClub;
-        if (ClickedId) {
-          selectedClub = clubs.find((club: any) => club.id === ClickedId);
-        } else {
-          selectedClub = clubs.find((club: any) => club.id === "1");
-        }
-        setClub(selectedClub);
-        setChangedClub(selectedClub);
-        const dates = selectedClub?.recruitDate?.split("~") || [];
+        setClub(response.data.data);
+        setChangedClub(response.data.data);
+        console.log(response.data.data);
+        const dates = club?.recruitmentPeriod?.split("~") || [];
         if (dates.length === 1 && dates[0] === "") {
           dates.push("");
         }
@@ -180,7 +162,7 @@ export const ClubInfo = ({ ClickedId }: ParentProps) => {
       .catch((error) => {
         console.error("에러 발생:", error);
       });
-  }, [ClickedId]);
+  }, [ClickedId, club?.recruitmentPeriod]);
 
   return (
     <ClubContainer>
@@ -198,7 +180,7 @@ export const ClubInfo = ({ ClickedId }: ParentProps) => {
           <ClubRow>
             <Text>신청일</Text>
             <Date
-              value={changedClub ? changedClub.date : "로딩 중..."}
+              value={changedClub ? changedClub.clubCreated : "로딩 중..."}
               type="text"
               readOnly
             />
@@ -207,7 +189,7 @@ export const ClubInfo = ({ ClickedId }: ParentProps) => {
         <ClubRow2>
           <Text2>동아리명</Text2>
           <ClubName
-            value={changedClub ? changedClub.name : "로딩 중..."}
+            value={changedClub ? changedClub.clubName : "로딩 중..."}
             type="text"
             onChange={handleNameChange}
           />
@@ -222,42 +204,34 @@ export const ClubInfo = ({ ClickedId }: ParentProps) => {
             />
           </ClubRow2>
           <ClubRow2>
-            <Text2>전공</Text2>
+            <Text2>분과</Text2>
             <Value
-              value={changedClub ? changedClub.major : ""}
+              value={changedClub ? changedClub.division : "로딩 중..."}
               type="text"
-              onChange={handleMajorChange}
-              disabled={changedClub?.college === "중앙동아리"}
+              onChange={handleDepartChange}
             />
           </ClubRow2>
         </ClubCol>
-        <ClubRow2>
-          <Text2>분과</Text2>
-          <Value
-            value={changedClub ? changedClub.department : "로딩 중..."}
-            type="text"
-            onChange={handleDepartChange}
-          />
-        </ClubRow2>
+
         <ClubRow>
           <Text>모집여부</Text>
           <CheckBox
             type="checkbox"
             name="recruit"
-            checked={changedClub?.recruit}
+            checked={changedClub?.recruitment}
             onClick={handleRecruitChange}
           />
         </ClubRow>
         <ClubRow>
           <Text>모집기간</Text>
           <RecruitDate
-            disabled={changedClub?.recruit === false}
+            disabled={changedClub?.recruitment === false}
             value={changedClub ? recruitDates[0] : "로딩 중..."}
             onChange={handleRecruitStartChange}
           />
           <Text>~</Text>
           <RecruitDate
-            disabled={changedClub?.recruit === false}
+            disabled={changedClub?.recruitment === false}
             value={changedClub ? recruitDates[1] : "로딩 중..."}
             onChange={handleRecruitEndChange}
           />
@@ -265,7 +239,7 @@ export const ClubInfo = ({ ClickedId }: ParentProps) => {
         <ClubRow2>
           <Text2>본문</Text2>
           <Introduction
-            value={changedClub ? changedClub.introduction : "로딩 중..."}
+            value={changedClub ? changedClub.content : "로딩 중..."}
             onChange={handleIntroChange}
           />
         </ClubRow2>

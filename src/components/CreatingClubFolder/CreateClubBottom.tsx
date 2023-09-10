@@ -45,7 +45,7 @@ export function CreateClubBottom() {
       setRecruitDate("");
       alert("날짜를 다시 확인해주세요");
     }
-  }, [recruitDateTo]);
+  }, [recruitDateTo, recruitDate, recruitDateFrom]);
 
   const onDelete = () => {
     setClubIntroInput("");

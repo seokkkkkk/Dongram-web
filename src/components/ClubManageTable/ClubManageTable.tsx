@@ -19,7 +19,7 @@ import {
 import { customAxios } from "@/Utils/customAxios";
 
 interface DataRow {
-  id: string;
+  clubId: string;
   name: string;
   admin: string;
   major: string;
@@ -61,7 +61,7 @@ export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
       let valueToSearch = "";
       switch (searchOption) {
         case "ID":
-          valueToSearch = item.id;
+          valueToSearch = item.clubId;
           break;
         case "이름":
           valueToSearch = item.name;
@@ -206,8 +206,8 @@ export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
           {currentData.map((item, rowIndex) => (
             <TableRow
               key={rowIndex}
-              onClick={() => handleClicked(item.id)}
-              clicked={item.id === clickedId}
+              onClick={() => handleClicked(item.clubId)}
+              clicked={item.clubId === clickedId}
             >
               {Object.values(item).map((value, colIndex) => {
                 if (colIndex < 5) {

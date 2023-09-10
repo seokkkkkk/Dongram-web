@@ -42,7 +42,7 @@ export function Header() {
         </Link>
         <BoardContainer>
           <FreeBoardText>자유게시판</FreeBoardText>
-          <Link href="../clubPage">
+          <Link href="../ClubPage">
             <ClubText>동아리정보</ClubText>
           </Link>
           <ClubText>내 동아리</ClubText>

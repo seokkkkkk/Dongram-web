@@ -85,7 +85,7 @@ export function CreateClubSelect({
               className="w-[21.2rem] h-[2.2rem] text-[1.6rem] bg-transparent outline-none hover:cursor-pointer"
             >
               <option disabled value="">
-                <span className="text-cool-gray-60 font-roboto text-base font-normal font-medium leading-[140%]">
+                <span className="text-cool-gray-60 font-roboto text-base font-medium leading-[140%]">
                   분류
                 </span>
               </option>
@@ -109,7 +109,7 @@ export function CreateClubSelect({
               disabled={!college}
             >
               <option disabled value="">
-                <span className="text-cool-gray-60 font-roboto text-base font-normal font-medium leading-[140%]">
+                <span className="text-cool-gray-60 font-roboto text-base font-medium leading-[140%]">
                   전공
                 </span>
               </option>
@@ -133,7 +133,7 @@ export function CreateClubSelect({
               disabled={!college}
             >
               <option disabled value="">
-                <span className="text-cool-gray-60 font-roboto text-base font-normal font-medium leading-[140%]">
+                <span className="text-cool-gray-60 font-roboto text-base font-medium leading-[140%]">
                   분과
                 </span>
               </option>

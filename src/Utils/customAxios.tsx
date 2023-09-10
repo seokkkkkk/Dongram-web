@@ -23,14 +23,6 @@ export const customAxios = axios.create({
     }`,
   },
 });
-customAxios.interceptors.request.use(function (config) {
-  const accessToken = localStorage.getItem("accessToken");
-  if (accessToken == "") {
-    console.log(localStorage.getItem("accessToken"));
-    config.headers.common["Access_Token"] = accessToken;
-  }
-  return config;
-});
 
 //200번대 응답이 아닐 경우 error
 customAxios.interceptors.response.use(
