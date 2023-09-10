@@ -1,7 +1,14 @@
 import { AuthoritySelector } from "../AuthoritySelector/AuthoritySelector";
 import { AdminMajorSelector } from "../AdminMajorSelector/AdminMajorSelector";
 import placeholder from "@public/placeholder.png";
-import React, { EventHandler, useCallback, useEffect, useState } from "react";
+import React, {
+  Dispatch,
+  EventHandler,
+  SetStateAction,
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
 import {
   UserContainer,
   UserImage,
@@ -35,9 +42,10 @@ interface Club {
 
 interface ParentProps {
   ClickedId: string;
+  setClickedId: Dispatch<SetStateAction<string>>;
 }
 
-export const UserInfo = ({ ClickedId }: ParentProps) => {
+export const UserInfo = ({ ClickedId, setClickedId }: ParentProps) => {
   const [user, setUser] = useState<DataRow>();
   const [changedUser, setChangedUser] = useState<DataRow>();
 
@@ -101,6 +109,12 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
     },
     [changedUser]
   );
+  const handelDeleteClick = useCallback(() => {
+    customAxios
+      .delete(`admin/member/${ClickedId}`)
+      .catch((error) => console.error("에러: ", error));
+    setClickedId("1");
+  }, [setClickedId, ClickedId]);
   const handelCancleClick = useCallback(() => {
     setChangedUser(user);
   }, [user]);
@@ -147,7 +161,7 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
           onAuthorityChange={handleAuthorityChange}
         />
         <Buttons>
-          <Delete>회원삭제</Delete>
+          <Delete onClick={handelDeleteClick}>회원삭제</Delete>
           <CompleteButtons>
             <Cancle onClick={handelCancleClick}>취소</Cancle>
             <Save onClick={handleSaveClick}>저장</Save>
