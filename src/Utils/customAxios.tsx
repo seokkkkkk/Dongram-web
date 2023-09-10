@@ -17,12 +17,23 @@ export const removeCookie = (name: string) => {
 
 export const customAxios = axios.create({
   baseURL: "http://13.125.162.181:8080",
-  headers: {
-    Access_Token: `${
-      typeof window != "undefined" ? localStorage.getItem("accessToken") : ""
-    }`,
-  },
 });
+
+customAxios.interceptors.request.use(
+  function (config) {
+    // window 객체가 있고, localStorage에 accessToken이 있다면 헤더에 추가
+    if (typeof window !== "undefined") {
+      const token = localStorage.getItem("accessToken");
+      if (token) {
+        config.headers["Access_Token"] = token;
+      }
+    }
+    return config;
+  },
+  function (error) {
+    return Promise.reject(error);
+  }
+);
 
 //200번대 응답이 아닐 경우 error
 customAxios.interceptors.response.use(
