@@ -50,6 +50,7 @@ export function Header() {
         <SearchContainer>
           <SearchImage src={search_icon} alt="search-icon" />
           <SearchInput type="text" placeholder="Search for..." />
+        </SearchContainer>
         {LoginButtonControl()}
       </HeaderContainer>
 
