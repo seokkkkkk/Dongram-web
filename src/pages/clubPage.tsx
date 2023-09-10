@@ -1,6 +1,8 @@
 import { Header } from "@components/Header/Header";
 import Categories from "@components/Categories/Categories";
+import { Clubs } from "@/components/Clubs/Clubs";
 import styled from "@emotion/styled";
+import { useState } from "react";
 
 const PageContainer = styled.div`
   display: flex; /* Flexbox 컨테이너로 설정 */
@@ -22,19 +24,32 @@ const Boarder = styled.div`
   width: 91.3rem;
 `;
 
-export default function clubPage() {
+export default function ClubPage() {
+  const [clickedIds, setClickedIds] = useState<number[]>([]);
+  const [clickedDivision, setClickedDivision] = useState<number[]>([]);
   return (
     <PageContainer>
       <Header />
       <div>
         <College>
-          <Categories filePath="college" />
+          <Categories
+            filePath="/colleges/all"
+            fieldName="college"
+            clickedIds={clickedIds}
+            setClickedIds={setClickedIds}
+          />
         </College>
         <Department>
-          <Categories filePath="department" />
+          <Categories
+            filePath="/division/all"
+            fieldName="division"
+            clickedIds={clickedDivision}
+            setClickedIds={setClickedDivision}
+          />
         </Department>
       </div>
       <Boarder />
+      <Clubs ids={clickedIds} divisions={clickedDivision} />
     </PageContainer>
   );
 }

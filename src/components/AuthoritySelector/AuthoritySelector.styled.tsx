@@ -5,11 +5,12 @@ interface OptionShow {
   show: boolean;
 }
 export const SelectBox = styled.div<OptionShow>`
+  margin-left: 0.2rem;
   margin-top: 1rem;
   display: flex;
   align-items: center;
   position: relative;
-  width: 11.7rem;
+  width: 15.6rem;
   height: 4.8rem;
   padding: 1.2rem 1.6rem;
   background: ${(props) => (props.show ? "#e0e5eb" : "#f2f4f8")};

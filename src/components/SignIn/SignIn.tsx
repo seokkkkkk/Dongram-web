@@ -1,6 +1,6 @@
 import { InputLarge } from "@components/InputLarge/InputLarge";
 import { Password } from "@components/InputLargeWithShowOption/InputLargeWithShowOption";
-import { useState, useCallback } from "react";
+import { useState, useCallback, Dispatch, SetStateAction } from "react";
 import { customAxios } from "@/Utils/customAxios";
 import { setCookie } from "@/Utils/customAxios";
 import {
@@ -15,14 +15,21 @@ import {
   SignUpText,
   LoginButton,
 } from "./SignIn.styled";
+import axios from "axios";
 
 interface Modal {
   signInModal: boolean;
   toggleSignUp: () => void;
   toggleSignIn: () => void;
+  LoginControl: Dispatch<SetStateAction<boolean>>;
 }
 
-export function SignIn({ signInModal, toggleSignUp, toggleSignIn }: Modal) {
+export function SignIn({
+  signInModal,
+  toggleSignUp,
+  toggleSignIn,
+  LoginControl,
+}: Modal) {
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
 
@@ -31,22 +38,20 @@ export function SignIn({ signInModal, toggleSignUp, toggleSignIn }: Modal) {
       studentId: id,
       password: pw,
     };
-    customAxios //api post 예시
+    axios //api post 예시
       .post("http://13.125.162.181:8080/login", formData)
       .then((res) => {
-        console.log(res.data);
         const Token = res.data.data;
-        customAxios.defaults.headers.common[
-          "Authorization"
-        ] = `Bearer ${Token.accessToken}`;
+        axios.defaults.headers.common["Access_Token"] = `${Token.accessToken}`;
         localStorage.setItem("accessToken", Token.accessToken);
         setCookie("refreshToken", Token.refreshToken);
         toggleSignIn();
+        LoginControl(true);
       })
       .catch((error) => {
         alert("저장 실패");
       });
-  }, [id, pw, toggleSignIn]);
+  }, [id, pw, toggleSignIn, LoginControl]);
 
   return signInModal ? (
     <PageContainer>
@@ -63,15 +68,13 @@ export function SignIn({ signInModal, toggleSignUp, toggleSignIn }: Modal) {
               setId(e.target.value);
             }}
           />
-          <form>
-            <Password
-              text="비밀번호"
-              placeholder="비밀번호"
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                setPw(e.target.value);
-              }}
-            />
-          </form>
+          <Password
+            text="비밀번호"
+            placeholder="비밀번호"
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+              setPw(e.target.value);
+            }}
+          />
           <LoginPasswordContainer>
             <ForgetPassword onClick={toggleSignIn}>
               비밀번호를 잊으셨나요?

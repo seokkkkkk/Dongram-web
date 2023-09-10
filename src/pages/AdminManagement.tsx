@@ -27,7 +27,7 @@ export default function AdminPage() {
     return isUserPage ? (
       <Tab>
         <UserManageTable ParentClickedId={HandleClicked} />
-        <UserInfo ClickedId={ClickedId} />
+        <UserInfo ClickedId={ClickedId} setClickedId={setClickedId} />
       </Tab>
     ) : (
       <Tab>

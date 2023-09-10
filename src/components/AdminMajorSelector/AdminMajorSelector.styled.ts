@@ -49,7 +49,7 @@ export const Options = styled.ul<OptionShow>`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 14rem;
+  height: 10rem;
   overflow-y: scroll;
   top: 5.4rem;
   left: 0;

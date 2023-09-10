@@ -11,10 +11,14 @@ export const getCookie = (name: string) => {
   return cookies.get(name);
 };
 
+export const removeCookie = (name: string) => {
+  return cookies.remove(name);
+};
+
 export const customAxios = axios.create({
-  baseURL: `${process.env.NEXT_PUBLIC_API_BASEURL}`,
+  baseURL: "http://13.125.162.181:8080",
   headers: {
-    Authorization: `Bearer ${
+    Access_Token: `${
       typeof window != "undefined" ? localStorage.getItem("accessToken") : ""
     }`,
   },
@@ -30,19 +34,27 @@ customAxios.interceptors.response.use(
       config,
       response: { status },
     } = error;
+    console.log(status);
     //401 = 토큰 만료
     if (status == 401) {
       const originRequest = config;
       //refreshToken
       const refreshToken = getCookie("refreshToken");
-      const response = await axios.post(refreshToken);
+      const response = await axios.post(
+        "http://13.125.162.181:8080/refreshToken",
+        {},
+        {
+          headers: {
+            Refresh_Token: `${refreshToken}`,
+          },
+        }
+      );
       //refreshToken 요청 성공
-      if (response.status === 201) {
-        const newToken = response.data;
-        localStorage.setItem("accessToken", newToken.accessToken);
-        setCookie("refreshToken", newToken.refreshToken);
-        customAxios.defaults.headers.common.Authorization = `Bearer ${newToken.accessToken}`;
-        originRequest.headers.Authorization = `Bearer ${newToken.accessToken}`;
+      if (response.status === 200) {
+        const newToken = response.data.data;
+        localStorage.setItem("accessToken", newToken);
+        customAxios.defaults.headers.common.Access_Token = `${newToken}`;
+        originRequest.headers.Access_Token = `${newToken}`;
         return axios(originRequest);
       } else if (response.status === 401) {
         alert("로그인 실패");

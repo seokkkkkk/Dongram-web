@@ -16,13 +16,14 @@ import {
   SearchLine,
   Container,
 } from "./UserManageTable.styled";
+import { customAxios } from "@/Utils/customAxios";
 
 interface DataRow {
   id: string;
   name: string;
   studentId: string;
   major: string;
-  authority: string;
+  role: string;
 }
 
 interface ParentProps {
@@ -71,13 +72,16 @@ export const UserManageTable = ({ ParentClickedId }: ParentProps) => {
           valueToSearch = item.major;
           break;
         case "권한":
-          valueToSearch = item.authority;
+          valueToSearch = item.role;
           break;
         default:
           break;
       }
 
-      return valueToSearch.toLowerCase().includes(searchText.toLowerCase());
+      return valueToSearch
+        .toString()
+        .toLowerCase()
+        .includes(searchText.toLowerCase());
     });
   }, [data, searchText, searchOption]);
 
@@ -177,9 +181,12 @@ export const UserManageTable = ({ ParentClickedId }: ParentProps) => {
   //여기까지
 
   useEffect(() => {
-    import(`../../data/userManageData.json`)
-      .then((data) => setData(data.default))
-      .catch((error) => console.error("에러 발생:", error));
+    customAxios
+      .get("/admin/members/all")
+      .then((response) => {
+        setData(response.data.data), console.log(response.data.data);
+      })
+      .catch((error) => console.log("에러:", error));
   }, []);
 
   return (
