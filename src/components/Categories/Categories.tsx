@@ -45,7 +45,6 @@ function Categories({
     }
     NewIds.sort();
     setClickedIds(NewIds);
-    console.log(`Clicked ID: ${NewIds}`);
   };
 
   return (
