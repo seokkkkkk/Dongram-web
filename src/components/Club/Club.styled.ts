@@ -6,6 +6,7 @@ export const ClubIndexContainer = styled.div`
   height: 30em;
   border: 1px solid #dde1e6;
   margin-right: 3rem;
+  margin-bottom: 3rem;
 `;
 export const ClubImage = styled(Image)`
   width: 20.7rem;
