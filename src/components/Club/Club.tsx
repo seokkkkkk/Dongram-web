@@ -7,6 +7,7 @@ import {
   ClubIndexExplain,
 } from "./Club.styled";
 import { useCallback } from "react";
+import Link from "next/link";
 
 interface ClubProps {
   recruit: string;
@@ -17,16 +18,17 @@ interface ClubProps {
 }
 
 export function Club({ recruit, college, department, name, id }: ClubProps) {
-  const onClubClick = useCallback(() => {}, []);
   return (
-    <ClubIndexContainer onClick={onClubClick}>
-      <ClubImage src={clubimage} alt="club main image" />
-      <ClubIndexExplain>
-        <Category props={recruit} />
-        <Category props={college} />
-        <Category props={department} />
-        <ClubName>{name}</ClubName>
-      </ClubIndexExplain>
-    </ClubIndexContainer>
+    <Link href={`/clubExplain?clubId=${id}`}>
+      <ClubIndexContainer>
+        <ClubImage src={clubimage} alt="club main image" />
+        <ClubIndexExplain>
+          <Category props={recruit} />
+          <Category props={college} />
+          <Category props={department} />
+          <ClubName>{name}</ClubName>
+        </ClubIndexExplain>
+      </ClubIndexContainer>
+    </Link>
   );
 }
