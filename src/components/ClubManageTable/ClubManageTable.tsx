@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState, useMemo } from "react";
 import { AdminSearchBox } from "../AdminSearchBox/AdminSearchBox";
-import { AdminSelector } from "../AdminSelector/AdminSelector";
+import { AdminClubSelector } from "../AdminClubSelector/AdminClubSelector";
 import {
   PageTab,
   DisabledShiftButton,
@@ -20,10 +20,9 @@ import { customAxios } from "@/Utils/customAxios";
 
 interface DataRow {
   clubId: string;
-  name: string;
-  admin: string;
-  major: string;
-  date: string;
+  clubName: string;
+  division: string;
+  recruitment: string;
   college: string;
 }
 
@@ -63,17 +62,14 @@ export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
         case "ID":
           valueToSearch = item.clubId;
           break;
-        case "이름":
-          valueToSearch = item.name;
-          break;
-        case "관리자":
-          valueToSearch = item.admin;
-          break;
         case "소속":
-          valueToSearch = item.major ? item.major : item.college;
+          valueToSearch = item.college;
           break;
-        case "신청일":
-          valueToSearch = item.date;
+        case "분과":
+          valueToSearch = item.division;
+          break;
+        case "이름":
+          valueToSearch = item.clubName;
           break;
         default:
           break;
@@ -188,7 +184,7 @@ export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
   return (
     <Container>
       <SearchLine>
-        <AdminSelector onOptionChange={handleOptionChange} />
+        <AdminClubSelector onOptionChange={handleOptionChange} />
         <AdminSearchBox
           onSearchChange={setInputText}
           onSearchClick={handleSearchClick}
