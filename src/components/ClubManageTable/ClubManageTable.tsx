@@ -197,10 +197,9 @@ export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
       <Table>
         <TableTitle>
           <TitleRow isId>고유ID</TitleRow>
-          <TitleRow>동아리 이름</TitleRow>
-          <TitleRow>관리자</TitleRow>
           <TitleRow>소속</TitleRow>
-          <TitleRow>신청일</TitleRow>
+          <TitleRow>분과</TitleRow>
+          <TitleRow>이름</TitleRow>
         </TableTitle>
         <TableContent>
           {currentData.map((item, rowIndex) => (
@@ -210,7 +209,7 @@ export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
               clicked={item.clubId === clickedId}
             >
               {Object.values(item).map((value, colIndex) => {
-                if (colIndex < 5) {
+                if (colIndex < 4) {
                   // 만약 major가 빈 문자열이고 colIndex가 3 (major를 표시하는 열) 이면 college 값을 표시
                   if (colIndex === 3 && !value) {
                     value = item.college;

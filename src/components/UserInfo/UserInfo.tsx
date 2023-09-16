@@ -120,7 +120,16 @@ export const UserInfo = ({ ClickedId, setClickedId }: ParentProps) => {
   }, [user]);
   const handleSaveClick = useCallback(() => {
     setUser(changedUser);
-  }, [changedUser]);
+    customAxios
+      .put(`admin/members/${ClickedId}`, {
+        studentId: changedUser?.studentId,
+        memberName: changedUser?.memberName,
+        major1: changedUser?.major1,
+        major2: changedUser?.major2,
+        role: changedUser?.role,
+      })
+      .catch((error) => console.error("에러: ", error));
+  }, [changedUser, ClickedId]);
 
   return (
     <UserContainer>

@@ -170,9 +170,9 @@ export const ClubInfo = ({ ClickedId }: ParentProps) => {
       <Body>
         <ClubCol>
           <ClubRow>
-            <Text>관리자</Text>
+            <Text>고유ID</Text>
             <Admin
-              value={changedClub ? changedClub.admin : "로딩 중..."}
+              value={changedClub ? changedClub.clubId : "로딩 중..."}
               type="text"
               onChange={handleAdminChange}
             />
