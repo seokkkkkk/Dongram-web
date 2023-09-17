@@ -19,8 +19,8 @@ interface ClubProps {
 
 export function Club({ recruit, college, department, name, id }: ClubProps) {
   return (
-    <Link href={`/clubExplain?clubId=${id}`}>
-      <ClubIndexContainer>
+    <ClubIndexContainer>
+      <Link href={`/clubExplain?clubId=${id}`}>
         <ClubImage src={clubimage} alt="club main image" />
         <ClubIndexExplain>
           <Category props={recruit} />
@@ -28,7 +28,7 @@ export function Club({ recruit, college, department, name, id }: ClubProps) {
           <Category props={department} />
           <ClubName>{name}</ClubName>
         </ClubIndexExplain>
-      </ClubIndexContainer>
-    </Link>
+      </Link>
+    </ClubIndexContainer>
   );
 }

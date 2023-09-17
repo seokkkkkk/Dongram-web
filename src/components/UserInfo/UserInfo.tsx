@@ -31,6 +31,7 @@ interface DataRow {
   studentId: string;
   memberName: string;
   major1: string;
+  college1: string;
   role: string;
   major2: string;
   clubList: Club[];
@@ -124,6 +125,7 @@ export const UserInfo = ({ ClickedId, setClickedId }: ParentProps) => {
       .put(`admin/members/${ClickedId}`, {
         studentId: changedUser?.studentId,
         memberName: changedUser?.memberName,
+        college1: changedUser.college1,
         major1: changedUser?.major1,
         major2: changedUser?.major2,
         role: changedUser?.role,
