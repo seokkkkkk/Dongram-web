@@ -184,10 +184,10 @@ export const UserManageTable = ({ ParentClickedId }: ParentProps) => {
     customAxios
       .get("/admin/members/all")
       .then((response) => {
-        setData(response.data.data), console.log(response.data.data);
+        setData(response.data.data), handleClicked(response.data.data[0].id);
       })
       .catch((error) => console.log("에러:", error));
-  }, []);
+  }, [handleClicked]);
 
   return (
     <Container>

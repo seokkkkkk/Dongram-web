@@ -153,9 +153,11 @@ export const ClubInfo = ({ ClickedId }: ParentProps) => {
         setClub(response.data.data);
         setChangedClub(response.data.data);
         console.log(response.data.data);
-        const dates = club?.recruitmentPeriod?.split("~") || [];
-        if (dates.length === 1 && dates[0] === "") {
-          dates.push("");
+        let dates = [];
+        if (response.data.data.recruitment) {
+          dates = response.data.data.recruitmentPeriod?.split("~") || [];
+        } else {
+          dates = ["", ""];
         }
         setRecruitDates(dates);
       })

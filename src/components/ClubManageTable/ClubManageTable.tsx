@@ -177,9 +177,14 @@ export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
   useEffect(() => {
     customAxios
       .get("/clubs/all")
-      .then((response) => (setData(response.data.data), console.log(response)))
+      .then(
+        (response) => (
+          setData(response.data.data),
+          handleClicked(response.data.data[0].clubId)
+        )
+      )
       .catch((error) => console.log("에러:", error));
-  }, []);
+  }, [handleClicked]);
 
   return (
     <Container>
