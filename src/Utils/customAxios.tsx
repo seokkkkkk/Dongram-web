@@ -45,7 +45,6 @@ customAxios.interceptors.response.use(
       config,
       response: { status },
     } = error;
-    console.log(status);
     //401 = 토큰 만료
     if (status == 401) {
       const originRequest = config;

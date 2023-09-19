@@ -152,7 +152,6 @@ export const ClubInfo = ({ ClickedId }: ParentProps) => {
       .then((response) => {
         setClub(response.data.data);
         setChangedClub(response.data.data);
-        console.log(response.data.data);
         let dates = [];
         if (response.data.data.recruitment) {
           dates = response.data.data.recruitmentPeriod?.split("~") || [];

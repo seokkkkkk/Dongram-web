@@ -15,30 +15,30 @@ export function MyClub() {
       <Table>
         <Club
           recruit="모집 중"
-          college="중앙동아리"
-          department="공연"
-          name="세마치"
+          college="정보통신대학"
+          department="학술"
+          name="TOOLS"
           id="1"
         />
         <Club
           recruit="모집 중"
-          college="중앙동아리"
-          department="공연"
-          name="세마치"
+          college="정보통신대학"
+          department="학술"
+          name="TOOLS"
           id="1"
         />
         <Club
           recruit="모집 중"
-          college="중앙동아리"
-          department="공연"
-          name="세마치"
+          college="정보통신대학"
+          department="학술"
+          name="TOOLS"
           id="1"
         />
         <Club
           recruit="모집 중"
-          college="중앙동아리"
-          department="공연"
-          name="세마치"
+          college="정보통신대학"
+          department="학술"
+          name="TOOLS"
           id="1"
         />
       </Table>

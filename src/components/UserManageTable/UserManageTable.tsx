@@ -186,7 +186,7 @@ export const UserManageTable = ({ ParentClickedId }: ParentProps) => {
       .then((response) => {
         setData(response.data.data), handleClicked(response.data.data[0].id);
       })
-      .catch((error) => console.log("에러:", error));
+      .catch((error) => console.error("에러:", error));
   }, [handleClicked]);
 
   return (
