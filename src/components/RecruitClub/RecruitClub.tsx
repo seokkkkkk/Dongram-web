@@ -1,23 +1,94 @@
 import { Club } from "@components/Club/Club";
-import Link from "next/link";
-import { PageContainer, RecruitClubText } from "./RecruitClub.styled";
+import left from "@public/left_fill.svg";
+import right from "@public/right_fill.svg";
+import leftDisabled from "@public/left.svg";
+import rightDisabled from "@public/right.svg";
+import {
+  PageContainer,
+  RecruitClubText,
+  ClubContainer,
+  Table,
+  Button,
+  Clubs,
+} from "./RecruitClub.styled";
+import { useCallback, useEffect, useState } from "react";
+import { customAxios } from "@/Utils/customAxios";
+
+interface ClubData {
+  clubId: string;
+  college: string;
+  division: string;
+  clubName: string;
+  recruitment: boolean;
+}
 
 export function RecruitClub() {
+  const [data, setData] = useState<ClubData[]>([]);
+  const [filteredData, setFilteredData] = useState<ClubData[]>([]);
+  const [page, setPage] = useState(0);
+  const [lastPage, setLastPage] = useState(0);
+  useEffect(() => {
+    customAxios
+      .get("/clubs/all")
+      .then((res) => {
+        const filteredData = res.data.data.filter((orgData: ClubData) => {
+          return orgData.recruitment === true; // return을 추가
+        });
+        setData(filteredData);
+        setLastPage(Math.ceil(filteredData.length / 4) - 1);
+      })
+      .catch((error) => {
+        console.error("에러: ", error);
+      });
+  }, []);
+  useEffect(() => {
+    var dataSet;
+    if (page === lastPage) {
+      dataSet = data.slice(lastPage * 4 - 3, (lastPage + 1) * 4);
+    } else {
+      dataSet = data.slice(page * 4, (page + 1) * 4);
+    }
+    setFilteredData(dataSet);
+  }, [data, page, lastPage]);
+  const onLeftClick = useCallback(() => {
+    if (page >= 1) setPage(page - 1);
+  }, [page]);
+  const onRightClick = useCallback(() => {
+    if (page < lastPage) setPage(page + 1);
+  }, [lastPage, page]);
+  const printClubs = useCallback(() => {
+    return filteredData.map((data, idx) => {
+      return (
+        <ClubContainer key={idx}>
+          <Club
+            recruit="모집 중"
+            college={data.college}
+            department={data.division.replace("분과", "")}
+            name={data.clubName}
+            id={data.clubId}
+          />
+        </ClubContainer>
+      );
+    });
+  }, [filteredData]);
   return (
     <PageContainer>
       <RecruitClubText>모집 중인 동아리</RecruitClubText>
-      <div className="flex">
-        <Club
-          recruit="모집 중"
-          college="중앙동아리"
-          department="공연"
-          name="세마치"
-          id="1"
+      <Table>
+        <Button
+          src={page === 0 ? leftDisabled : left}
+          alt="left_button"
+          onClick={onLeftClick}
+          style={{ cursor: page === 0 ? "default" : "pointer" }}
         />
-        <Club />
-        <Club />
-        <Club />
-      </div>
+        <Clubs>{printClubs()}</Clubs>
+        <Button
+          src={page === lastPage ? rightDisabled : right}
+          alt="right_button"
+          onClick={onRightClick}
+          style={{ cursor: page === lastPage ? "default" : "pointer" }}
+        />
+      </Table>
     </PageContainer>
   );
 }
