@@ -56,7 +56,6 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
       .get(`/admin/members/${ClickedId}`)
       .then((response) => {
         setUser(response.data.data), setChangedUser(response.data.data);
-        console.log(response.data.data);
       })
       .catch((error) => {
         console.error("에러:", error);
