@@ -74,6 +74,7 @@ export function SignIn({
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                 setId(e.target.value);
               }}
+              onKeyDown={handleKeyDown}
             />
             <Password
               text="비밀번호"
