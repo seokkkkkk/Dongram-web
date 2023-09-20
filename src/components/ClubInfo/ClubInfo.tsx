@@ -152,10 +152,11 @@ export const ClubInfo = ({ ClickedId }: ParentProps) => {
       .then((response) => {
         setClub(response.data.data);
         setChangedClub(response.data.data);
-        console.log(response.data.data);
-        const dates = club?.recruitmentPeriod?.split("~") || [];
-        if (dates.length === 1 && dates[0] === "") {
-          dates.push("");
+        let dates = [];
+        if (response.data.data.recruitment) {
+          dates = response.data.data.recruitmentPeriod?.split("~") || [];
+        } else {
+          dates = ["", ""];
         }
         setRecruitDates(dates);
       })
@@ -170,9 +171,9 @@ export const ClubInfo = ({ ClickedId }: ParentProps) => {
       <Body>
         <ClubCol>
           <ClubRow>
-            <Text>관리자</Text>
+            <Text>고유ID</Text>
             <Admin
-              value={changedClub ? changedClub.admin : "로딩 중..."}
+              value={changedClub ? changedClub.clubId : "로딩 중..."}
               type="text"
               onChange={handleAdminChange}
             />

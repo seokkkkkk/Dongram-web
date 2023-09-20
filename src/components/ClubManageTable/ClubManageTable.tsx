@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState, useMemo } from "react";
 import { AdminSearchBox } from "../AdminSearchBox/AdminSearchBox";
-import { AdminSelector } from "../AdminSelector/AdminSelector";
+import { AdminClubSelector } from "../AdminClubSelector/AdminClubSelector";
 import {
   PageTab,
   DisabledShiftButton,
@@ -20,10 +20,9 @@ import { customAxios } from "@/Utils/customAxios";
 
 interface DataRow {
   clubId: string;
-  name: string;
-  admin: string;
-  major: string;
-  date: string;
+  clubName: string;
+  division: string;
+  recruitment: string;
   college: string;
 }
 
@@ -63,17 +62,14 @@ export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
         case "ID":
           valueToSearch = item.clubId;
           break;
-        case "이름":
-          valueToSearch = item.name;
-          break;
-        case "관리자":
-          valueToSearch = item.admin;
-          break;
         case "소속":
-          valueToSearch = item.major ? item.major : item.college;
+          valueToSearch = item.college;
           break;
-        case "신청일":
-          valueToSearch = item.date;
+        case "분과":
+          valueToSearch = item.division;
+          break;
+        case "이름":
+          valueToSearch = item.clubName;
           break;
         default:
           break;
@@ -181,14 +177,19 @@ export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
   useEffect(() => {
     customAxios
       .get("/clubs/all")
-      .then((response) => (setData(response.data.data), console.log(response)))
-      .catch((error) => console.log("에러:", error));
-  }, []);
+      .then(
+        (response) => (
+          setData(response.data.data),
+          handleClicked(response.data.data[0].clubId)
+        )
+      )
+      .catch((error) => console.error("에러:", error));
+  }, [handleClicked]);
 
   return (
     <Container>
       <SearchLine>
-        <AdminSelector onOptionChange={handleOptionChange} />
+        <AdminClubSelector onOptionChange={handleOptionChange} />
         <AdminSearchBox
           onSearchChange={setInputText}
           onSearchClick={handleSearchClick}
@@ -197,10 +198,9 @@ export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
       <Table>
         <TableTitle>
           <TitleRow isId>고유ID</TitleRow>
-          <TitleRow>동아리 이름</TitleRow>
-          <TitleRow>관리자</TitleRow>
           <TitleRow>소속</TitleRow>
-          <TitleRow>신청일</TitleRow>
+          <TitleRow>분과</TitleRow>
+          <TitleRow>이름</TitleRow>
         </TableTitle>
         <TableContent>
           {currentData.map((item, rowIndex) => (
@@ -210,7 +210,7 @@ export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
               clicked={item.clubId === clickedId}
             >
               {Object.values(item).map((value, colIndex) => {
-                if (colIndex < 5) {
+                if (colIndex < 4) {
                   // 만약 major가 빈 문자열이고 colIndex가 3 (major를 표시하는 열) 이면 college 값을 표시
                   if (colIndex === 3 && !value) {
                     value = item.college;

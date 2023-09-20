@@ -36,7 +36,7 @@ export const AdminMajorSelector = ({
   const handleSetSelectedOption = useCallback(
     (e: React.MouseEvent) => {
       const { innerText } = e.target as HTMLElement;
-      if (major !== "" && major2 !== "") {
+      if (major !== "" && major2 !== null) {
         alert("최대 2개의 전공을 선택할 수 있습니다.");
         return;
       } else if (major === innerText || major2 === innerText) {

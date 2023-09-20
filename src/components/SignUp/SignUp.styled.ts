@@ -58,6 +58,7 @@ export const SubmitButton = styled.button`
   width: 52rem;
   height: 4.8rem;
   background-color: #0090f9;
+  margin-top: 4rem;
   margin-left: 4rem;
   color: #fff;
   font-size: 2rem;

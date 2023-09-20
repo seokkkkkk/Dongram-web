@@ -1,5 +1,15 @@
 import { Dispatch, SetStateAction, useCallback, useState } from "react";
-import { Header, Title, UserMenu, ClubMenu } from "./AdminHeader.styled";
+import {
+  Header,
+  Title,
+  UserMenu,
+  ClubMenu,
+  ImageCss,
+  Text,
+} from "./AdminHeader.styled";
+import Image from "next/image";
+import Link from "next/link";
+import Home from "@public/home.svg";
 
 interface AdminHeaderProps {
   isUserPage: boolean;
@@ -18,13 +28,18 @@ export const AdminHeader = ({
   }, [setIsUserPage]);
   return (
     <Header>
-      <Title>어드민 페이지</Title>
-      <UserMenu active={isUserPage} onClick={UserClick}>
-        회원관리
-      </UserMenu>
-      <ClubMenu active={!isUserPage} onClick={ClubClick}>
-        동아리 관리
-      </ClubMenu>
+      <Text>
+        <Title>어드민 페이지</Title>
+        <UserMenu active={isUserPage} onClick={UserClick}>
+          회원관리
+        </UserMenu>
+        <ClubMenu active={!isUserPage} onClick={ClubClick}>
+          동아리 관리
+        </ClubMenu>
+      </Text>
+      <Link href={"/"}>
+        <ImageCss src={Home} alt="home" />
+      </Link>
     </Header>
   );
 };

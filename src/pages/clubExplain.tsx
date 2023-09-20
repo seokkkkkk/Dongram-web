@@ -20,7 +20,6 @@ export default function ClubExplain() {
   //뒷부분 숫자를 clubId로 갖고오기
 
   useEffect(() => {
-    console.log(clubId);
     if (clubId) {
       fetchClubData(clubId); // 클럽 ID를 사용하여 동아리 정보를 가져옵니다.
     }
@@ -31,7 +30,6 @@ export default function ClubExplain() {
     customAxios
       .get(`http://13.125.162.181:8080/clubs/${clubId}`)
       .then((res) => {
-        console.log(res.data.data);
         setClubData(res.data.data);
       })
       .catch((error) => {

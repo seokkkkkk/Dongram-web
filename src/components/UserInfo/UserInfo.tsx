@@ -25,12 +25,14 @@ import {
   Majors,
 } from "./UserInfo.styled";
 import { customAxios } from "@/Utils/customAxios";
+import { useRouter } from "next/router";
 
 interface DataRow {
   memberId: string;
   studentId: string;
   memberName: string;
   major1: string;
+  college1: string;
   role: string;
   major2: string;
   clubList: Club[];
@@ -42,10 +44,10 @@ interface Club {
 
 interface ParentProps {
   ClickedId: string;
-  setClickedId: Dispatch<SetStateAction<string>>;
 }
 
-export const UserInfo = ({ ClickedId, setClickedId }: ParentProps) => {
+export const UserInfo = ({ ClickedId }: ParentProps) => {
+  const router = useRouter();
   const [user, setUser] = useState<DataRow>();
   const [changedUser, setChangedUser] = useState<DataRow>();
 
@@ -54,7 +56,6 @@ export const UserInfo = ({ ClickedId, setClickedId }: ParentProps) => {
       .get(`/admin/members/${ClickedId}`)
       .then((response) => {
         setUser(response.data.data), setChangedUser(response.data.data);
-        console.log(response.data.data);
       })
       .catch((error) => {
         console.error("에러:", error);
@@ -111,16 +112,27 @@ export const UserInfo = ({ ClickedId, setClickedId }: ParentProps) => {
   );
   const handelDeleteClick = useCallback(() => {
     customAxios
-      .delete(`admin/member/${ClickedId}`)
+      .delete(`admin/members/${ClickedId}`)
+      .then(() => router.reload())
       .catch((error) => console.error("에러: ", error));
-    setClickedId("1");
-  }, [setClickedId, ClickedId]);
+  }, [router, ClickedId]);
   const handelCancleClick = useCallback(() => {
     setChangedUser(user);
   }, [user]);
   const handleSaveClick = useCallback(() => {
     setUser(changedUser);
-  }, [changedUser]);
+    customAxios
+      .put(`admin/members/${ClickedId}`, {
+        studentId: changedUser?.studentId,
+        memberName: changedUser?.memberName,
+        college1: changedUser?.college1,
+        major1: changedUser?.major1,
+        major2: changedUser?.major2,
+        role: changedUser?.role,
+      })
+      .then(() => router.reload())
+      .catch((error) => console.error("에러: ", error));
+  }, [router, changedUser, ClickedId]);
 
   return (
     <UserContainer>

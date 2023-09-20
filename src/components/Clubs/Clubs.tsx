@@ -210,7 +210,7 @@ export const Clubs = ({ ids, divisions }: ParentProps) => {
           college={club.college}
           department={department}
           name={club.clubName}
-          id={club.clubId}
+          id={club.clubId.toString()}
           key={i}
         />
       );

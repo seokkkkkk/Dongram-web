@@ -5,7 +5,9 @@ import { ClubManageTable } from "@/components/ClubManageTable/ClubManageTable";
 import { ClubInfo } from "@/components/ClubInfo/ClubInfo";
 
 import styled from "@emotion/styled";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
+import { customAxios } from "@/Utils/customAxios";
+import { useRouter } from "next/router";
 
 const Tab = styled.div`
   margin-top: 6.5rem;
@@ -18,16 +20,30 @@ const Admin = styled.div`
 `;
 
 export default function AdminPage() {
-  const [ClickedId, setClickedId] = useState("1");
+  const router = useRouter();
+  const [ClickedId, setClickedId] = useState("");
   const HandleClicked = useCallback((id: string) => {
     setClickedId(id);
   }, []);
+  useEffect(() => {
+    customAxios
+      .get("/admin/members/all")
+      .then(() => setIsAdmin(true))
+      .catch(() => setIsAdmin(false));
+  }, []);
+  const [isAdmin, setIsAdmin] = useState<null | Boolean>(null);
   const [isUserPage, setIsUserPage] = useState(true);
+  useEffect(() => {
+    if (isAdmin === false) {
+      router.push("/"); // 루트 페이지로 이동
+      alert("관리자 권한이 없습니다.");
+    }
+  }, [isAdmin, router]);
   const handleTab = useCallback(() => {
     return isUserPage ? (
       <Tab>
         <UserManageTable ParentClickedId={HandleClicked} />
-        <UserInfo ClickedId={ClickedId} setClickedId={setClickedId} />
+        <UserInfo ClickedId={ClickedId} />
       </Tab>
     ) : (
       <Tab>
@@ -36,10 +52,10 @@ export default function AdminPage() {
       </Tab>
     );
   }, [ClickedId, HandleClicked, isUserPage]);
-  return (
+  return isAdmin ? (
     <Admin>
       <AdminHeader isUserPage={isUserPage} setIsUserPage={setIsUserPage} />
       {handleTab()}
     </Admin>
-  );
+  ) : null;
 }

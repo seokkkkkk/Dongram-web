@@ -1,8 +1,18 @@
 import styled from "@emotion/styled";
+import Image from "next/image";
 
 interface MenuProps {
   active?: boolean;
 }
+
+export const ImageCss = styled(Image)`
+  width: 5rem;
+  height: 5rem;
+`;
+
+export const Text = styled.div`
+  display: flex;
+`;
 
 export const Header = styled.div`
   display: flex;
@@ -11,6 +21,7 @@ export const Header = styled.div`
   align-items: center;
   background-color: #f2f4f8;
   border-bottom: 1px solid #000;
+  justify-content: space-between;
 `;
 export const Title = styled.div`
   margin-right: 14.5rem;
