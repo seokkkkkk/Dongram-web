@@ -42,12 +42,14 @@ export function RecruitClub() {
       });
   }, []);
   useEffect(() => {
-    var dataSet;
+    let dataSet;
     if (page === lastPage) {
-      dataSet = data.slice(lastPage * 8 - 3, (lastPage + 1) * 8);
+      const startIndex = Math.max(lastPage * 8 - (8 - (data.length % 8)), 0);
+      dataSet = data.slice(startIndex, lastPage * 8 + (data.length % 8));
     } else {
       dataSet = data.slice(page * 8, (page + 1) * 8);
     }
+
     setFilteredData(dataSet);
   }, [data, page, lastPage]);
   const onLeftClick = useCallback(() => {
