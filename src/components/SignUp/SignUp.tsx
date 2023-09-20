@@ -51,6 +51,7 @@ export function SignUp({ signUpModal, toggleSignUp, toggleSignIn }: Modal) {
         toggleSignUp();
       })
       .catch((error) => {
+        alert("실패");
         console.log("저장 실패");
         console.log(error);
       });

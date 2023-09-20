@@ -3,8 +3,8 @@ import setting from "@public/setting.svg"; //벨사진 없다고 오류뜨길래
 import logout from "@public/logout.svg";
 import user from "@public/user.svg";
 import Link from "next/link";
-import { Dispatch, SetStateAction } from "react";
-import { removeCookie } from "@/Utils/customAxios";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { customAxios, removeCookie } from "@/Utils/customAxios";
 import { UserButtonContainer, ImageCss, ButtonCss } from "./UserButton.styled";
 
 interface Login {
@@ -12,6 +12,14 @@ interface Login {
 }
 
 export function UserButton({ LoginControl }: Login) {
+  const [isAdmin, setIsAdmin] = useState<null | Boolean>(null);
+  useEffect(() => {
+    customAxios
+      .get("/admin/members/all")
+      .then(() => setIsAdmin(true))
+      .catch(() => setIsAdmin(false));
+  }, []);
+
   const Logout = () => {
     localStorage.removeItem("accessToken");
     removeCookie("refreshToken");
@@ -20,11 +28,15 @@ export function UserButton({ LoginControl }: Login) {
 
   return (
     <UserButtonContainer>
-      <button>
-        <Link href={"/AdminManagement"}>
-          <ImageCss src={setting} alt="bell" />
-        </Link>
-      </button>
+      {isAdmin ? (
+        <button>
+          <Link href={"/AdminManagement"}>
+            <ImageCss src={setting} alt="bell" />
+          </Link>
+        </button>
+      ) : (
+        <></>
+      )}
       <ButtonCss>
         <Link href="/memberInfo">
           <button>
