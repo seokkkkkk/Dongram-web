@@ -20,6 +20,11 @@ export const AdminSearchBox = ({
     },
     [onSearchChange]
   );
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      onSearchClick();
+    }
+  };
   return (
     <SearchBox>
       <SearchImage
@@ -32,6 +37,7 @@ export const AdminSearchBox = ({
         placeholder="Search"
         value={inputValue}
         onChange={handleInputChange}
+        onKeyDown={handleKeyDown}
       />
     </SearchBox>
   );

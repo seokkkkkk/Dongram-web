@@ -53,6 +53,12 @@ export function SignIn({
       });
   }, [id, pw, toggleSignIn, LoginControl]);
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      onSubmit();
+    }
+  };
+
   return signInModal ? (
     <PageContainer>
       <LoginTextAlign>
@@ -75,6 +81,7 @@ export function SignIn({
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                 setPw(e.target.value);
               }}
+              onKeyDown={handleKeyDown}
             />
           </form>
           <LoginPasswordContainer>
