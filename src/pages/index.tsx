@@ -18,7 +18,6 @@ export default function Home() {
       <PageConatiner>
         <Header />
         <Banner />
-        <MyClub />
         <RecruitClub />
       </PageConatiner>
     </>
