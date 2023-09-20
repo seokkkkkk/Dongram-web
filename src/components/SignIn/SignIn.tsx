@@ -49,7 +49,7 @@ export function SignIn({
         LoginControl(true);
       })
       .catch((error) => {
-        alert("저장 실패");
+        alert("아이디 또는 비밀번호가 일치하지 않습니다.");
       });
   }, [id, pw, toggleSignIn, LoginControl]);
 
@@ -61,20 +61,22 @@ export function SignIn({
 
         <LoginModal>
           <LoginText>로그인</LoginText>
-          <InputLarge
-            text="아이디"
-            placeholder="학번"
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-              setId(e.target.value);
-            }}
-          />
-          <Password
-            text="비밀번호"
-            placeholder="비밀번호"
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-              setPw(e.target.value);
-            }}
-          />
+          <form>
+            <InputLarge
+              text="아이디"
+              placeholder="학번"
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                setId(e.target.value);
+              }}
+            />
+            <Password
+              text="비밀번호"
+              placeholder="비밀번호"
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                setPw(e.target.value);
+              }}
+            />
+          </form>
           <LoginPasswordContainer>
             <ForgetPassword onClick={toggleSignIn}>
               비밀번호를 잊으셨나요?

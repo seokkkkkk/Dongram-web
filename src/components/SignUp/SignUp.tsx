@@ -51,9 +51,9 @@ export function SignUp({ signUpModal, toggleSignUp, toggleSignIn }: Modal) {
         toggleSignUp();
       })
       .catch((error) => {
-        alert("실패");
+        alert("회원가입 실패. 다시 시도해주세요.");
         console.log("저장 실패");
-        console.log(error);
+        console.error(error);
       });
   }, [
     id,
@@ -88,33 +88,31 @@ export function SignUp({ signUpModal, toggleSignUp, toggleSignIn }: Modal) {
               confirmPassword={checkPassword}
               setConfirmPassword={setCheckPassword}
             />
-            <InputSmall
-              text="이름*"
-              placeholder="이름"
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                setName(e.target.value);
-              }}
-            />
-            <MajorSelector
-              filePath="major"
-              first={true}
-              college={col1}
-              setCollege={setCol1}
-              major={major1}
-              setMajor={setMajor1}
-            />
-            <MajorSelector
-              filePath="major"
-              first={false}
-              college={col2}
-              setCollege={setCol2}
-              major={major2}
-              setMajor={setMajor2}
-            />
-            <SubmitButton type="submit" onClick={onSubmit}>
-              회원가입
-            </SubmitButton>
           </form>
+          <InputSmall
+            text="이름*"
+            placeholder="이름"
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+              setName(e.target.value);
+            }}
+          />
+          <MajorSelector
+            filePath="major"
+            first={true}
+            college={col1}
+            setCollege={setCol1}
+            major={major1}
+            setMajor={setMajor1}
+          />
+          <MajorSelector
+            filePath="major"
+            first={false}
+            college={col2}
+            setCollege={setCol2}
+            major={major2}
+            setMajor={setMajor2}
+          />
+          <SubmitButton onClick={onSubmit}>회원가입</SubmitButton>
         </SignUpModal>
       </PageTextAlign>
     </PageContainer>

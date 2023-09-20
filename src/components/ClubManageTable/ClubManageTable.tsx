@@ -183,7 +183,7 @@ export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
           handleClicked(response.data.data[0].clubId)
         )
       )
-      .catch((error) => console.log("에러:", error));
+      .catch((error) => console.error("에러:", error));
   }, [handleClicked]);
 
   return (
