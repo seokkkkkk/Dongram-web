@@ -20,6 +20,8 @@ export const Button = styled(Image)`
 `;
 export const Clubs = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  width: 100rem;
   margin-left: 3rem;
 `;
 export const ClubContainer = styled.div`

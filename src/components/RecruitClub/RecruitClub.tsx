@@ -35,19 +35,21 @@ export function RecruitClub() {
           return orgData.recruitment === true; // return을 추가
         });
         setData(filteredData);
-        setLastPage(Math.ceil(filteredData.length / 4) - 1);
+        setLastPage(Math.ceil(filteredData.length / 8) - 1);
       })
       .catch((error) => {
         console.error("에러: ", error);
       });
   }, []);
   useEffect(() => {
-    var dataSet;
+    let dataSet;
     if (page === lastPage) {
-      dataSet = data.slice(lastPage * 4 - 3, (lastPage + 1) * 4);
+      const startIndex = Math.max(lastPage * 8 - (8 - (data.length % 8)), 0);
+      dataSet = data.slice(startIndex, lastPage * 8 + (data.length % 8));
     } else {
-      dataSet = data.slice(page * 4, (page + 1) * 4);
+      dataSet = data.slice(page * 8, (page + 1) * 8);
     }
+
     setFilteredData(dataSet);
   }, [data, page, lastPage]);
   const onLeftClick = useCallback(() => {

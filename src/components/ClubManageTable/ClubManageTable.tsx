@@ -75,7 +75,10 @@ export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
           break;
       }
 
-      return valueToSearch.toLowerCase().includes(searchText.toLowerCase());
+      return valueToSearch
+        .toString()
+        .toLowerCase()
+        .includes(searchText.toLowerCase());
     });
   }, [data, searchText, searchOption]);
 

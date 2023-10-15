@@ -6,12 +6,14 @@ import Link from "next/link";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { customAxios, removeCookie } from "@/Utils/customAxios";
 import { UserButtonContainer, ImageCss, ButtonCss } from "./UserButton.styled";
+import { useRouter } from "next/router";
 
 interface Login {
   LoginControl: Dispatch<SetStateAction<boolean>>;
 }
 
 export function UserButton({ LoginControl }: Login) {
+  const router = useRouter();
   const [isAdmin, setIsAdmin] = useState<null | Boolean>(null);
   useEffect(() => {
     customAxios
@@ -23,7 +25,7 @@ export function UserButton({ LoginControl }: Login) {
   const Logout = () => {
     localStorage.removeItem("accessToken");
     removeCookie("refreshToken");
-    LoginControl(false);
+    router.reload();
   };
 
   return (

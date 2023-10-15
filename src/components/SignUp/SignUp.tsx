@@ -73,7 +73,9 @@ export function SignUp({ signUpModal, toggleSignUp, toggleSignIn }: Modal) {
         <SignUpSpanCss />
         <SignUpModal>
           <SignUpText>회원가입</SignUpText>
-          <AlreadyHaveAccount>이미 계정을 소유하고 있나요?</AlreadyHaveAccount>
+          <AlreadyHaveAccount onClick={toggleSignIn}>
+            이미 계정을 소유하고 있나요?
+          </AlreadyHaveAccount>
           <form>
             <InputLarge
               text="아이디*"
