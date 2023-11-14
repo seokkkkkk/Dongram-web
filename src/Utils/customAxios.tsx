@@ -16,7 +16,7 @@ export const removeCookie = (name: string) => {
 };
 
 export const customAxios = axios.create({
-  baseURL: "http://13.125.162.181:8080",
+  baseURL: "http://13.125.162.181:8084",
 });
 
 customAxios.interceptors.request.use(
@@ -51,7 +51,7 @@ customAxios.interceptors.response.use(
       //refreshToken
       const refreshToken = getCookie("refreshToken");
       const response = await axios.post(
-        "http://13.125.162.181:8080/refreshToken",
+        "http://13.125.162.181:8084/refreshToken",
         {},
         {
           headers: {
