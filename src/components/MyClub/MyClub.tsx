@@ -1,59 +1,111 @@
-import Link from "next/link";
-import { Container, Text } from "./MyClub.styled";
 import { Club } from "@components/Club/Club";
-import styled from "@emotion/styled";
+import left from "@public/left_fill.svg";
+import right from "@public/right_fill.svg";
+import {
+  PageContainer,
+  RecruitClubText,
+  ClubContainer,
+  Table,
+  Button,
+  Clubs,
+} from "./MyClub.styled";
+import { useCallback, useEffect, useState } from "react";
 import { customAxios } from "@/Utils/customAxios";
-import { useEffect } from "react";
 
-const Table = styled.div`
-  display: flex;
-  gap: 1.3rem;
-  width: 100rem;
-`;
-export function MyClub() {
+interface ClubData {
+  clubId: string;
+  college: string;
+  division: string;
+  clubName: string;
+  recruitment: boolean;
+}
+
+interface ParentProps {
+  displayNum: number;
+}
+
+export function MyClub({ displayNum }: ParentProps) {
+  const [data, setData] = useState<ClubData[]>([]);
+  const [filteredData, setFilteredData] = useState<ClubData[]>([]);
+  const [page, setPage] = useState(0);
+  const [lastPage, setLastPage] = useState(0);
   useEffect(() => {
     customAxios
-      .get("/member")
+      .get("/clubs/all")
       .then((res) => {
-        console.log(res.data.data);
+        const filteredData = res.data.data.filter((orgData: ClubData) => {
+          return orgData.recruitment === true; // return을 추가
+        });
+        setData(filteredData);
+        setLastPage(Math.ceil(filteredData.length / displayNum) - 1);
       })
       .catch((error) => {
         console.error("에러: ", error);
       });
-  }, []);
-  return (
-    <Container>
-      <Text>내 동아리</Text>
+  }, [displayNum]);
+  useEffect(() => {
+    let dataSet;
+    if (page === lastPage) {
+      const startIndex = Math.max(
+        lastPage * displayNum - (displayNum - (data.length % displayNum)),
+        0
+      );
+      dataSet = data.slice(
+        startIndex,
+        lastPage * displayNum + (data.length % displayNum)
+      );
+    } else {
+      dataSet = data.slice(page * displayNum, (page + 1) * displayNum);
+    }
+
+    setFilteredData(dataSet);
+  }, [data, page, lastPage, displayNum]);
+  const onLeftClick = useCallback(() => {
+    if (page >= 1) setPage(page - 1);
+  }, [page]);
+  const onRightClick = useCallback(() => {
+    if (page < lastPage) setPage(page + 1);
+  }, [lastPage, page]);
+  const printClubs = useCallback(() => {
+    return filteredData.map((data, idx) => {
+      return (
+        <ClubContainer key={idx}>
+          <Club
+            recruit="모집 중"
+            college={data.college}
+            department={data.division.replace("분과", "")}
+            name={data.clubName}
+            id={data.clubId}
+          />
+        </ClubContainer>
+      );
+    });
+  }, [filteredData]);
+  return page === 0 ? (
+    <PageContainer>
+      <RecruitClubText>내 동아리</RecruitClubText>
       <Table>
-        <Club
-          recruit="모집 중"
-          college="정보통신대학"
-          department="학술"
-          name="TOOLS"
-          id="1"
+        <Clubs>{printClubs()}</Clubs>
+      </Table>
+    </PageContainer>
+  ) : (
+    <PageContainer>
+      <RecruitClubText>내 동아리</RecruitClubText>
+      <Table>
+        <Button
+          src={left}
+          alt="left_button"
+          onClick={onLeftClick}
+          style={{ cursor: page === 0 ? "default" : "pointer" }}
         />
-        <Club
-          recruit="모집 중"
-          college="정보통신대학"
-          department="학술"
-          name="TOOLS"
-          id="1"
-        />
-        <Club
-          recruit="모집 중"
-          college="정보통신대학"
-          department="학술"
-          name="TOOLS"
-          id="1"
-        />
-        <Club
-          recruit="모집 중"
-          college="정보통신대학"
-          department="학술"
-          name="TOOLS"
-          id="1"
+        <Clubs>{printClubs()}</Clubs>
+        <Button
+          src={right}
+          alt="right_button"
+          onClick={onRightClick}
+          style={{ cursor: page === lastPage ? "default" : "pointer" }}
         />
       </Table>
-    </Container>
+    </PageContainer>
   );
 }

@@ -10,7 +10,7 @@ import { customAxios } from "@/Utils/customAxios";
 import { useRouter } from "next/router";
 
 const Tab = styled.div`
-  margin-top: 6.5rem;
+  margin-top: 3rem;
   display: flex;
   justify-content: space-around;
   align-items: start;
@@ -33,6 +33,7 @@ export default function AdminPage() {
   }, []);
   const [isAdmin, setIsAdmin] = useState<null | Boolean>(null);
   const [isUserPage, setIsUserPage] = useState(true);
+  const [isClubInfo, setIsClubInfo] = useState(true);
   useEffect(() => {
     if (isAdmin === false) {
       router.push("/"); // 루트 페이지로 이동
@@ -48,10 +49,14 @@ export default function AdminPage() {
     ) : (
       <Tab>
         <ClubManageTable ParentClickedId={HandleClicked} />
-        <ClubInfo ClickedId={ClickedId} />
+        <ClubInfo
+          ClickedId={ClickedId}
+          isClubInfo={isClubInfo}
+          setIsClubInfo={setIsClubInfo}
+        />
       </Tab>
     );
-  }, [ClickedId, HandleClicked, isUserPage]);
+  }, [ClickedId, HandleClicked, isUserPage, isClubInfo]);
   return isAdmin ? (
     <Admin>
       <AdminHeader isUserPage={isUserPage} setIsUserPage={setIsUserPage} />

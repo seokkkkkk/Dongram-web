@@ -1,6 +1,10 @@
 import Image from "next/image";
 import styled from "@emotion/styled";
 
+export const ClubTab = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 export const Text = styled.div`
   font-size: 1.8rem;
   line-height: 110%;

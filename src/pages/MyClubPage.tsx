@@ -3,6 +3,7 @@ import { Header } from "@components/Header/Header";
 import { Banner } from "@components/Banner/Banner";
 import { RecruitClub } from "@components/RecruitClub/RecruitClub";
 import styled from "@emotion/styled";
+import { MyClub } from "@/components/MyClub/MyClub";
 
 const PageConatiner = styled.div`
   display: flex; /* Flexbox 컨테이너로 설정 */
@@ -17,7 +18,8 @@ export default function Home() {
       <PageConatiner>
         <Header />
         <Banner />
-        <RecruitClub displayNum={8} />
+        <MyClub displayNum={4} />
+        <RecruitClub displayNum={4} />
       </PageConatiner>
     </>
   );

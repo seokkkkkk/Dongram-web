@@ -3,6 +3,7 @@ import Categories from "@components/Categories/Categories";
 import { Clubs } from "@/components/Clubs/Clubs";
 import styled from "@emotion/styled";
 import { useState } from "react";
+import { Category } from "@/components/Category/Category";
 
 const PageContainer = styled.div`
   display: flex; /* Flexbox 컨테이너로 설정 */
@@ -27,6 +28,7 @@ const Boarder = styled.div`
 export default function ClubPage() {
   const [clickedIds, setClickedIds] = useState<number[]>([]);
   const [clickedDivision, setClickedDivision] = useState<number[]>([]);
+  const [recruit, setRecruit] = useState(false);
   return (
     <PageContainer>
       <Header />
@@ -45,6 +47,11 @@ export default function ClubPage() {
             fieldName="division"
             clickedIds={clickedDivision}
             setClickedIds={setClickedDivision}
+          />
+          <Category
+            category="모집 중"
+            recruit={recruit}
+            setRecruit={setRecruit}
           />
         </Department>
       </div>
