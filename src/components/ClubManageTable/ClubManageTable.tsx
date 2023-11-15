@@ -1,3 +1,4 @@
+//어드민 페이지의 동아리 관리 테이블
 import { useCallback, useEffect, useState, useMemo } from "react";
 import { AdminSearchBox } from "../AdminSearchBox/AdminSearchBox";
 import { AdminClubSelector } from "../AdminClubSelector/AdminClubSelector";

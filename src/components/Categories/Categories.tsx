@@ -1,3 +1,4 @@
+//카테고리 배열
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { BigCategory } from "@components/BigCategory/BigCategory";
 import { CategoryContainer } from "./Categories.styled";

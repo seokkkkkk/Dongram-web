@@ -1,3 +1,4 @@
+//관리자 페이지 검색 박슨
 import search_icon from "@public/adminSearch.svg";
 import { SearchBox, SearchImage, SearchInput } from "./AdminSearchBox.styled";
 import React, { useCallback, useState } from "react";

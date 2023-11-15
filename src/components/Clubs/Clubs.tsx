@@ -1,6 +1,6 @@
+//필터링된 동아리 목록 표시
 import { customAxios } from "@/Utils/customAxios";
 import { Club } from "../Club/Club";
-import styled from "styled-components";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   DisabledShiftButton,
@@ -8,10 +8,12 @@ import {
   ActiveNumberButton,
   NumberButton,
 } from "@components/UserManageTable/UserManageTable.styled";
+import { ClubTable, PageTab } from "./Clubs.styled";
 
 interface ParentProps {
   ids: number[];
   divisions: number[];
+  recruit: boolean;
 }
 interface clubinfo {
   clubId: number;
@@ -20,26 +22,8 @@ interface clubinfo {
   division: string;
   recruitment: string;
 }
-export const PageTab = styled.div`
-  margin-top: 1rem;
-  display: flex;
-  width: 86rem;
-  height: 4rem;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  font-weight: 500;
-  font-size: 1.6rem;
-`;
-const ClubTable = styled.div`
-  margin-top: 4rem;
-  margin-left: 3.3rem;
-  display: flex;
-  flex-wrap: wrap;
-  width: 95rem;
-`;
 
-export const Clubs = ({ ids, divisions }: ParentProps) => {
+export const Clubs = ({ ids, divisions, recruit }: ParentProps) => {
   const [clubData, setClubData] = useState<clubinfo[]>([]);
   const [division, setDivision] = useState<string[]>([]);
   const [selectedClubs, setSelectedClubs] = useState<clubinfo[]>([]);
@@ -182,19 +166,26 @@ export const Clubs = ({ ids, divisions }: ParentProps) => {
     }
     setDivision(newDivision);
   }, [divisions]);
+
   useEffect(() => {
-    const newClubData = [...clubData];
-    let filteredClubs = [];
+    let filteredClubs = [...clubData];
+
     if (division.length > 0) {
-      filteredClubs = newClubData.filter((club) =>
+      filteredClubs = filteredClubs.filter((club) =>
         division.includes(club.division)
       );
-    } else {
-      filteredClubs = newClubData;
     }
+
+    if (recruit) {
+      filteredClubs = filteredClubs.filter(
+        (club) => club.recruitment === "true"
+      );
+    }
+
     setSelectedClubs(filteredClubs);
     setCurrentPage(1);
-  }, [clubData, division]);
+  }, [clubData, division, recruit]);
+
   const printClub = useCallback(() => {
     return currentData.map((club, i) => {
       let recruit = "";

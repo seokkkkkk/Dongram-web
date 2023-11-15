@@ -1,3 +1,4 @@
+//관리자 페이지 동아리 탭의 회원 관리 테이블
 import { useCallback, useEffect, useState, useMemo } from "react";
 import { AdminSearchBox } from "../AdminSearchBox/AdminSearchBox";
 import { AdminClubSelector } from "../AdminClubSelector/AdminClubSelector";
@@ -18,6 +19,7 @@ import {
 } from "./AdminClubMemberManageTable.styled";
 import { customAxios } from "@/Utils/customAxios";
 
+//동아리 데이터 형식
 interface DataRow {
   clubId: string;
   clubName: string;
@@ -25,7 +27,7 @@ interface DataRow {
   recruitment: string;
   college: string;
 }
-
+//선택된 동아리 정보
 interface ParentProps {
   ParentClickedId: string;
 }
@@ -38,11 +40,6 @@ export const AdminClubMemberManageTable = ({
   const [searchText, setSearchText] = useState("");
   const [searchOption, setSearchOption] = useState("ID");
   const [clickedId, setClickedId] = useState<string>();
-
-  const handleSearchClick = useCallback(() => {
-    setSearchText(inputText);
-    setCurrentPage(1);
-  }, [inputText]);
 
   //table 페이지
   const [currentPage, setCurrentPage] = useState(1);
@@ -137,8 +134,9 @@ export const AdminClubMemberManageTable = ({
     handlePageClick,
     handlePrevClick,
   ]);
-  //여기까지
+  //여기까지 페이지 관리
 
+  //클릭된 동아리 정보 get
   useEffect(() => {
     customAxios
       .get(`/clubs/${ParentClickedId}`)

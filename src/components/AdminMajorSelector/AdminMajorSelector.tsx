@@ -1,3 +1,5 @@
+//관리자 페이지에서 사용하는 전공 선택 컴포넌트
+
 import { useState, useCallback, useEffect } from "react";
 import x from "@public/x.svg";
 import under from "@public/under2.svg";

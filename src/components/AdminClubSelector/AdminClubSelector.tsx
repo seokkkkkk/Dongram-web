@@ -1,3 +1,4 @@
+//관리자 페이지 동아리 탭의 검색 옵션 박스
 import { useCallback, useState } from "react";
 import filter from "@public/filter.svg";
 import {

@@ -1,3 +1,4 @@
+//동아리 정보
 import {
   useEffect,
   useState,

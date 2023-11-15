@@ -1,3 +1,4 @@
+//동아리 컴포넌트
 import clubimage from "@public/placeholder.png";
 import { Category } from "@components/Category/Category";
 import {

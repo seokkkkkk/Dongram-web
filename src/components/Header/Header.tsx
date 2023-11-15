@@ -1,3 +1,4 @@
+//메인 페이지의 헤더
 import logo from "@public/logo.png";
 import { LoginButton } from "@components/LoginButton/LoginButton";
 import { UserButton } from "@components/UserButton/UserButton";

@@ -3,7 +3,7 @@ import Categories from "@components/Categories/Categories";
 import { Clubs } from "@/components/Clubs/Clubs";
 import styled from "@emotion/styled";
 import { useState } from "react";
-import { Category } from "@/components/Category/Category";
+import { Category } from "@/components/CategoryWithState/Category";
 
 const PageContainer = styled.div`
   display: flex; /* Flexbox 컨테이너로 설정 */
@@ -48,15 +48,11 @@ export default function ClubPage() {
             clickedIds={clickedDivision}
             setClickedIds={setClickedDivision}
           />
-          <Category
-            category="모집 중"
-            recruit={recruit}
-            setRecruit={setRecruit}
-          />
+          <Category props="모집 중" setState={setRecruit} />
         </Department>
       </div>
       <Boarder />
-      <Clubs ids={clickedIds} divisions={clickedDivision} />
+      <Clubs ids={clickedIds} divisions={clickedDivision} recruit={recruit} />
     </PageContainer>
   );
 }
