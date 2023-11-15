@@ -63,6 +63,12 @@ export const Delete = styled.button`
   font-size: 1.6rem;
   font-weight: 500;
   letter-spacing: 0.05rem;
+  &:hover {
+    box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #e02626 inset;
+  }
+  &:active {
+    box-shadow: 0.2rem 0.2rem 0.3rem 0.2rem #e02626 inset;
+  }
 `;
 export const Buttons = styled.div`
   margin-top: 4.5rem;
@@ -79,12 +85,24 @@ export const Cancle = styled.button`
   font-size: 1.8rem;
   font-weight: 500;
   letter-spacing: 0.05rem;
+  &:hover {
+    box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #dadce0 inset;
+  }
+  &:active {
+    box-shadow: 0.2rem 0.2rem 0.3rem 0.2rem #dadce0 inset;
+  }
 `;
 export const Save = styled(Cancle)`
   margin-left: 1.3rem;
   border: 1px solid #0090f9;
   background: #0090f9;
   color: white;
+  &:hover {
+    box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #0076d7 inset;
+  }
+  &:active {
+    box-shadow: 0.2rem 0.2rem 0.3rem 0.2rem #0076d7 inset;
+  }
 `;
 
 export const Majors = styled(Text)`

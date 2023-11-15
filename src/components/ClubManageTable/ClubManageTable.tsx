@@ -159,7 +159,7 @@ export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
             </NumberButton>
           )
         )}
-        {currentPage === totalPages ? (
+        {currentPage >= totalPages ? (
           <DisabledShiftButton onClick={handleNextClick}>
             Next &nbsp;&gt;
           </DisabledShiftButton>

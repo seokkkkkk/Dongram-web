@@ -120,7 +120,7 @@ export const Clubs = ({ ids, divisions }: ParentProps) => {
             </NumberButton>
           )
         )}
-        {currentPage === totalPages || totalPages === 0 ? (
+        {currentPage >= totalPages || totalPages === 0 ? (
           <DisabledShiftButton onClick={handleNextClick}>
             Next &nbsp;&gt;
           </DisabledShiftButton>

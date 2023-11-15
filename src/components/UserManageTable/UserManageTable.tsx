@@ -162,7 +162,7 @@ export const UserManageTable = ({ ParentClickedId }: ParentProps) => {
             </NumberButton>
           )
         )}
-        {currentPage === totalPages ? (
+        {currentPage >= totalPages ? (
           <DisabledShiftButton onClick={handleNextClick}>
             Next &nbsp;&gt;
           </DisabledShiftButton>

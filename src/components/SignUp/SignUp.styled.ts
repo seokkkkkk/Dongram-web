@@ -63,4 +63,10 @@ export const SubmitButton = styled.button`
   color: #fff;
   font-size: 2rem;
   font-weight: 600;
+  &:hover {
+    box-shadow: 0.2rem 0.2rem 0.4rem 0.2rem #0076d7 inset;
+  }
+  &:active {
+    box-shadow: 0.3rem 0.3rem 0.5rem 0.3rem #0076d7 inset;
+  }
 `;

@@ -15,6 +15,12 @@ export const SelectBox = styled.div<OptionShow>`
   border-radius: 0.6rem;
   border-bottom: 1px solid #c1c7cd;
   cursor: pointer;
+  &:hover {
+    box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #dadce0 inset;
+  }
+  &:active {
+    box-shadow: 0.2rem 0.2rem 0.3rem 0.2rem #dadce0 inset;
+  }
 `;
 export const Selected = styled.label`
   font-size: 1.2rem;
