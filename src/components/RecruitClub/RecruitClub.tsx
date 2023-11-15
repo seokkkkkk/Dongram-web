@@ -1,6 +1,8 @@
 import { Club } from "@components/Club/Club";
 import left from "@public/left_fill.svg";
+import disabled_left from "@public/left.svg";
 import right from "@public/right_fill.svg";
+import disabled_right from "@public/right.svg";
 import {
   PageContainer,
   RecruitClubText,
@@ -81,7 +83,7 @@ export function RecruitClub({ displayNum }: ParentProps) {
       );
     });
   }, [filteredData]);
-  return page === 0 ? (
+  return lastPage === 0 ? (
     <PageContainer>
       <RecruitClubText>모집 중인 동아리</RecruitClubText>
       <Table>
@@ -93,14 +95,14 @@ export function RecruitClub({ displayNum }: ParentProps) {
       <RecruitClubText>모집 중인 동아리</RecruitClubText>
       <Table>
         <Button
-          src={left}
+          src={page === 0 ? disabled_left : left}
           alt="left_button"
           onClick={onLeftClick}
           style={{ cursor: page === 0 ? "default" : "pointer" }}
         />
         <Clubs>{printClubs()}</Clubs>
         <Button
-          src={right}
+          src={page === lastPage ? disabled_right : right}
           alt="right_button"
           onClick={onRightClick}
           style={{ cursor: page === lastPage ? "default" : "pointer" }}

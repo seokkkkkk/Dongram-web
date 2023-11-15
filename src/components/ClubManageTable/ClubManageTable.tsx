@@ -20,18 +20,23 @@ import {
 import { customAxios } from "@/Utils/customAxios";
 
 interface DataRow {
-  clubId: string;
-  clubName: string;
-  division: string;
-  recruitment: string;
-  college: string;
+  id: string;
+  club_name: string;
+  student_name: string;
+  major: string;
+  apply_date: string;
+  status: string;
 }
 
 interface ParentProps {
   ParentClickedId: (id: string) => void;
+  HandleStatus: (status: string) => void;
 }
 
-export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
+export const ClubManageTable = ({
+  ParentClickedId,
+  HandleStatus,
+}: ParentProps) => {
   const [data, setData] = useState<DataRow[]>([]);
   const [inputText, setInputText] = useState("");
   const [searchText, setSearchText] = useState("");
@@ -61,16 +66,16 @@ export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
       let valueToSearch = "";
       switch (searchOption) {
         case "ID":
-          valueToSearch = item.clubId;
+          valueToSearch = item.id;
           break;
         case "소속":
-          valueToSearch = item.college;
+          valueToSearch = item.major;
           break;
-        case "분과":
-          valueToSearch = item.division;
+        case "상태":
+          valueToSearch = item.status;
           break;
         case "이름":
-          valueToSearch = item.clubName;
+          valueToSearch = item.club_name;
           break;
         default:
           break;
@@ -180,13 +185,8 @@ export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
 
   useEffect(() => {
     customAxios
-      .get("/clubs/all")
-      .then(
-        (response) => (
-          setData(response.data.data),
-          handleClicked(response.data.data[0].clubId)
-        )
-      )
+      .get("admin/clubs/all")
+      .then((response) => setData(response.data.data))
       .catch((error) => console.error("에러:", error));
   }, [handleClicked]);
 
@@ -202,23 +202,20 @@ export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
       <Table>
         <TableTitle>
           <TitleRow isId>고유ID</TitleRow>
+          <TitleRow>동아리 이름</TitleRow>
           <TitleRow>소속</TitleRow>
-          <TitleRow>분과</TitleRow>
-          <TitleRow>이름</TitleRow>
+          <TitleRow>신청일</TitleRow>
+          <TitleRow>상태</TitleRow>
         </TableTitle>
         <TableContent>
           {currentData.map((item, rowIndex) => (
             <TableRow
               key={rowIndex}
-              onClick={() => handleClicked(item.clubId)}
-              clicked={item.clubId === clickedId}
+              onClick={() => handleClicked(item.id)}
+              clicked={item.id === clickedId}
             >
               {Object.values(item).map((value, colIndex) => {
-                if (colIndex < 4) {
-                  // 만약 major가 빈 문자열이고 colIndex가 3 (major를 표시하는 열) 이면 college 값을 표시
-                  if (colIndex === 3 && !value) {
-                    value = item.college;
-                  }
+                if (colIndex != 2) {
                   return (
                     <TableText key={colIndex} isId={colIndex === 0}>
                       {value}

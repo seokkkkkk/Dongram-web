@@ -39,7 +39,8 @@ interface DataRow {
 }
 
 interface Club {
-  name: string;
+  clubKey: string;
+  clubValue: string;
 }
 
 interface ParentProps {
@@ -162,9 +163,11 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
         <Text>소속 동아리</Text>
         <Clubs>
           {changedUser && changedUser.clubList
-            ? changedUser.clubList.map((club, index) => (
-                <ClubBox key={index}>{club.toString()}</ClubBox>
-              ))
+            ? Object.entries(changedUser.clubList)
+                .filter(([clubKey, clubValue]) => clubValue === "approved")
+                .map(([clubKey], index) => (
+                  <ClubBox key={index}>{clubKey}</ClubBox>
+                ))
             : "로딩 중..."}
         </Clubs>
         <Text>권한</Text>

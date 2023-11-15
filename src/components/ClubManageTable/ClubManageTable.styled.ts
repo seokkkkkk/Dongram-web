@@ -25,7 +25,7 @@ export const TableRow = styled.div<{ clicked?: boolean }>`
 export const TableText = styled.div<{ isId?: boolean }>`
   font-size: 1.8rem;
   line-height: 110%;
-  flex: ${(props) => (props.isId ? 0.5 : 1)};
+  flex: 0.5;
   text-align: center;
 `;
 export const TableTitle = styled.div`
@@ -40,9 +40,10 @@ export const TableTitle = styled.div`
   flex: 1;
 `;
 export const TitleRow = styled.div<{ isId?: boolean }>`
+  white-space: nowrap;
   font-size: 1.8rem;
   line-height: 110%;
-  flex: ${(props) => (props.isId ? 0.5 : 1)};
+  flex: 0.5;
   text-align: center;
 `;
 export const PageTab = styled.div`

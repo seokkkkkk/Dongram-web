@@ -47,12 +47,10 @@ export function SignUp({ signUpModal, toggleSignUp, toggleSignIn }: Modal) {
     axios //api post 예시
       .post("http://13.125.162.181:8084/join", formData)
       .then((res) => {
-        console.log("저장 완료");
         toggleSignUp();
       })
       .catch((error) => {
         alert("회원가입 실패. 다시 시도해주세요.");
-        console.log("저장 실패");
         console.error(error);
       });
   }, [

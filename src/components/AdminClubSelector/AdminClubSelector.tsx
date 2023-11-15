@@ -39,7 +39,7 @@ export const AdminClubSelector = ({ onOptionChange }: AdminSelectorProps) => {
       <Options show={showOptions}>
         <Option onClick={handleSetSelectedOption}>ID</Option>
         <Option onClick={handleSetSelectedOption}>소속</Option>
-        <Option onClick={handleSetSelectedOption}>분과</Option>
+        <Option onClick={handleSetSelectedOption}>상태</Option>
         <Option onClick={handleSetSelectedOption}>이름</Option>
       </Options>
     </SelectBox>

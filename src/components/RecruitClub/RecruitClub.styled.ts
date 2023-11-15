@@ -2,12 +2,15 @@ import styled from "@emotion/styled";
 import Image from "next/image";
 
 export const PageContainer = styled.div`
-  width: 107.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: -3rem;
   margin-top: 3rem;
   margin-bottom: 4.4rem;
 `;
 export const RecruitClubText = styled.div`
-  margin-left: 6.8rem;
+  margin-left: -72rem;
   margin-bottom: 1.7rem;
   font-size: 2.4rem;
   font-weight: 400;
@@ -22,7 +25,7 @@ export const Clubs = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100rem;
-  margin-left: 3rem;
+  margin-left: 4.5rem;
 `;
 export const ClubContainer = styled.div`
   margin-left: 1.3rem;
@@ -30,5 +33,4 @@ export const ClubContainer = styled.div`
 export const Table = styled.div`
   display: flex;
   align-items: center;
-  margin-left: -1.5rem;
 `;

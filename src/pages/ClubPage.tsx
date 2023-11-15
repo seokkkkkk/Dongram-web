@@ -4,6 +4,7 @@ import { Clubs } from "@/components/Clubs/Clubs";
 import styled from "@emotion/styled";
 import { useState } from "react";
 import { Category } from "@/components/CategoryWithState/Category";
+import { BigCategory } from "@/components/BigCategory/BigCategory";
 
 const PageContainer = styled.div`
   display: flex; /* Flexbox 컨테이너로 설정 */
@@ -16,6 +17,8 @@ const College = styled.div`
   margin-top: 2rem;
 `;
 const Department = styled.div`
+  display: flex;
+  justify-content: space-between;
   margin-top: 1.2rem;
 `;
 const Boarder = styled.div`
@@ -29,6 +32,9 @@ export default function ClubPage() {
   const [clickedIds, setClickedIds] = useState<number[]>([]);
   const [clickedDivision, setClickedDivision] = useState<number[]>([]);
   const [recruit, setRecruit] = useState(false);
+  const handleCategoryClick = () => {
+    setRecruit(!recruit);
+  };
   return (
     <PageContainer>
       <Header />
@@ -48,7 +54,7 @@ export default function ClubPage() {
             clickedIds={clickedDivision}
             setClickedIds={setClickedDivision}
           />
-          <Category props="모집 중" setState={setRecruit} />
+          <BigCategory props="모집 중" onCategoryClick={handleCategoryClick} />
         </Department>
       </div>
       <Boarder />
