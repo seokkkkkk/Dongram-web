@@ -24,7 +24,8 @@ customAxios.interceptors.request.use(
     // window 객체가 있고, localStorage에 accessToken이 있다면 헤더에 추가
     if (typeof window !== "undefined") {
       const token = localStorage.getItem("accessToken");
-      if (token) {
+      const refreshToken = getCookie("refreshToken");
+      if (refreshToken) {
         config.headers["Access_Token"] = token;
       }
     }
