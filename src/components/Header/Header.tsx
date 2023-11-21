@@ -10,7 +10,6 @@ import {
   LogoImage,
   LogoText,
   BoardContainer,
-  FreeBoardText,
   ClubText,
   SearchContainer,
   SearchImage,
@@ -20,7 +19,12 @@ import {
 import { IsLogin } from "@/components/IsLogin/IsLogin";
 import { useCallback, useEffect, useState } from "react";
 
-export function Header() {
+interface ParentProps {
+  onSearchClick: () => void;
+  onSearchChange: (value: string) => void;
+}
+
+export const Header = ({ onSearchClick, onSearchChange }: ParentProps) => {
   const [LoginHeader, setLoginHeader] = useState(false);
   useEffect(() => {
     setLoginHeader(IsLogin());
@@ -32,6 +36,23 @@ export function Header() {
       <LoginButton LoginControl={setLoginHeader} />
     );
   }, [LoginHeader]);
+  const [inputValue, setInputValue] = useState("");
+
+  const handleInputChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setInputValue(e.target.value);
+      onSearchChange(e.target.value);
+    },
+    [onSearchChange]
+  );
+  const handleKeyDown = useCallback(
+    (e: React.KeyboardEvent<HTMLInputElement>) => {
+      if (e.key === "Enter") {
+        onSearchClick();
+      }
+    },
+    [onSearchClick]
+  );
   return (
     <header>
       <HeaderContainer>
@@ -50,13 +71,22 @@ export function Header() {
           </ClubText>
         </BoardContainer>
         <SearchContainer>
-          <SearchImage src={search_icon} alt="search-icon" />
-          <SearchInput type="text" placeholder="Search for..." />
+          <SearchImage
+            src={search_icon}
+            alt="search-icon"
+            onClick={onSearchClick}
+          />
+          <SearchInput
+            type="text"
+            placeholder="Search for..."
+            value={inputValue}
+            onChange={handleInputChange}
+            onKeyDown={handleKeyDown}
+          />
         </SearchContainer>
         {LoginButtonControl()}
       </HeaderContainer>
-
       <GreyBorder></GreyBorder>
     </header>
   );
-}
+};

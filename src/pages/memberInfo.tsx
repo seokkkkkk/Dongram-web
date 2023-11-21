@@ -2,6 +2,9 @@ import { Header } from "@components/Header/Header";
 import { SideInfo } from "@/components/SideInfoFolder/SideInfo";
 import styled from "@emotion/styled";
 import { MainInfo } from "@/components/MainInfoFolder/MainInfo";
+import { useCallback, useState } from "react";
+import { customAxios } from "@/Utils/customAxios";
+import { SearchResult } from "@/components/SearchResult/SearchResult";
 
 const PageConatiner = styled.div`
   display: flex; /* Flexbox 컨테이너로 설정 */
@@ -15,15 +18,33 @@ const InfoContainer = styled.div`
 `;
 
 export default function memberInfo() {
-  return (
-    <>
-      <PageConatiner>
-        <Header />
-        <InfoContainer>
-          <SideInfo />
-          <MainInfo />
-        </InfoContainer>
-      </PageConatiner>
-    </>
+  //검색
+  const [searchValue, setSearchValue] = useState("");
+  const [searchResult, setSearchResult] = useState([]);
+  const [search, setSearch] = useState(false);
+  const onSearchChange = useCallback((value: string) => {
+    setSearchValue(value);
+  }, []);
+  const onSearchClick = useCallback(() => {
+    customAxios.get(`/clubs/search?keyword=${searchValue}`).then((res) => {
+      setSearchResult(res.data.data);
+      setSearch(true);
+    });
+  }, [searchValue]);
+  //<Header onSearchChange={onSearchChange} onSearchClick={onSearchClick} />
+  //<SearchResult displayNum={8} ResultClubs={searchResult} />
+  return search ? (
+    <PageConatiner>
+      <Header onSearchChange={onSearchChange} onSearchClick={onSearchClick} />
+      <SearchResult displayNum={8} ResultClubs={searchResult} />
+    </PageConatiner>
+  ) : (
+    <PageConatiner>
+      <Header onSearchChange={onSearchChange} onSearchClick={onSearchClick} />
+      <InfoContainer>
+        <SideInfo />
+        <MainInfo />
+      </InfoContainer>
+    </PageConatiner>
   );
 }

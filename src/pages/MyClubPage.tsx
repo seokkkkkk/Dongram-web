@@ -4,6 +4,9 @@ import { Banner } from "@components/Banner/Banner";
 import { RecruitClub } from "@components/RecruitClub/RecruitClub";
 import styled from "@emotion/styled";
 import { MyClub } from "@/components/MyClub/MyClub";
+import { useCallback, useState } from "react";
+import { customAxios } from "@/Utils/customAxios";
+import { SearchResult } from "@/components/SearchResult/SearchResult";
 
 const PageConatiner = styled.div`
   display: flex; /* Flexbox 컨테이너로 설정 */
@@ -13,14 +16,32 @@ const PageConatiner = styled.div`
 `;
 //회원정보를 확인하는 페이지와, 동아리 생성 홈페이지는 로그인후 나타나는 유저아이콘 사진에 링크를 넣어놨음
 export default function Home() {
-  return (
-    <>
-      <PageConatiner>
-        <Header />
-        <Banner />
-        <MyClub displayNum={4} />
-        <RecruitClub displayNum={4} />
-      </PageConatiner>
-    </>
+  //검색
+  const [searchValue, setSearchValue] = useState("");
+  const [searchResult, setSearchResult] = useState([]);
+  const [search, setSearch] = useState(false);
+  const onSearchChange = useCallback((value: string) => {
+    setSearchValue(value);
+  }, []);
+  const onSearchClick = useCallback(() => {
+    customAxios.get(`/clubs/search?keyword=${searchValue}`).then((res) => {
+      setSearchResult(res.data.data);
+      setSearch(true);
+    });
+  }, [searchValue]);
+  //<Header onSearchChange={onSearchChange} onSearchClick={onSearchClick} />
+  //<SearchResult displayNum={8} ResultClubs={searchResult} />
+  return search ? (
+    <PageConatiner>
+      <Header onSearchChange={onSearchChange} onSearchClick={onSearchClick} />
+      <SearchResult displayNum={8} ResultClubs={searchResult} />
+    </PageConatiner>
+  ) : (
+    <PageConatiner>
+      <Header onSearchChange={onSearchChange} onSearchClick={onSearchClick} />
+      <Banner />
+      <MyClub displayNum={4} />
+      <RecruitClub displayNum={4} />
+    </PageConatiner>
   );
 }

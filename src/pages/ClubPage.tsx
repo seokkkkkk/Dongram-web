@@ -2,9 +2,11 @@ import { Header } from "@components/Header/Header";
 import Categories from "@components/Categories/Categories";
 import { Clubs } from "@/components/Clubs/Clubs";
 import styled from "@emotion/styled";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { Category } from "@/components/CategoryWithState/Category";
 import { BigCategory } from "@/components/BigCategory/BigCategory";
+import { customAxios } from "@/Utils/customAxios";
+import { SearchResult } from "@/components/SearchResult/SearchResult";
 
 const PageContainer = styled.div`
   display: flex; /* Flexbox 컨테이너로 설정 */
@@ -35,9 +37,29 @@ export default function ClubPage() {
   const handleCategoryClick = () => {
     setRecruit(!recruit);
   };
-  return (
+  //검색
+  const [searchValue, setSearchValue] = useState("");
+  const [searchResult, setSearchResult] = useState([]);
+  const [search, setSearch] = useState(false);
+  const onSearchChange = useCallback((value: string) => {
+    setSearchValue(value);
+  }, []);
+  const onSearchClick = useCallback(() => {
+    customAxios.get(`/clubs/search?keyword=${searchValue}`).then((res) => {
+      setSearchResult(res.data.data);
+      setSearch(true);
+    });
+  }, [searchValue]);
+  //<Header onSearchChange={onSearchChange} onSearchClick={onSearchClick} />
+  //<SearchResult displayNum={8} ResultClubs={searchResult} />
+  return search ? (
     <PageContainer>
-      <Header />
+      <Header onSearchChange={onSearchChange} onSearchClick={onSearchClick} />
+      <SearchResult displayNum={8} ResultClubs={searchResult} />
+    </PageContainer>
+  ) : (
+    <PageContainer>
+      <Header onSearchChange={onSearchChange} onSearchClick={onSearchClick} />
       <div>
         <College>
           <Categories
