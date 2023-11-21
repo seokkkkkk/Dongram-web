@@ -20,7 +20,7 @@ interface clubinfo {
   clubName: string;
   college: string;
   division: string;
-  recruitment: string;
+  recruitment: boolean;
 }
 
 export const Clubs = ({ ids, divisions, recruit }: ParentProps) => {
@@ -137,6 +137,7 @@ export const Clubs = ({ ids, divisions, recruit }: ParentProps) => {
         .get(`clubs/all`)
         .then((response) => {
           setClubData(response.data.data);
+          console.log(response.data.data);
         })
         .catch((error) => {
           console.error("에러: ", error);
@@ -177,9 +178,7 @@ export const Clubs = ({ ids, divisions, recruit }: ParentProps) => {
     }
 
     if (recruit) {
-      filteredClubs = filteredClubs.filter(
-        (club) => club.recruitment === "true"
-      );
+      filteredClubs = filteredClubs.filter((club) => club.recruitment === true);
     }
 
     setSelectedClubs(filteredClubs);
@@ -189,7 +188,7 @@ export const Clubs = ({ ids, divisions, recruit }: ParentProps) => {
   const printClub = useCallback(() => {
     return currentData.map((club, i) => {
       let recruit = "";
-      if (club.recruitment === "true") {
+      if (club.recruitment === true) {
         recruit = "모집 중";
       } else {
         recruit = "모집 X";

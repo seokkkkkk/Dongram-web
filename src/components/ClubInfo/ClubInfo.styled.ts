@@ -92,7 +92,7 @@ export const Delete = styled.button`
   }
 `;
 export const Buttons = styled.div`
-  margin-top: 4.5rem;
+  margin-top: 2rem;
   display: flex;
   align-items: end;
   justify-content: space-between;

@@ -164,7 +164,7 @@ export const ClubInfo = ({
 
   useEffect(() => {
     customAxios
-      .get(`/clubs/${ClickedId}`)
+      .get(`admin/clubs/${ClickedId}`)
       .then((response) => {
         setClub(response.data.data);
         setChangedClub(response.data.data);
