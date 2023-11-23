@@ -1,3 +1,4 @@
+//카테코리 컴포넌트 (대)
 import { useState } from "react";
 import { CategoryButtonCss, CategoryButtonTextCss } from "./BigCategory.styled";
 

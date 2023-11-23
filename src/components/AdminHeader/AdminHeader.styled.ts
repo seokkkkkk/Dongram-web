@@ -17,7 +17,7 @@ export const Text = styled.div`
 export const Header = styled.div`
   display: flex;
   width: 100%;
-  padding: 1.6rem 3.2rem;
+  padding: 1rem 3.2rem;
   align-items: center;
   background-color: #f2f4f8;
   border-bottom: 1px solid #000;

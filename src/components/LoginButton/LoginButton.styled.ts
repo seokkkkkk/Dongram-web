@@ -11,6 +11,12 @@ export const LoginButtonCss = styled.button`
   height: 5.2rem;
   font-size: 2rem;
   font-weight: 500;
+  &:hover {
+    box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #dadce0 inset;
+  }
+  &:active {
+    box-shadow: 0.2rem 0.2rem 0.3rem 0.2rem #dadce0 inset;
+  }
 `;
 export const PasswordButtonCss = styled.button`
   border-radius: 2.5rem;
@@ -21,4 +27,10 @@ export const PasswordButtonCss = styled.button`
   font-size: 2rem;
   font-weight: 500;
   margin-left: 1.1rem;
+  &:hover {
+    box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #0076d7 inset;
+  }
+  &:active {
+    box-shadow: 0.2rem 0.2rem 0.3rem 0.2rem #0076d7 inset;
+  }
 `;

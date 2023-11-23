@@ -1,4 +1,5 @@
-import banner from "@public/placeholder.png";
+//배너 이미지
+import banner from "@public/banner.png";
 import { BannerImageCss } from "@components/Banner/Banner.styled";
 
 export function Banner() {

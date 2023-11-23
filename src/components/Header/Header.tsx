@@ -1,4 +1,5 @@
-import logo from "@public/logo.svg";
+//메인 페이지의 헤더
+import logo from "@public/logo.png";
 import { LoginButton } from "@components/LoginButton/LoginButton";
 import { UserButton } from "@components/UserButton/UserButton";
 import search_icon from "@public/search-icon.svg";
@@ -9,7 +10,6 @@ import {
   LogoImage,
   LogoText,
   BoardContainer,
-  FreeBoardText,
   ClubText,
   SearchContainer,
   SearchImage,
@@ -19,7 +19,12 @@ import {
 import { IsLogin } from "@/components/IsLogin/IsLogin";
 import { useCallback, useEffect, useState } from "react";
 
-export function Header() {
+interface ParentProps {
+  onSearchClick: () => void;
+  onSearchChange: (value: string) => void;
+}
+
+export const Header = ({ onSearchClick, onSearchChange }: ParentProps) => {
   const [LoginHeader, setLoginHeader] = useState(false);
   useEffect(() => {
     setLoginHeader(IsLogin());
@@ -31,30 +36,57 @@ export function Header() {
       <LoginButton LoginControl={setLoginHeader} />
     );
   }, [LoginHeader]);
+  const [inputValue, setInputValue] = useState("");
+
+  const handleInputChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setInputValue(e.target.value);
+      onSearchChange(e.target.value);
+    },
+    [onSearchChange]
+  );
+  const handleKeyDown = useCallback(
+    (e: React.KeyboardEvent<HTMLInputElement>) => {
+      if (e.key === "Enter") {
+        onSearchClick();
+      }
+    },
+    [onSearchClick]
+  );
   return (
     <header>
       <HeaderContainer>
         <Link href="../">
           <LogoContainer>
             <LogoImage src={logo} alt="logo" />
-            <LogoText>ST</LogoText>
+            <LogoText>DONGRAM</LogoText>
           </LogoContainer>
         </Link>
         <BoardContainer>
-          <FreeBoardText>자유게시판</FreeBoardText>
           <ClubText>
             <Link href="../ClubPage">동아리정보</Link>
           </ClubText>
-          <ClubText>내 동아리</ClubText>
+          <ClubText>
+            <Link href="../MyClubPage">내 동아리</Link>
+          </ClubText>
         </BoardContainer>
         <SearchContainer>
-          <SearchImage src={search_icon} alt="search-icon" />
-          <SearchInput type="text" placeholder="Search for..." />
+          <SearchImage
+            src={search_icon}
+            alt="search-icon"
+            onClick={onSearchClick}
+          />
+          <SearchInput
+            type="text"
+            placeholder="Search for..."
+            value={inputValue}
+            onChange={handleInputChange}
+            onKeyDown={handleKeyDown}
+          />
         </SearchContainer>
         {LoginButtonControl()}
       </HeaderContainer>
-
       <GreyBorder></GreyBorder>
     </header>
   );
-}
+};

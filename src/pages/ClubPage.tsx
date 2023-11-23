@@ -2,7 +2,11 @@ import { Header } from "@components/Header/Header";
 import Categories from "@components/Categories/Categories";
 import { Clubs } from "@/components/Clubs/Clubs";
 import styled from "@emotion/styled";
-import { useState } from "react";
+import { useCallback, useState } from "react";
+import { Category } from "@/components/CategoryWithState/Category";
+import { BigCategory } from "@/components/BigCategory/BigCategory";
+import { customAxios } from "@/Utils/customAxios";
+import { SearchResult } from "@/components/SearchResult/SearchResult";
 
 const PageContainer = styled.div`
   display: flex; /* Flexbox 컨테이너로 설정 */
@@ -15,6 +19,8 @@ const College = styled.div`
   margin-top: 2rem;
 `;
 const Department = styled.div`
+  display: flex;
+  justify-content: space-between;
   margin-top: 1.2rem;
 `;
 const Boarder = styled.div`
@@ -27,9 +33,33 @@ const Boarder = styled.div`
 export default function ClubPage() {
   const [clickedIds, setClickedIds] = useState<number[]>([]);
   const [clickedDivision, setClickedDivision] = useState<number[]>([]);
-  return (
+  const [recruit, setRecruit] = useState(false);
+  const handleCategoryClick = () => {
+    setRecruit(!recruit);
+  };
+  //검색
+  const [searchValue, setSearchValue] = useState("");
+  const [searchResult, setSearchResult] = useState([]);
+  const [search, setSearch] = useState(false);
+  const onSearchChange = useCallback((value: string) => {
+    setSearchValue(value);
+  }, []);
+  const onSearchClick = useCallback(() => {
+    customAxios.get(`/clubs/search?keyword=${searchValue}`).then((res) => {
+      setSearchResult(res.data.data);
+      setSearch(true);
+    });
+  }, [searchValue]);
+  //<Header onSearchChange={onSearchChange} onSearchClick={onSearchClick} />
+  //<SearchResult displayNum={8} ResultClubs={searchResult} />
+  return search ? (
     <PageContainer>
-      <Header />
+      <Header onSearchChange={onSearchChange} onSearchClick={onSearchClick} />
+      <SearchResult displayNum={8} ResultClubs={searchResult} />
+    </PageContainer>
+  ) : (
+    <PageContainer>
+      <Header onSearchChange={onSearchChange} onSearchClick={onSearchClick} />
       <div>
         <College>
           <Categories
@@ -46,10 +76,11 @@ export default function ClubPage() {
             clickedIds={clickedDivision}
             setClickedIds={setClickedDivision}
           />
+          <BigCategory props="모집 중" onCategoryClick={handleCategoryClick} />
         </Department>
       </div>
       <Boarder />
-      <Clubs ids={clickedIds} divisions={clickedDivision} />
+      <Clubs ids={clickedIds} divisions={clickedDivision} recruit={recruit} />
     </PageContainer>
   );
 }

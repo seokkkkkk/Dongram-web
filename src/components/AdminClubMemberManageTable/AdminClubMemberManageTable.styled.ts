@@ -1,19 +1,20 @@
 import styled from "@emotion/styled";
 
+export const ClubName = styled.div`
+  font-size: 3.6rem;
+`;
 export const Table = styled.div`
   margin-top: 2.1rem;
   z-index: auto;
+  width: 58rem;
 `;
 
 export const TableContent = styled.div`
   border-bottom: 0.5px solid #959a9f;
-  width: 86rem;
 `;
 export const TableRow = styled.div<{ clicked?: boolean }>`
   display: flex;
   align-items: center;
-  gap: 48px;
-  width: 86rem;
   height: 4.6rem;
   border: 0.5px solid #959a9f;
   border-bottom: none;
@@ -25,35 +26,30 @@ export const TableRow = styled.div<{ clicked?: boolean }>`
 export const TableText = styled.div<{ isId?: boolean }>`
   font-size: 1.8rem;
   line-height: 110%;
-  flex: 0.5;
+  flex: ${(props) => (props.isId ? 0.5 : 1)};
   text-align: center;
 `;
 export const TableTitle = styled.div`
   display: flex;
   align-items: center;
-  width: 86rem;
   height: 4.6rem;
-  gap: 48px;
-  align-self: stretch;
   background: #dde1e6;
   margin-bottom: 2.15rem;
-  flex: 1;
+  justify-content: space-around;
+  gap: 4.8rem;
 `;
-export const TitleRow = styled.div<{ isId?: boolean }>`
-  white-space: nowrap;
+export const TitleRow = styled.div`
   font-size: 1.8rem;
   line-height: 110%;
-  flex: 0.5;
   text-align: center;
+  justify-content: space-around;
+  gap: 4.8rem;
 `;
 export const PageTab = styled.div`
   margin-top: 15.8rem;
   display: flex;
-  width: 86rem;
-  height: 4rem;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
   font-weight: 500;
   font-size: 1.6rem;
 `;
@@ -79,27 +75,5 @@ export const DisabledShiftButton = styled(ShiftButton)`
   color: #697077;
   cursor: default;
 `;
-export const SearchLine = styled.div`
-  display: flex;
-  gap: 2.1rem;
-  align-items: center;
-  margin-bottom: -0.8rem;
-`;
-export const Header = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-`;
-export const Status = styled.div`
-  display: flex;
-  gap: 1rem;
-`;
-export const StatusText = styled.span`
-  margin-left: 0.5rem;
-  font-size: 1.5rem;
-`;
-export const StatusLabel = styled.label`
-  display: flex;
-  align-items: center;
-`;
+
 export const Container = styled.div``;

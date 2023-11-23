@@ -1,3 +1,4 @@
+//어드민 페이지의 동아리 관리 테이블
 import { useCallback, useEffect, useState, useMemo } from "react";
 import { AdminSearchBox } from "../AdminSearchBox/AdminSearchBox";
 import { AdminClubSelector } from "../AdminClubSelector/AdminClubSelector";
@@ -15,26 +16,39 @@ import {
   TableText,
   SearchLine,
   Container,
+  Header,
+  Status,
+  StatusText,
+  StatusLabel,
 } from "./ClubManageTable.styled";
 import { customAxios } from "@/Utils/customAxios";
 
 interface DataRow {
-  clubId: string;
-  clubName: string;
-  division: string;
-  recruitment: string;
-  college: string;
+  id: string;
+  club_name: string;
+  student_name: string;
+  major: string;
+  apply_date: string;
+  status: string;
 }
 
 interface ParentProps {
   ParentClickedId: (id: string) => void;
+  HandleStatus: (status: string) => void;
+  ClickedStatus: string;
 }
 
-export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
+export const ClubManageTable = ({
+  ParentClickedId,
+  HandleStatus,
+  ClickedStatus,
+}: ParentProps) => {
   const [data, setData] = useState<DataRow[]>([]);
+  const [originData, setOriginData] = useState<DataRow[]>([]);
   const [inputText, setInputText] = useState("");
   const [searchText, setSearchText] = useState("");
   const [searchOption, setSearchOption] = useState("ID");
+  const [searchStatus, setSearchStatus] = useState("approve");
   const [clickedId, setClickedId] = useState<string>();
 
   const handleClicked = useCallback(
@@ -60,16 +74,16 @@ export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
       let valueToSearch = "";
       switch (searchOption) {
         case "ID":
-          valueToSearch = item.clubId;
+          valueToSearch = item.id;
           break;
         case "소속":
-          valueToSearch = item.college;
+          valueToSearch = item.major;
           break;
-        case "분과":
-          valueToSearch = item.division;
+        case "상태":
+          valueToSearch = item.status;
           break;
         case "이름":
-          valueToSearch = item.clubName;
+          valueToSearch = item.club_name;
           break;
         default:
           break;
@@ -159,7 +173,7 @@ export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
             </NumberButton>
           )
         )}
-        {currentPage === totalPages ? (
+        {currentPage >= totalPages ? (
           <DisabledShiftButton onClick={handleNextClick}>
             Next &nbsp;&gt;
           </DisabledShiftButton>
@@ -179,45 +193,80 @@ export const ClubManageTable = ({ ParentClickedId }: ParentProps) => {
 
   useEffect(() => {
     customAxios
-      .get("/clubs/all")
-      .then(
-        (response) => (
-          setData(response.data.data),
-          handleClicked(response.data.data[0].clubId)
-        )
-      )
+      .get("admin/clubs/all")
+      .then((response) => setOriginData(response.data.data))
       .catch((error) => console.error("에러:", error));
-  }, [handleClicked]);
+  }, [handleClicked, ClickedStatus]);
+
+  useEffect(() => {
+    const filteredData = originData.filter((item) => {
+      return item.status === searchStatus;
+    });
+    setData(filteredData);
+  }, [searchStatus, originData]);
 
   return (
     <Container>
-      <SearchLine>
-        <AdminClubSelector onOptionChange={handleOptionChange} />
-        <AdminSearchBox
-          onSearchChange={setInputText}
-          onSearchClick={handleSearchClick}
-        />
-      </SearchLine>
+      <Header>
+        <SearchLine>
+          <AdminClubSelector onOptionChange={handleOptionChange} />
+          <AdminSearchBox
+            onSearchChange={setInputText}
+            onSearchClick={handleSearchClick}
+          />
+        </SearchLine>
+        <Status>
+          <StatusLabel>
+            <input
+              type="radio"
+              name="status"
+              value="approve"
+              onChange={(e) => setSearchStatus(e.target.value)}
+              checked={searchStatus === "approve"}
+            />
+            <StatusText>승인</StatusText>
+          </StatusLabel>
+          <StatusLabel>
+            <input
+              type="radio"
+              name="status"
+              value="rejected"
+              onChange={(e) => setSearchStatus(e.target.value)}
+              checked={searchStatus === "rejected"}
+            />
+            <StatusText>거절</StatusText>
+          </StatusLabel>
+          <StatusLabel>
+            <input
+              type="radio"
+              name="status"
+              value="pending"
+              onChange={(e) => setSearchStatus(e.target.value)}
+              checked={searchStatus === "pending"}
+            />
+            <StatusText>대기</StatusText>
+          </StatusLabel>
+        </Status>
+      </Header>
       <Table>
         <TableTitle>
           <TitleRow isId>고유ID</TitleRow>
+          <TitleRow>동아리 이름</TitleRow>
           <TitleRow>소속</TitleRow>
-          <TitleRow>분과</TitleRow>
-          <TitleRow>이름</TitleRow>
+          <TitleRow>신청일</TitleRow>
+          <TitleRow>상태</TitleRow>
         </TableTitle>
         <TableContent>
           {currentData.map((item, rowIndex) => (
             <TableRow
               key={rowIndex}
-              onClick={() => handleClicked(item.clubId)}
-              clicked={item.clubId === clickedId}
+              onClick={() => {
+                handleClicked(item.id), HandleStatus(item.status);
+              }}
+              clicked={item.id === clickedId}
             >
               {Object.values(item).map((value, colIndex) => {
-                if (colIndex < 4) {
-                  // 만약 major가 빈 문자열이고 colIndex가 3 (major를 표시하는 열) 이면 college 값을 표시
-                  if (colIndex === 3 && !value) {
-                    value = item.college;
-                  }
+                if (colIndex != 2) {
                   return (
                     <TableText key={colIndex} isId={colIndex === 0}>
                       {value}

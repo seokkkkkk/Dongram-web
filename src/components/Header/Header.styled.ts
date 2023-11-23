@@ -19,12 +19,12 @@ export const LogoContainer = styled.div`
 export const LogoText = styled.span`
   color: #697077;
   font-weight: 700;
-  margin-left: 1.6rem;
+  margin-left: 0.5rem;
 `;
 export const BoardContainer = styled.div`
   display: flex;
   font-weight: 400;
-  margin-left: 8.1rem;
+  margin-left: 4rem;
   white-space: nowrap;
 `;
 export const FreeBoardText = styled.span`

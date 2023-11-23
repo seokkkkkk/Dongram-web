@@ -23,6 +23,7 @@ import {
   Cancle,
   Save,
   Majors,
+  Placeholder,
 } from "./UserInfo.styled";
 import { customAxios } from "@/Utils/customAxios";
 import { useRouter } from "next/router";
@@ -33,13 +34,16 @@ interface DataRow {
   memberName: string;
   major1: string;
   college1: string;
+  college2: string | null;
   role: string;
   major2: string;
   clubList: Club[];
+  profileImage: string;
 }
 
 interface Club {
-  name: string;
+  clubKey: string;
+  clubValue: string;
 }
 
 interface ParentProps {
@@ -126,35 +130,37 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
         studentId: changedUser?.studentId,
         memberName: changedUser?.memberName,
         college1: changedUser?.college1,
+        college2: changedUser?.college2,
         major1: changedUser?.major1,
         major2: changedUser?.major2,
         role: changedUser?.role,
+        profile: changedUser?.profileImage,
       })
       .then(() => router.reload())
       .catch((error) => console.error("에러: ", error));
   }, [router, changedUser, ClickedId]);
 
-  return (
+  return changedUser ? (
     <UserContainer>
-      <UserImage src={placeholder} alt="userImage" />
+      <UserImage src={changedUser.profileImage} alt="userImage" />
       <Body>
         <Text>이름</Text>
         <Value
-          value={changedUser ? changedUser.memberName : "로딩 중..."}
+          value={changedUser.memberName ? changedUser.memberName : "로딩 중..."}
           type="text"
           onChange={handleNameChange}
         />
         <Text>학번</Text>
         <Value
-          value={changedUser ? changedUser.studentId : "로딩 중..."}
+          value={changedUser.studentId ? changedUser.studentId : "로딩 중..."}
           type="text"
           onChange={handleStudentIdChange}
         />
         <Text>학과</Text>
         <Majors>
           <AdminMajorSelector
-            major={changedUser ? changedUser.major1 : "로딩 중..."}
-            major2={changedUser ? changedUser.major2 : ""}
+            major={changedUser.major1 ? changedUser.major1 : "로딩 중..."}
+            major2={changedUser.major2 ? changedUser.major2 : ""}
             onMajorChange={handleMajorChange}
             onMajor2Change={handleMajor2Change}
           />
@@ -162,14 +168,53 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
         <Text>소속 동아리</Text>
         <Clubs>
           {changedUser && changedUser.clubList
-            ? changedUser.clubList.map((club, index) => (
-                <ClubBox key={index}>{club.toString()}</ClubBox>
-              ))
+            ? Object.entries(changedUser.clubList)
+                .filter(([clubKey, club]) => club.clubValue === "approved")
+                .map(([clubKey], index) => (
+                  <ClubBox key={index}>{clubKey}</ClubBox>
+                ))
             : "로딩 중..."}
         </Clubs>
         <Text>권한</Text>
         <AuthoritySelector
-          authority={changedUser ? changedUser.role : "로딩 중..."}
+          authority={changedUser.role ? changedUser.role : "로딩 중..."}
+          onAuthorityChange={handleAuthorityChange}
+        />
+        <Buttons>
+          <Delete onClick={handelDeleteClick}>회원삭제</Delete>
+          <CompleteButtons>
+            <Cancle onClick={handelCancleClick}>취소</Cancle>
+            <Save onClick={handleSaveClick}>저장</Save>
+          </CompleteButtons>
+        </Buttons>
+      </Body>
+    </UserContainer>
+  ) : (
+    <UserContainer>
+      <Placeholder src={placeholder} alt="userImage" priority />
+      <Body>
+        <Text>이름</Text>
+        <Value value={"로딩 중..."} type="text" onChange={handleNameChange} />
+        <Text>학번</Text>
+        <Value
+          value={"로딩 중..."}
+          type="text"
+          onChange={handleStudentIdChange}
+        />
+        <Text>학과</Text>
+        <Majors>
+          <AdminMajorSelector
+            major={"로딩 중..."}
+            major2={""}
+            onMajorChange={handleMajorChange}
+            onMajor2Change={handleMajor2Change}
+          />
+        </Majors>
+        <Text>소속 동아리</Text>
+        <Clubs>{"로딩 중..."}</Clubs>
+        <Text>권한</Text>
+        <AuthoritySelector
+          authority={"로딩 중..."}
           onAuthorityChange={handleAuthorityChange}
         />
         <Buttons>

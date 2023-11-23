@@ -1,3 +1,4 @@
+//관리자 페이지 헤더
 import { Dispatch, SetStateAction, useCallback, useState } from "react";
 import {
   Header,
@@ -7,7 +8,6 @@ import {
   ImageCss,
   Text,
 } from "./AdminHeader.styled";
-import Image from "next/image";
 import Link from "next/link";
 import Home from "@public/home.svg";
 

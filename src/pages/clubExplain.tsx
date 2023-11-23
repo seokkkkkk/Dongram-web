@@ -2,9 +2,9 @@ import { Header } from "@components/Header/Header";
 import ClubData from "@components/ClubData/ClubData";
 import styled from "@emotion/styled";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { customAxios } from "@/Utils/customAxios";
-import { useParams } from "react-router";
+import { SearchResult } from "@/components/SearchResult/SearchResult";
 
 const PageContainer = styled.div`
   display: flex;
@@ -25,10 +25,10 @@ export default function ClubExplain() {
     }
   }, [clubId]);
 
-  function fetchClubData(clubId) {
+  function fetchClubData(clubId: any) {
     // clubId의 숫자에 따라 각각 다른 동아리 정보 출력
     customAxios
-      .get(`http://13.125.162.181:8080/clubs/${clubId}`)
+      .get(`http://13.125.162.181:8084/clubs/${clubId}`)
       .then((res) => {
         setClubData(res.data.data);
       })
@@ -37,12 +37,30 @@ export default function ClubExplain() {
       });
   }
 
-  return (
-    <>
-      <PageContainer>
-        <Header />
-        <ClubData clubData={clubData} />
-      </PageContainer>
-    </>
+  //검색
+  const [searchValue, setSearchValue] = useState("");
+  const [searchResult, setSearchResult] = useState([]);
+  const [search, setSearch] = useState(false);
+  const onSearchChange = useCallback((value: string) => {
+    setSearchValue(value);
+  }, []);
+  const onSearchClick = useCallback(() => {
+    customAxios.get(`/clubs/search?keyword=${searchValue}`).then((res) => {
+      setSearchResult(res.data.data);
+      setSearch(true);
+    });
+  }, [searchValue]);
+  //<Header onSearchChange={onSearchChange} onSearchClick={onSearchClick} />
+  //<SearchResult displayNum={8} ResultClubs={searchResult} />
+  return search ? (
+    <PageContainer>
+      <Header onSearchChange={onSearchChange} onSearchClick={onSearchClick} />
+      <SearchResult displayNum={8} ResultClubs={searchResult} />
+    </PageContainer>
+  ) : (
+    <PageContainer>
+      <Header onSearchChange={onSearchChange} onSearchClick={onSearchClick} />
+      <ClubData clubData={clubData} />
+    </PageContainer>
   );
 }

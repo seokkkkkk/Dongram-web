@@ -10,9 +10,10 @@ import {
   Table,
   Button,
   Clubs,
-} from "./MyClub.styled";
+} from "./SearchResult.styled";
 import { useCallback, useEffect, useState } from "react";
 import { customAxios } from "@/Utils/customAxios";
+import { RecruitClub } from "../RecruitClub/RecruitClub";
 
 interface ClubData {
   clubId: string;
@@ -24,27 +25,19 @@ interface ClubData {
 
 interface ParentProps {
   displayNum: number;
+  ResultClubs: ClubData[];
 }
 
-export function MyClub({ displayNum }: ParentProps) {
+export function SearchResult({ displayNum, ResultClubs }: ParentProps) {
   const [data, setData] = useState<ClubData[]>([]);
   const [filteredData, setFilteredData] = useState<ClubData[]>([]);
   const [page, setPage] = useState(0);
   const [lastPage, setLastPage] = useState(0);
   useEffect(() => {
-    customAxios
-      .get("/clubs/all")
-      .then((res) => {
-        const filteredData = res.data.data.filter((orgData: ClubData) => {
-          return orgData.recruitment === true; // return을 추가
-        });
-        setData(filteredData);
-        setLastPage(Math.ceil(filteredData.length / displayNum) - 1);
-      })
-      .catch((error) => {
-        console.error("에러: ", error);
-      });
-  }, [displayNum]);
+    const filteredData = ResultClubs;
+    setData(filteredData);
+    setLastPage(Math.ceil(filteredData.length / displayNum) - 1);
+  }, [displayNum, ResultClubs]);
   useEffect(() => {
     let dataSet;
     if (page === lastPage) {
@@ -73,7 +66,7 @@ export function MyClub({ displayNum }: ParentProps) {
       return (
         <ClubContainer key={idx}>
           <Club
-            recruit="모집 중"
+            recruit={data.recruitment === true ? "모집 중" : "모집 X"}
             college={data.college}
             department={data.division.replace("분과", "")}
             name={data.clubName}
@@ -83,16 +76,14 @@ export function MyClub({ displayNum }: ParentProps) {
       );
     });
   }, [filteredData]);
-  return page === 0 ? (
+  return lastPage <= 0 ? (
     <PageContainer>
-      <RecruitClubText>내 동아리</RecruitClubText>
-      <Table>
-        <Clubs>{printClubs()}</Clubs>
-      </Table>
+      <RecruitClubText>검색 결과가 존재하지 않습니다.</RecruitClubText>
+      <RecruitClub displayNum={4} />
     </PageContainer>
   ) : (
     <PageContainer>
-      <RecruitClubText>내 동아리</RecruitClubText>
+      <RecruitClubText>검색 결과</RecruitClubText>
       <Table>
         <Button
           src={page === 0 ? disabled_left : left}

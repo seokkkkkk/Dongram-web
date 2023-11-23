@@ -10,7 +10,7 @@ import { customAxios } from "@/Utils/customAxios";
 import { useRouter } from "next/router";
 
 const Tab = styled.div`
-  margin-top: 6.5rem;
+  margin-top: 3rem;
   display: flex;
   justify-content: space-around;
   align-items: start;
@@ -22,8 +22,12 @@ const Admin = styled.div`
 export default function AdminPage() {
   const router = useRouter();
   const [ClickedId, setClickedId] = useState("");
+  const [ClickedStatus, setClickedStatus] = useState("");
   const HandleClicked = useCallback((id: string) => {
     setClickedId(id);
+  }, []);
+  const HandleStatus = useCallback((status: string) => {
+    setClickedStatus(status);
   }, []);
   useEffect(() => {
     customAxios
@@ -33,6 +37,7 @@ export default function AdminPage() {
   }, []);
   const [isAdmin, setIsAdmin] = useState<null | Boolean>(null);
   const [isUserPage, setIsUserPage] = useState(true);
+  const [isClubInfo, setIsClubInfo] = useState(true);
   useEffect(() => {
     if (isAdmin === false) {
       router.push("/"); // 루트 페이지로 이동
@@ -47,11 +52,28 @@ export default function AdminPage() {
       </Tab>
     ) : (
       <Tab>
-        <ClubManageTable ParentClickedId={HandleClicked} />
-        <ClubInfo ClickedId={ClickedId} />
+        <ClubManageTable
+          ParentClickedId={HandleClicked}
+          HandleStatus={HandleStatus}
+          ClickedStatus={ClickedStatus}
+        />
+        <ClubInfo
+          ClickedId={ClickedId}
+          ClickedStatus={ClickedStatus}
+          isClubInfo={isClubInfo}
+          setIsClubInfo={setIsClubInfo}
+          handleStatus={HandleStatus}
+        />
       </Tab>
     );
-  }, [ClickedId, HandleClicked, isUserPage]);
+  }, [
+    ClickedId,
+    HandleClicked,
+    isUserPage,
+    isClubInfo,
+    ClickedStatus,
+    HandleStatus,
+  ]);
   return isAdmin ? (
     <Admin>
       <AdminHeader isUserPage={isUserPage} setIsUserPage={setIsUserPage} />

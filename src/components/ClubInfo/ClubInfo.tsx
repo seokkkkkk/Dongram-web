@@ -1,4 +1,11 @@
-import { useEffect, useState, useCallback } from "react";
+//동아리 정보
+import {
+  useEffect,
+  useState,
+  useCallback,
+  Dispatch,
+  SetStateAction,
+} from "react";
 import placeholder from "@public/placeholder.png";
 import {
   ClubContainer,
@@ -21,8 +28,12 @@ import {
   CompleteButtons,
   Cancle,
   Save,
+  ClubTab,
+  PendingButtons,
 } from "./ClubInfo.styled";
 import { customAxios } from "@/Utils/customAxios";
+import { AdminClubHeader } from "../AdminClubHeader/AdminClubHeader";
+import { AdminClubMemberManageTable } from "../AdminClubMemberManageTable/AdminClubMemberManageTable";
 
 interface DataRow {
   clubId: string;
@@ -38,9 +49,19 @@ interface DataRow {
 
 interface ParentProps {
   ClickedId: string;
+  isClubInfo: boolean;
+  setIsClubInfo: Dispatch<SetStateAction<boolean>>;
+  ClickedStatus: string;
+  handleStatus: (value: string) => void;
 }
 
-export const ClubInfo = ({ ClickedId }: ParentProps) => {
+export const ClubInfo = ({
+  ClickedId,
+  isClubInfo,
+  setIsClubInfo,
+  handleStatus,
+  ClickedStatus,
+}: ParentProps) => {
   const [data, setData] = useState<DataRow[]>([]);
   const [club, setClub] = useState<DataRow>();
   const [changedClub, setChangedClub] = useState<DataRow>();
@@ -145,11 +166,32 @@ export const ClubInfo = ({ ClickedId }: ParentProps) => {
   const handleSaveClick = useCallback(() => {
     setClub(changedClub);
   }, [changedClub]);
+  const handleClubApprove = useCallback(() => {
+    customAxios
+      .put(`/admin/clubs/${ClickedId}/approve`)
+      .then((res) => {
+        handleStatus("approve");
+        alert("동아리가 승인되었습니다.");
+      })
+      .catch(() => alert("동아리 승인에 실패하였습니다."));
+  }, [ClickedId, handleStatus]);
+  const handleClubReject = useCallback(() => {
+    customAxios
+      .put(`/admin/clubs/${ClickedId}/reject`)
+      .then((res) => {
+        handleStatus("reject");
+        alert("동아리가 거절되었습니다.");
+      })
+      .catch(() => alert("동아리 거절에 실패하였습니다."));
+  }, [ClickedId, handleStatus]);
 
   useEffect(() => {
     customAxios
-      .get(`/clubs/${ClickedId}`)
+      .get(`admin/clubs/${ClickedId}`)
       .then((response) => {
+        if (response.data.data.clubCreated == null) {
+          response.data.data.clubCreated = "-";
+        }
         setClub(response.data.data);
         setChangedClub(response.data.data);
         let dates = [];
@@ -163,95 +205,299 @@ export const ClubInfo = ({ ClickedId }: ParentProps) => {
       .catch((error) => {
         console.error("에러 발생:", error);
       });
-  }, [ClickedId, club?.recruitmentPeriod]);
+  }, [ClickedId, club?.recruitmentPeriod, ClickedStatus]);
 
-  return (
-    <ClubContainer>
-      <ClubImage src={placeholder} alt="ClubImage" />
-      <Body>
-        <ClubCol>
-          <ClubRow>
-            <Text>고유ID</Text>
-            <Admin
-              value={changedClub ? changedClub.clubId : "로딩 중..."}
+  return changedClub ? (
+    isClubInfo ? (
+      ClickedStatus != "approve" ? (
+        <ClubTab>
+          <AdminClubHeader
+            isClubInfo={isClubInfo}
+            setIsClubInfo={setIsClubInfo}
+          />
+          <ClubContainer>
+            <ClubImage src={placeholder} alt="ClubImage" />
+            <Body>
+              <ClubCol>
+                <ClubRow>
+                  <Text>고유ID</Text>
+                  <Admin
+                    value={changedClub.clubId ? changedClub.clubId : ""}
+                    type="text"
+                    onChange={handleAdminChange}
+                  />
+                </ClubRow>
+                <ClubRow>
+                  <Text>신청일</Text>
+                  <Date
+                    value={
+                      changedClub.clubCreated ? changedClub.clubCreated : ""
+                    }
+                    type="text"
+                    readOnly
+                  />
+                </ClubRow>
+              </ClubCol>
+              <ClubRow2>
+                <Text2>동아리명</Text2>
+                <ClubName
+                  value={changedClub.clubName ? changedClub.clubName : ""}
+                  type="text"
+                  onChange={handleNameChange}
+                />
+              </ClubRow2>
+              <ClubCol>
+                <ClubRow2>
+                  <Text2>소속</Text2>
+                  <Value
+                    value={changedClub.college ? changedClub.college : ""}
+                    type="text"
+                    onChange={handleCollegeChange}
+                  />
+                </ClubRow2>
+                <ClubRow2>
+                  <Text2>분과</Text2>
+                  <Value
+                    value={changedClub.division ? changedClub.division : ""}
+                    type="text"
+                    onChange={handleDepartChange}
+                  />
+                </ClubRow2>
+              </ClubCol>
+
+              <ClubRow>
+                <Text>모집여부</Text>
+                <CheckBox
+                  type="checkbox"
+                  name="recruit"
+                  checked={changedClub.recruitment}
+                  onChange={handleRecruitChange}
+                />
+              </ClubRow>
+              <ClubRow>
+                <Text>모집기간</Text>
+                <RecruitDate
+                  disabled={changedClub.recruitment === false}
+                  value={changedClub.recruitmentPeriod ? recruitDates[0] : ""}
+                  onChange={handleRecruitStartChange}
+                />
+                <Text>~</Text>
+                <RecruitDate
+                  disabled={changedClub.recruitment === false}
+                  value={changedClub.recruitmentPeriod ? recruitDates[1] : ""}
+                  onChange={handleRecruitEndChange}
+                />
+              </ClubRow>
+              <ClubRow2>
+                <Text2>본문</Text2>
+                <Introduction
+                  value={changedClub.content ? changedClub.content : ""}
+                  onChange={handleIntroChange}
+                />
+              </ClubRow2>
+              <PendingButtons>
+                <CompleteButtons>
+                  <Cancle onClick={handleClubReject}>거절</Cancle>
+                  <Save onClick={handleClubApprove}>승인</Save>
+                </CompleteButtons>
+              </PendingButtons>
+            </Body>
+          </ClubContainer>
+        </ClubTab>
+      ) : (
+        <ClubTab>
+          <AdminClubHeader
+            isClubInfo={isClubInfo}
+            setIsClubInfo={setIsClubInfo}
+          />
+          <ClubContainer>
+            <ClubImage src={placeholder} alt="ClubImage" />
+            <Body>
+              <ClubCol>
+                <ClubRow>
+                  <Text>고유ID</Text>
+                  <Admin
+                    value={changedClub.clubId ? changedClub.clubId : ""}
+                    type="text"
+                    onChange={handleAdminChange}
+                  />
+                </ClubRow>
+                <ClubRow>
+                  <Text>신청일</Text>
+                  <Date
+                    value={
+                      changedClub.clubCreated ? changedClub.clubCreated : ""
+                    }
+                    type="text"
+                    readOnly
+                  />
+                </ClubRow>
+              </ClubCol>
+              <ClubRow2>
+                <Text2>동아리명</Text2>
+                <ClubName
+                  value={changedClub.clubName ? changedClub.clubName : ""}
+                  type="text"
+                  onChange={handleNameChange}
+                />
+              </ClubRow2>
+              <ClubCol>
+                <ClubRow2>
+                  <Text2>소속</Text2>
+                  <Value
+                    value={changedClub.college ? changedClub.college : ""}
+                    type="text"
+                    onChange={handleCollegeChange}
+                  />
+                </ClubRow2>
+                <ClubRow2>
+                  <Text2>분과</Text2>
+                  <Value
+                    value={changedClub.division ? changedClub.division : ""}
+                    type="text"
+                    onChange={handleDepartChange}
+                  />
+                </ClubRow2>
+              </ClubCol>
+
+              <ClubRow>
+                <Text>모집여부</Text>
+                <CheckBox
+                  type="checkbox"
+                  name="recruit"
+                  checked={changedClub.recruitment}
+                  onChange={handleRecruitChange}
+                />
+              </ClubRow>
+              <ClubRow>
+                <Text>모집기간</Text>
+                <RecruitDate
+                  disabled={changedClub.recruitment === false}
+                  value={changedClub.recruitmentPeriod ? recruitDates[0] : ""}
+                  onChange={handleRecruitStartChange}
+                />
+                <Text>~</Text>
+                <RecruitDate
+                  disabled={changedClub?.recruitment === false}
+                  value={changedClub.recruitmentPeriod ? recruitDates[1] : ""}
+                  onChange={handleRecruitEndChange}
+                />
+              </ClubRow>
+              <ClubRow2>
+                <Text2>본문</Text2>
+                <Introduction
+                  value={changedClub.content ? changedClub.content : ""}
+                  onChange={handleIntroChange}
+                />
+              </ClubRow2>
+              <Buttons>
+                <Delete>삭제</Delete>
+                <CompleteButtons>
+                  <Cancle onClick={handelCancleClick}>취소</Cancle>
+                  <Save onClick={handleSaveClick}>저장</Save>
+                </CompleteButtons>
+              </Buttons>
+            </Body>
+          </ClubContainer>
+        </ClubTab>
+      )
+    ) : (
+      <ClubTab>
+        <AdminClubHeader
+          isClubInfo={isClubInfo}
+          setIsClubInfo={setIsClubInfo}
+        />
+        <AdminClubMemberManageTable ParentClickedId={ClickedId} />
+      </ClubTab>
+    )
+  ) : isClubInfo ? (
+    <ClubTab>
+      <AdminClubHeader isClubInfo={isClubInfo} setIsClubInfo={setIsClubInfo} />
+      <ClubContainer>
+        <ClubImage src={placeholder} alt="ClubImage" />
+        <Body>
+          <ClubCol>
+            <ClubRow>
+              <Text>고유ID</Text>
+              <Admin
+                value={"로딩 중..."}
+                type="text"
+                onChange={handleAdminChange}
+              />
+            </ClubRow>
+            <ClubRow>
+              <Text>신청일</Text>
+              <Date value={"로딩 중..."} type="text" readOnly />
+            </ClubRow>
+          </ClubCol>
+          <ClubRow2>
+            <Text2>동아리명</Text2>
+            <ClubName
+              value={"로딩 중..."}
               type="text"
-              onChange={handleAdminChange}
+              onChange={handleNameChange}
+            />
+          </ClubRow2>
+          <ClubCol>
+            <ClubRow2>
+              <Text2>소속</Text2>
+              <Value
+                value={"로딩 중..."}
+                type="text"
+                onChange={handleCollegeChange}
+              />
+            </ClubRow2>
+            <ClubRow2>
+              <Text2>분과</Text2>
+              <Value
+                value={"로딩 중..."}
+                type="text"
+                onChange={handleDepartChange}
+              />
+            </ClubRow2>
+          </ClubCol>
+
+          <ClubRow>
+            <Text>모집여부</Text>
+            <CheckBox
+              type="checkbox"
+              name="recruit"
+              checked={false}
+              onChange={handleRecruitChange}
             />
           </ClubRow>
           <ClubRow>
-            <Text>신청일</Text>
-            <Date
-              value={changedClub ? changedClub.clubCreated : "로딩 중..."}
-              type="text"
-              readOnly
+            <Text>모집기간</Text>
+            <RecruitDate
+              disabled={true}
+              value={"로딩 중..."}
+              onChange={handleRecruitStartChange}
+            />
+            <Text>~</Text>
+            <RecruitDate
+              disabled={true}
+              value={"로딩 중..."}
+              onChange={handleRecruitEndChange}
             />
           </ClubRow>
-        </ClubCol>
-        <ClubRow2>
-          <Text2>동아리명</Text2>
-          <ClubName
-            value={changedClub ? changedClub.clubName : "로딩 중..."}
-            type="text"
-            onChange={handleNameChange}
-          />
-        </ClubRow2>
-        <ClubCol>
           <ClubRow2>
-            <Text2>소속</Text2>
-            <Value
-              value={changedClub ? changedClub.college : "로딩 중..."}
-              type="text"
-              onChange={handleCollegeChange}
-            />
+            <Text2>본문</Text2>
+            <Introduction value={"로딩 중..."} onChange={handleIntroChange} />
           </ClubRow2>
-          <ClubRow2>
-            <Text2>분과</Text2>
-            <Value
-              value={changedClub ? changedClub.division : "로딩 중..."}
-              type="text"
-              onChange={handleDepartChange}
-            />
-          </ClubRow2>
-        </ClubCol>
-
-        <ClubRow>
-          <Text>모집여부</Text>
-          <CheckBox
-            type="checkbox"
-            name="recruit"
-            checked={changedClub?.recruitment}
-            onClick={handleRecruitChange}
-          />
-        </ClubRow>
-        <ClubRow>
-          <Text>모집기간</Text>
-          <RecruitDate
-            disabled={changedClub?.recruitment === false}
-            value={changedClub ? recruitDates[0] : "로딩 중..."}
-            onChange={handleRecruitStartChange}
-          />
-          <Text>~</Text>
-          <RecruitDate
-            disabled={changedClub?.recruitment === false}
-            value={changedClub ? recruitDates[1] : "로딩 중..."}
-            onChange={handleRecruitEndChange}
-          />
-        </ClubRow>
-        <ClubRow2>
-          <Text2>본문</Text2>
-          <Introduction
-            value={changedClub ? changedClub.content : "로딩 중..."}
-            onChange={handleIntroChange}
-          />
-        </ClubRow2>
-        <Buttons>
-          <Delete>삭제</Delete>
-          <CompleteButtons>
-            <Cancle onClick={handelCancleClick}>취소</Cancle>
-            <Save onClick={handleSaveClick}>저장</Save>
-          </CompleteButtons>
-        </Buttons>
-      </Body>
-    </ClubContainer>
+          <Buttons>
+            <Delete>삭제</Delete>
+            <CompleteButtons>
+              <Cancle onClick={handelCancleClick}>취소</Cancle>
+              <Save onClick={handleSaveClick}>저장</Save>
+            </CompleteButtons>
+          </Buttons>
+        </Body>
+      </ClubContainer>
+    </ClubTab>
+  ) : (
+    <ClubTab>
+      <AdminClubHeader isClubInfo={isClubInfo} setIsClubInfo={setIsClubInfo} />
+      <AdminClubMemberManageTable ParentClickedId={ClickedId} />
+    </ClubTab>
   );
 };

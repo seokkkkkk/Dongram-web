@@ -1,7 +1,9 @@
+//styled 완료
 import { Header } from "@components/Header/Header";
-import { SideInfo } from "@/components/SideInfoFolder/SideInfo";
+import { Banner } from "@components/Banner/Banner";
+import { RecruitClub } from "@components/RecruitClub/RecruitClub";
 import styled from "@emotion/styled";
-import { MainInfo } from "@/components/MainInfoFolder/MainInfo";
+import { MyClub } from "@/components/MyClub/MyClub";
 import { useCallback, useState } from "react";
 import { customAxios } from "@/Utils/customAxios";
 import { SearchResult } from "@/components/SearchResult/SearchResult";
@@ -12,12 +14,8 @@ const PageConatiner = styled.div`
   align-items: center; /* 수직 가운데 정렬 */
   justify-content: center; /* 수평 가운데 정렬 */
 `;
-const InfoContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-
-export default function memberInfo() {
+//회원정보를 확인하는 페이지와, 동아리 생성 홈페이지는 로그인후 나타나는 유저아이콘 사진에 링크를 넣어놨음
+export default function Home() {
   //검색
   const [searchValue, setSearchValue] = useState("");
   const [searchResult, setSearchResult] = useState([]);
@@ -41,10 +39,9 @@ export default function memberInfo() {
   ) : (
     <PageConatiner>
       <Header onSearchChange={onSearchChange} onSearchClick={onSearchClick} />
-      <InfoContainer>
-        <SideInfo />
-        <MainInfo />
-      </InfoContainer>
+      <Banner />
+      <MyClub displayNum={4} />
+      <RecruitClub displayNum={4} />
     </PageConatiner>
   );
 }
