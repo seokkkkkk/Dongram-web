@@ -17,7 +17,7 @@ import {
   BottomGreyBorder,
 } from "./ClubData.styled";
 
-const ClubData = ({ clubData }) => {
+const ClubData = ({ clubData }: any) => {
   return (
     <>
       <DetailExplainText>상세설명</DetailExplainText>
