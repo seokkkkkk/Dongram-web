@@ -17,7 +17,7 @@ const InfoContainer = styled.div`
   justify-content: space-between;
 `;
 
-export default function memberInfo() {
+export default function MemberInfo() {
   //검색
   const [searchValue, setSearchValue] = useState("");
   const [searchResult, setSearchResult] = useState([]);

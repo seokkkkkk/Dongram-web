@@ -40,7 +40,7 @@ export function UserButton({ LoginControl }: Login) {
         <></>
       )}
       <ButtonCss>
-        <Link href="/memberInfo">
+        <Link href="/MemberInfo">
           <button>
             <ImageCss src={user} alt="bell" />
           </button>

@@ -16,13 +16,13 @@ export function SideInfo() {
         <ImageTextContainer>
           <IconCss src={memberInfoIcon} alt="member-Info" />
           <ImageText>
-            <Link href="memberInfo">회원정보</Link>
+            <Link href="MemberInfo">회원정보</Link>
           </ImageText>
         </ImageTextContainer>
         <ImageTextContainer>
           <IconCss src={createClubIcon} alt="createClub" />
           <ImageText>
-            <Link href="creatingClub">동아리 생성</Link>
+            <Link href="CreatingClub">동아리 생성</Link>
           </ImageText>
         </ImageTextContainer>
       </SideMenuContainer>
