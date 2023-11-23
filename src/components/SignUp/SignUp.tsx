@@ -32,6 +32,8 @@ export function SignUp({ signUpModal, toggleSignUp, toggleSignIn }: Modal) {
   const [major1, setMajor1] = useState<string>("");
   const [major2, setMajor2] = useState<string>("");
 
+  cons;
+
   const onSubmit = useCallback(() => {
     const formData = {
       studentId: id,
@@ -64,6 +66,10 @@ export function SignUp({ signUpModal, toggleSignUp, toggleSignIn }: Modal) {
     major2,
     toggleSignUp,
   ]);
+  const dummyKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+    }
+  };
   return signUpModal ? (
     <PageContainer>
       <PageTextAlign>
@@ -76,6 +82,7 @@ export function SignUp({ signUpModal, toggleSignUp, toggleSignIn }: Modal) {
           </AlreadyHaveAccount>
           <form>
             <InputLarge
+              onKeyDown={dummyKeyDown}
               text="아이디*"
               placeholder="학번"
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
