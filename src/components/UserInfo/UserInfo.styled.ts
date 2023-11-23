@@ -1,7 +1,11 @@
-import Image from "next/image";
 import styled from "@emotion/styled";
+import Image from "next/image";
 
-export const UserImage = styled(Image)`
+export const UserImage = styled.img`
+  width: 19.6rem;
+  height: 22.2rem;
+`;
+export const Placeholder = styled(Image)`
   width: 19.6rem;
   height: 22.2rem;
 `;
@@ -11,7 +15,7 @@ export const UserContainer = styled.div`
   place-items: center;
 `;
 export const Body = styled.div`
-  margin-top: 6rem;
+  margin-top: 3rem;
 `;
 export const Text = styled.div`
   font-size: 1.8rem;

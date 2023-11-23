@@ -23,6 +23,7 @@ import {
   Cancle,
   Save,
   Majors,
+  Placeholder,
 } from "./UserInfo.styled";
 import { customAxios } from "@/Utils/customAxios";
 import { useRouter } from "next/router";
@@ -33,9 +34,11 @@ interface DataRow {
   memberName: string;
   major1: string;
   college1: string;
+  college2: string | null;
   role: string;
   major2: string;
   clubList: Club[];
+  profileImage: string;
 }
 
 interface Club {
@@ -127,9 +130,11 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
         studentId: changedUser?.studentId,
         memberName: changedUser?.memberName,
         college1: changedUser?.college1,
+        college2: changedUser?.college2,
         major1: changedUser?.major1,
         major2: changedUser?.major2,
         role: changedUser?.role,
+        profile: changedUser?.profileImage,
       })
       .then(() => router.reload())
       .catch((error) => console.error("에러: ", error));
@@ -137,7 +142,7 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
 
   return changedUser ? (
     <UserContainer>
-      <UserImage src={placeholder} alt="userImage" />
+      <UserImage src={changedUser.profileImage} alt="userImage" />
       <Body>
         <Text>이름</Text>
         <Value
@@ -186,7 +191,7 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
     </UserContainer>
   ) : (
     <UserContainer>
-      <UserImage src={placeholder} alt="userImage" />
+      <Placeholder src={placeholder} alt="userImage" priority />
       <Body>
         <Text>이름</Text>
         <Value value={"로딩 중..."} type="text" onChange={handleNameChange} />
