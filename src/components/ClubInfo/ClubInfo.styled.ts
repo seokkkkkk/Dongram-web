@@ -97,6 +97,9 @@ export const Buttons = styled.div`
   align-items: end;
   justify-content: space-between;
 `;
+export const PendingButtons = styled(Buttons)`
+  justify-content: end;
+`;
 export const CompleteButtons = styled.div``;
 export const Cancle = styled.button`
   width: 9.4rem;

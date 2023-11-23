@@ -38,6 +38,7 @@ export const Clubs = styled.div`
   gap: 0.6rem;
   margin-top: 1.5rem;
   margin-bottom: 4rem;
+  height: 1rem;
 `;
 export const ClubBox = styled.div`
   padding: 0 0.5rem;

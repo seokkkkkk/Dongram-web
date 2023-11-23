@@ -164,7 +164,7 @@ export const UserInfo = ({ ClickedId }: ParentProps) => {
         <Clubs>
           {changedUser && changedUser.clubList
             ? Object.entries(changedUser.clubList)
-                .filter(([clubKey, clubValue]) => clubValue === "approved")
+                .filter(([clubKey, club]) => club.clubValue === "approved")
                 .map(([clubKey], index) => (
                   <ClubBox key={index}>{clubKey}</ClubBox>
                 ))

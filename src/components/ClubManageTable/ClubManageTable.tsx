@@ -31,11 +31,13 @@ interface DataRow {
 interface ParentProps {
   ParentClickedId: (id: string) => void;
   HandleStatus: (status: string) => void;
+  ClickedStatus: string;
 }
 
 export const ClubManageTable = ({
   ParentClickedId,
   HandleStatus,
+  ClickedStatus,
 }: ParentProps) => {
   const [data, setData] = useState<DataRow[]>([]);
   const [inputText, setInputText] = useState("");
@@ -188,7 +190,7 @@ export const ClubManageTable = ({
       .get("admin/clubs/all")
       .then((response) => setData(response.data.data))
       .catch((error) => console.error("에러:", error));
-  }, [handleClicked]);
+  }, [handleClicked, ClickedStatus]);
 
   return (
     <Container>
@@ -211,7 +213,9 @@ export const ClubManageTable = ({
           {currentData.map((item, rowIndex) => (
             <TableRow
               key={rowIndex}
-              onClick={() => handleClicked(item.id)}
+              onClick={() => {
+                handleClicked(item.id), HandleStatus(item.status);
+              }}
               clicked={item.id === clickedId}
             >
               {Object.values(item).map((value, colIndex) => {

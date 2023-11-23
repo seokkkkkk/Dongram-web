@@ -55,12 +55,14 @@ export default function AdminPage() {
         <ClubManageTable
           ParentClickedId={HandleClicked}
           HandleStatus={HandleStatus}
+          ClickedStatus={ClickedStatus}
         />
         <ClubInfo
           ClickedId={ClickedId}
           ClickedStatus={ClickedStatus}
           isClubInfo={isClubInfo}
           setIsClubInfo={setIsClubInfo}
+          handleStatus={HandleStatus}
         />
       </Tab>
     );
