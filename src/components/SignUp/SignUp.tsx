@@ -32,8 +32,6 @@ export function SignUp({ signUpModal, toggleSignUp, toggleSignIn }: Modal) {
   const [major1, setMajor1] = useState<string>("");
   const [major2, setMajor2] = useState<string>("");
 
-  cons;
-
   const onSubmit = useCallback(() => {
     const formData = {
       studentId: id,
