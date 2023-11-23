@@ -85,4 +85,21 @@ export const SearchLine = styled.div`
   align-items: center;
   margin-bottom: -0.8rem;
 `;
+export const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+`;
+export const Status = styled.div`
+  display: flex;
+  gap: 1rem;
+`;
+export const StatusText = styled.span`
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+`;
+export const StatusLabel = styled.label`
+  display: flex;
+  align-items: center;
+`;
 export const Container = styled.div``;

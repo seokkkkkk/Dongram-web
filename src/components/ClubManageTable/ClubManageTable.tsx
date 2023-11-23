@@ -16,6 +16,10 @@ import {
   TableText,
   SearchLine,
   Container,
+  Header,
+  Status,
+  StatusText,
+  StatusLabel,
 } from "./ClubManageTable.styled";
 import { customAxios } from "@/Utils/customAxios";
 
@@ -40,9 +44,11 @@ export const ClubManageTable = ({
   ClickedStatus,
 }: ParentProps) => {
   const [data, setData] = useState<DataRow[]>([]);
+  const [originData, setOriginData] = useState<DataRow[]>([]);
   const [inputText, setInputText] = useState("");
   const [searchText, setSearchText] = useState("");
   const [searchOption, setSearchOption] = useState("ID");
+  const [searchStatus, setSearchStatus] = useState("approve");
   const [clickedId, setClickedId] = useState<string>();
 
   const handleClicked = useCallback(
@@ -188,19 +194,60 @@ export const ClubManageTable = ({
   useEffect(() => {
     customAxios
       .get("admin/clubs/all")
-      .then((response) => setData(response.data.data))
+      .then((response) => setOriginData(response.data.data))
       .catch((error) => console.error("에러:", error));
   }, [handleClicked, ClickedStatus]);
 
+  useEffect(() => {
+    const filteredData = originData.filter((item) => {
+      return item.status === searchStatus;
+    });
+    setData(filteredData);
+  }, [searchStatus, originData]);
+
   return (
     <Container>
-      <SearchLine>
-        <AdminClubSelector onOptionChange={handleOptionChange} />
-        <AdminSearchBox
-          onSearchChange={setInputText}
-          onSearchClick={handleSearchClick}
-        />
-      </SearchLine>
+      <Header>
+        <SearchLine>
+          <AdminClubSelector onOptionChange={handleOptionChange} />
+          <AdminSearchBox
+            onSearchChange={setInputText}
+            onSearchClick={handleSearchClick}
+          />
+        </SearchLine>
+        <Status>
+          <StatusLabel>
+            <input
+              type="radio"
+              name="status"
+              value="approve"
+              onChange={(e) => setSearchStatus(e.target.value)}
+              checked={searchStatus === "approve"}
+            />
+            <StatusText>승인</StatusText>
+          </StatusLabel>
+          <StatusLabel>
+            <input
+              type="radio"
+              name="status"
+              value="rejected"
+              onChange={(e) => setSearchStatus(e.target.value)}
+              checked={searchStatus === "rejected"}
+            />
+            <StatusText>거절</StatusText>
+          </StatusLabel>
+          <StatusLabel>
+            <input
+              type="radio"
+              name="status"
+              value="pending"
+              onChange={(e) => setSearchStatus(e.target.value)}
+              checked={searchStatus === "pending"}
+            />
+            <StatusText>대기</StatusText>
+          </StatusLabel>
+        </Status>
+      </Header>
       <Table>
         <TableTitle>
           <TitleRow isId>고유ID</TitleRow>
