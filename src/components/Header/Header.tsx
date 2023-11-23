@@ -53,7 +53,7 @@ export const Header = ({ onSearchClick, onSearchChange }: ParentProps) => {
     },
     [onSearchClick]
   );
-  return (
+  return IsLogin() ? (
     <header>
       <HeaderContainer>
         <Link href="../">
@@ -68,6 +68,41 @@ export const Header = ({ onSearchClick, onSearchChange }: ParentProps) => {
           </ClubText>
           <ClubText>
             <Link href="../MyClubPage">내 동아리</Link>
+          </ClubText>
+        </BoardContainer>
+        <SearchContainer>
+          <SearchImage
+            src={search_icon}
+            alt="search-icon"
+            onClick={onSearchClick}
+          />
+          <SearchInput
+            type="text"
+            placeholder="Search for..."
+            value={inputValue}
+            onChange={handleInputChange}
+            onKeyDown={handleKeyDown}
+          />
+        </SearchContainer>
+        {LoginButtonControl()}
+      </HeaderContainer>
+      <GreyBorder></GreyBorder>
+    </header>
+  ) : (
+    <header>
+      <HeaderContainer>
+        <Link href="../">
+          <LogoContainer>
+            <LogoImage src={logo} alt="logo" />
+            <LogoText>DONGRAM</LogoText>
+          </LogoContainer>
+        </Link>
+        <BoardContainer>
+          <ClubText>
+            <Link href="../ClubPage">동아리정보</Link>
+          </ClubText>
+          <ClubText>
+            <Link href="../MyClubPage">모집 동아리</Link>
           </ClubText>
         </BoardContainer>
         <SearchContainer>

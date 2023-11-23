@@ -7,6 +7,7 @@ import { MyClub } from "@/components/MyClub/MyClub";
 import { useCallback, useState } from "react";
 import { customAxios } from "@/Utils/customAxios";
 import { SearchResult } from "@/components/SearchResult/SearchResult";
+import { IsLogin } from "@/components/IsLogin/IsLogin";
 
 const PageConatiner = styled.div`
   display: flex; /* Flexbox 컨테이너로 설정 */
@@ -36,12 +37,18 @@ export default function Home() {
       <Header onSearchChange={onSearchChange} onSearchClick={onSearchClick} />
       <SearchResult displayNum={8} ResultClubs={searchResult} />
     </PageConatiner>
-  ) : (
+  ) : IsLogin() ? (
     <PageConatiner>
       <Header onSearchChange={onSearchChange} onSearchClick={onSearchClick} />
       <Banner />
       <MyClub displayNum={4} />
       <RecruitClub displayNum={4} />
+    </PageConatiner>
+  ) : (
+    <PageConatiner>
+      <Header onSearchChange={onSearchChange} onSearchClick={onSearchClick} />
+      <Banner />
+      <RecruitClub displayNum={8} />
     </PageConatiner>
   );
 }
