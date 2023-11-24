@@ -1,1 +1,1 @@
-donggram-web
+동그람 프로젝트 웹
