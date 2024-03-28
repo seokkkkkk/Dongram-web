@@ -1,1 +1,1 @@
-동그람 프로젝트 웹
+# Dongram-web developed by Next.js
